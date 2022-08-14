@@ -1,0 +1,13 @@
+//
+//  Development.xcconfig
+//  boilerplate-ios-swiftui
+//
+//  Created by Can Baybunar on 19.11.2020.
+//  Copyright © 2020 Adesso Turkey. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-boilerplate-ios-swiftui/Pods-boilerplate-ios-swiftui.development.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = com.adesso.boilerplate-ios-swiftui.development
