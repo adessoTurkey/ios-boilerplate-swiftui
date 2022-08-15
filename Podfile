@@ -4,7 +4,7 @@
 # ignore all warnings from all pods
 inhibit_all_warnings!
 
-target 'boilerplate-ios-swiftui' do
+target 'boilerplate_ios_swiftui' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -16,12 +16,12 @@ target 'boilerplate-ios-swiftui' do
   pod 'CocoaDebug', '1.7.1', :configurations => ['Development','Swifter']
   pod 'CocoaLumberjack/Swift' # Powerful & flexible logging framework
 
-  target 'boilerplate-ios-swiftuiTests' do
+  target 'boilerplate_ios_swiftuiTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'boilerplate-ios-swiftuiUITests' do
+  target 'boilerplate_ios_swiftuiUITests' do
     # Pods for testing
   end
 
