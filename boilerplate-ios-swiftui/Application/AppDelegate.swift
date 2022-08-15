@@ -8,7 +8,6 @@
 
 import UIKit
 
-//@UIApplicationMain
 class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
 
     lazy private var services: [UIApplicationDelegate] = {
