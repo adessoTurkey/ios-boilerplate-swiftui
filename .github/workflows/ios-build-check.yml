@@ -20,4 +20,4 @@ jobs:
         shell: bash
       - name: Build
         run: |
-          xcodebuild -workspace ios-boilerplate.xcworkspace -scheme ios-boilerplate clean build -sdk iphoneos -configuration Development CODE_SIGNING_ALLOWED=No          
+          xcodebuild -workspace boilerplate_ios_swiftui.xcworkspace -scheme boilerplate_ios_swiftui clean build -sdk iphoneos -configuration Development CODE_SIGNING_ALLOWED=No          
