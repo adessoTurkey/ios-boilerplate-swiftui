@@ -1,0 +1,30 @@
+PODS:
+  - CocoaDebug (1.7.1)
+  - CocoaLumberjack/Core (3.7.4)
+  - CocoaLumberjack/Swift (3.7.4):
+    - CocoaLumberjack/Core
+  - Swifter (1.5.0)
+  - SwiftLint (0.41.0)
+
+DEPENDENCIES:
+  - CocoaDebug (= 1.7.1)
+  - CocoaLumberjack/Swift
+  - Swifter (~> 1.5.0)
+  - SwiftLint (~> 0.41.0)
+
+SPEC REPOS:
+  trunk:
+    - CocoaDebug
+    - CocoaLumberjack
+    - Swifter
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  CocoaDebug: 9993e85ec4cfbcd2668c8cf8a6d955eb9c96d49a
+  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  Swifter: e71dd674404923d7f03ebb03f3f222d1c570bc8e
+  SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
+
+PODFILE CHECKSUM: 18fe58f2fca5de77c76a53cdd5eaf39bcbdd99c4
+
+COCOAPODS: 1.11.3
