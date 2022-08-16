@@ -29,10 +29,10 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 
 | Branch | Description |
 | --- | --- |
-| **Main** | The purpose of the main branch in the Git flow workflow is to contain production-ready code that can be released. |
-| **Develop** | The develop branch is created at the start of a project and is maintained throughout the development process, and contains pre-production code with newly developed features that are in the process of being tested. |
-| **Feature** | When working on a new feature, you will start a feature branch off the develop branch, and then merge your changes back into the develop branch when the feature is completed and properly reviewed. |
-| **Hotfix** | In Git flow, the hotfix branch is used to quickly address necessary changes in your main branch. The base of the hotfix branch should be your main branch and should be merged back into both the main and develop branches. |
+| **Main** | In the Git flow workflow, the main branch is used to store code that is release-ready and ready for production. |
+| **Develop** | The develop branch contains pre-production code with recently built features that are currently being tested. It is established at the beginning of a project and maintained during the development process. |
+| **Feature** | You will create a feature branch off the develop branch while working on a new feature, and once it has been finished and carefully reviewed, you will merge your changes into the develop branch. |
+| **Hotfix** | The hotfix branch is utilized in the Git pipeline to swiftly address required changes in your main branch. Your main branch should serve as the base for the hotfix branch, and it should be merged back into both the main and develop branches. |
 | **Release** | The release branch should be used when preparing new production releases. Typically, the work being performed on release branches concerns finishing touches and minor bugs specific to releasing new code, with code that should be addressed separately from the main develop branch. | 
 
 
