@@ -11,6 +11,7 @@ Table of Contents
 -----------------
 
 - [Prerequisites](#prerequisites)
+- [Branching Strategy](#branching)
 - [Project Structure](#project-structure)
 - [Workspace Preparing](#workspace-preparing)
 - [List of Frameworks](#list-of-frameworks)
@@ -21,6 +22,22 @@ Table of Contents
 - [MacOS Mojave (10.14.3 or higher)](https://support.apple.com/kb/SP777)
 - [Xcode 11 or higher](https://developer.apple.com/download/) ~ Swift 5.0
 - [CocoaPods 1.4.0 or higher](https://cocoapods.org/#install)
+
+## Branching Strategy
+
+Gitflow is a legacy Git workflow that was originally a disruptive and novel strategy for managing Git branches. Gitflow has fallen in popularity in favor of trunk-based workflows, which are now considered best practices for modern continuous software development and DevOps practices. Gitflow also can be challenging to use with CI/CD.
+
+| Branch | Description |
+| --- | --- |
+| **Main** | The purpose of the main branch in the Git flow workflow is to contain production-ready code that can be released. |
+| **Develop** | The develop branch is created at the start of a project and is maintained throughout the development process, and contains pre-production code with newly developed features that are in the process of being tested. |
+| **Feature** | When working on a new feature, you will start a feature branch off the develop branch, and then merge your changes back into the develop branch when the feature is completed and properly reviewed. |
+| **Hotfix** | In Git flow, the hotfix branch is used to quickly address necessary changes in your main branch. The base of the hotfix branch should be your main branch and should be merged back into both the main and develop branches. |
+| **Release** | The release branch should be used when preparing new production releases. Typically, the work being performed on release branches concerns finishing touches and minor bugs specific to releasing new code, with code that should be addressed separately from the main develop branch. | 
+
+
+- Branch names should start with feature, hotfix or release according to purpose of the branch then should continue with ticketid. see example: feature/BSU-1234
+- Pull requests should refer to specific issue with ticketid. see example: [BSU-1234] - New feature
 
 ## Project Structure
 
