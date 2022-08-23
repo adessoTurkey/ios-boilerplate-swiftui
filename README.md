@@ -38,6 +38,7 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 
 - Branch names should start with feature, hotfix or release according to purpose of the branch then should continue with ticketid. see example: feature/BSU-1234
 - Pull requests should refer to specific issue with ticketid. see example: [BSU-1234] - New feature
+- Merge strategy: Rebase and Merge is preffered for maintaining a linear project history.
 
 ## Project Structure
 
