@@ -8,6 +8,6 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
-#include "Pods/Target Support Files/Pods-boilerplate-ios-swiftui/Pods-boilerplate-ios-swiftui.appstore.xcconfig"
+#include "Pods/Target Support Files/Pods-boilerplate_ios_swiftui/Pods-boilerplate_ios_swiftui.appstore.xcconfig"
 
-PRODUCT_BUNDLE_IDENTIFIER = com.adesso.boilerplate-ios-swiftui
+PRODUCT_BUNDLE_IDENTIFIER = com.adesso.boilerplate_ios_swiftui
