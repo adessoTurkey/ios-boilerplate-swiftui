@@ -11,6 +11,7 @@ Table of Contents
 -----------------
 
 - [Prerequisites](#prerequisites)
+- [Branching Strategy](#branching)
 - [Project Structure](#project-structure)
 - [Workspace Preparing](#workspace-preparing)
 - [List of Frameworks](#list-of-frameworks)
@@ -21,6 +22,23 @@ Table of Contents
 - [MacOS Mojave (10.14.3 or higher)](https://support.apple.com/kb/SP777)
 - [Xcode 11 or higher](https://developer.apple.com/download/) ~ Swift 5.0
 - [CocoaPods 1.4.0 or higher](https://cocoapods.org/#install)
+
+## Branching Strategy
+
+Gitflow is a legacy Git workflow that was originally a disruptive and novel strategy for managing Git branches. Gitflow has fallen in popularity in favor of trunk-based workflows, which are now considered best practices for modern continuous software development and DevOps practices. Gitflow also can be challenging to use with CI/CD.
+
+| Branch | Description |
+| --- | --- |
+| **Main** | In the Git flow workflow, the main branch is used to store code that is release-ready and ready for production. |
+| **Develop** | The develop branch contains pre-production code with recently built features that are currently being tested. It is established at the beginning of a project and maintained during the development process. |
+| **Feature** | You will create a feature branch off the develop branch while working on a new feature, and once it has been finished and carefully reviewed, you will merge your changes into the develop branch. |
+| **Hotfix** | The hotfix branch is utilized in the Git pipeline to swiftly address required changes in your main branch. Your main branch should serve as the base for the hotfix branch, and it should be merged back into both the main and develop branches. |
+| **Release** | The release branch should be used when preparing new production releases. Typically, the work being performed on release branches concerns finishing touches and minor bugs specific to releasing new code, with code that should be addressed separately from the main develop branch. | 
+
+
+- Branch names should start with feature, hotfix or release according to purpose of the branch then should continue with ticketid. see example: feature/BSU-1234
+- Pull requests should refer to specific issue with ticketid. see example: [BSU-1234] - New feature
+- Merge strategy: Rebase and Merge is preffered for maintaining a linear project history.
 
 ## Project Structure
 
