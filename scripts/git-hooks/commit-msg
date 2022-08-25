@@ -19,7 +19,7 @@
 
 INPUT_FILE=$1
 START_LINE=`head -1 $INPUT_FILE`
-PATTERN='^\[((?i)[a-z]+-[0-9]+)\].|(?i)merge'
+PATTERN='^\[((?i)[A-Za-z]+-[0-9]+)\].|(?i)merge'
 length=${#START_LINE}
 
 check=$(head -1 $1 | egrep $PATTERN)
