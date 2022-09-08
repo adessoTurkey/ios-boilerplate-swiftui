@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,8 @@
 		2FCDE0FF2565722600203445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE0FE2565722600203445 /* Assets.xcassets */; };
 		2FCDE1022565722600203445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE1002565722600203445 /* LaunchScreen.storyboard */; };
 		2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */; };
+		D1703A4C28C9CD440071EF00 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4B28C9CD440071EF00 /* Swifter */; };
+		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_boilerplate_ios_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_boilerplate_ios_swiftuiTests.framework */; };
 		FBF57751EA98C6694C07382B /* Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E61C39E93D40AE93D79E3 /* Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +118,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EC0C2453748A46E5EA50303 /* Pods_boilerplate_ios_swiftui.framework in Frameworks */,
+				D1703A4C28C9CD440071EF00 /* Swifter in Frameworks */,
+				D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +370,10 @@
 			dependencies = (
 			);
 			name = boilerplate_ios_swiftui;
+			packageProductDependencies = (
+				D1703A4B28C9CD440071EF00 /* Swifter */,
+				D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */,
+			);
 			productName = "boilerplate-ios-swiftui";
 			productReference = 2FCDE0F22565722400203445 /* boilerplate_ios_swiftui.app */;
 			productType = "com.apple.product-type.application";
@@ -442,6 +450,10 @@
 				Base,
 			);
 			mainGroup = 2FCDE0E92565722400203445;
+			packageReferences = (
+				D1703A4A28C9CD440071EF00 /* XCRemoteSwiftPackageReference "swifter" */,
+				D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+			);
 			productRefGroup = 2FCDE0F32565722400203445 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -522,7 +534,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		28F41CA2F9AF1D73F9D66EFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1231,6 +1243,38 @@
 			defaultConfigurationName = AppStore;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1703A4A28C9CD440071EF00 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.0;
+			};
+		};
+		D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1703A4B28C9CD440071EF00 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1703A4A28C9CD440071EF00 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+		D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FCDE0EA2565722400203445 /* Project object */;
 }
