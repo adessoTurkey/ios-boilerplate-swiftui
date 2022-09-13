@@ -38,6 +38,7 @@
 		D1703A4C28C9CD440071EF00 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4B28C9CD440071EF00 /* Swifter */; };
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_boilerplate_ios_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_boilerplate_ios_swiftuiTests.framework */; };
+		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 		FBF57751EA98C6694C07382B /* Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E61C39E93D40AE93D79E3 /* Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,9 @@
 		A090B752C5E3F28629178692 /* Pods-boilerplate_ios_swiftui.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui.development.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui/Pods-boilerplate_ios_swiftui.development.xcconfig"; sourceTree = "<group>"; };
 		BED19158C7A8F53AEB325928 /* Pods-boilerplate_ios_swiftui.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui.appstore.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui/Pods-boilerplate_ios_swiftui.appstore.xcconfig"; sourceTree = "<group>"; };
 		F2A1669AD3998030C9F73813 /* Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.appstore.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.appstore.xcconfig"; sourceTree = "<group>"; };
+		F856462E28D12DC90015D3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F856463028D12DDD0015D3DF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F856463128D12DE80015D3DF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB89E15DF3E6838C70010F13 /* Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.production.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.production.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +296,7 @@
 				2F56AE9B256E6EF70007D0A2 /* Icons.xcassets */,
 				2F56AE93256E65910007D0A2 /* Images.xcassets */,
 				2FCDE1032565722600203445 /* Info.plist */,
+				F856462F28D12DC90015D3DF /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -448,6 +453,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				tr,
 			);
 			mainGroup = 2FCDE0E92565722400203445;
 			packageReferences = (
@@ -473,6 +480,7 @@
 				2F56AE92256E4CD30007D0A2 /* Colors.xcassets in Resources */,
 				26C4C7012578BFE600358DAE /* sample-data.json in Resources */,
 				2F56AE94256E65910007D0A2 /* Images.xcassets in Resources */,
+				F856462D28D12DC90015D3DF /* Localizable.strings in Resources */,
 				2FCDE1022565722600203445 /* LaunchScreen.storyboard in Resources */,
 				2FCDE0FF2565722600203445 /* Assets.xcassets in Resources */,
 				2F56AE9C256E6EF70007D0A2 /* Icons.xcassets in Resources */,
@@ -683,6 +691,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		F856462F28D12DC90015D3DF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F856462E28D12DC90015D3DF /* en */,
+				F856463028D12DDD0015D3DF /* de */,
+				F856463128D12DE80015D3DF /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -691,6 +709,7 @@
 			baseConfigurationReference = 2FCDE1292566444C00203445 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -820,6 +839,7 @@
 			baseConfigurationReference = 2FCDE1292566444C00203445 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -949,6 +969,7 @@
 			baseConfigurationReference = 2FCDE134256651EF00203445 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1012,6 +1033,7 @@
 			baseConfigurationReference = 2FCDE1352566520A00203445 /* AppStore.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
