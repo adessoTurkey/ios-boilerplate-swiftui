@@ -13,6 +13,7 @@
 		18CADB3828A93B4F007FC2C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3728A93B4F007FC2C8 /* HomeView.swift */; };
 		18CADB3A28A97CC8007FC2C8 /* boilerplate_ios_swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3928A97CC8007FC2C8 /* boilerplate_ios_swiftuiTests.swift */; };
 		18CADB3C28A97CDF007FC2C8 /* boilerplate_ios_swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3B28A97CDF007FC2C8 /* boilerplate_ios_swiftuiUITests.swift */; };
+		2686502C28DA6CAB00822964 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2686502B28DA6CAB00822964 /* UserDefaultsManager.swift */; };
 		26BCDA102579826700096894 /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA0F2579826700096894 /* LoggerManager.swift */; };
 		26BCDA202579833600096894 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA1F2579833600096894 /* Logger.swift */; };
 		26BCDA252579852700096894 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA242579852700096894 /* LoggingService.swift */; };
@@ -67,6 +68,7 @@
 		18CADB3928A97CC8007FC2C8 /* boilerplate_ios_swiftuiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = boilerplate_ios_swiftuiTests.swift; sourceTree = "<group>"; };
 		18CADB3B28A97CDF007FC2C8 /* boilerplate_ios_swiftuiUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = boilerplate_ios_swiftuiUITests.swift; sourceTree = "<group>"; };
 		242E61C39E93D40AE93D79E3 /* Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2686502B28DA6CAB00822964 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		26BCDA0F2579826700096894 /* LoggerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerManager.swift; sourceTree = "<group>"; };
 		26BCDA1F2579833600096894 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		26BCDA242579852700096894 /* LoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingService.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				26C4C58925766B6100358DAE /* SwifterManager.swift */,
 				26BCDA0F2579826700096894 /* LoggerManager.swift */,
+				2686502B28DA6CAB00822964 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				2F56AE8E256E487F0007D0A2 /* StringExtensions.swift in Sources */,
 				18CADB3228A92CDC007FC2C8 /* MainView.swift in Sources */,
 				2F56AE8A256E44BB0007D0A2 /* UICollectionViewCellExtensions.swift in Sources */,
+				2686502C28DA6CAB00822964 /* UserDefaultsManager.swift in Sources */,
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
 				2FCDE0F62565722400203445 /* AppDelegate.swift in Sources */,
