@@ -10,7 +10,7 @@ import SwiftUI
 
 @main
 struct boilerplate_ios_swiftuiApp: App {
-    //swiftlint:disable:next weak_delegate
+    // swiftlint:disable:next weak_delegate
     @UIApplicationDelegateAdaptor var delegate: BoilerPlateAppDelegate
     var body: some Scene {
         WindowGroup {
