@@ -20,6 +20,20 @@
                ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2FCDE1072565722600203445"
+               BuildableName = "boilerplate_ios_swiftuiTests.xctest"
+               BlueprintName = "boilerplate_ios_swiftuiTests"
+               ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
