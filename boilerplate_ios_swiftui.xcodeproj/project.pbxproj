@@ -808,6 +808,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -831,6 +832,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -839,10 +841,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adesso.boilerplate-ios-swiftuiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "boilerplate-ios-swiftui";
+				TEST_TARGET_NAME = boilerplate_ios_swiftui;
 			};
 			name = Swifter;
 		};
@@ -917,6 +920,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftui/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -938,6 +942,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -961,6 +966,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -969,10 +975,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adesso.boilerplate-ios-swiftuiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "boilerplate-ios-swiftui";
+				TEST_TARGET_NAME = boilerplate_ios_swiftui;
 			};
 			name = Development;
 		};
@@ -1105,6 +1112,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftui/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1146,6 +1154,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1169,6 +1178,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1192,6 +1202,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1200,10 +1211,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adesso.boilerplate-ios-swiftuiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "boilerplate-ios-swiftui";
+				TEST_TARGET_NAME = boilerplate_ios_swiftui;
 			};
 			name = Production;
 		};
@@ -1215,6 +1227,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1223,9 +1236,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adesso.boilerplate-ios-swiftuiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "boilerplate-ios-swiftui";
+				TEST_TARGET_NAME = boilerplate_ios_swiftui;
 			};
 			name = AppStore;
 		};
