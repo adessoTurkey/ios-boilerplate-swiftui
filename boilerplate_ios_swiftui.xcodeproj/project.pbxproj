@@ -37,6 +37,7 @@
 		2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */; };
 		D1703A4C28C9CD440071EF00 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4B28C9CD440071EF00 /* Swifter */; };
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
+		D191953428DC605F006C08B3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F56AE8D256E487F0007D0A2 /* StringExtensions.swift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_boilerplate_ios_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_boilerplate_ios_swiftuiTests.framework */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 		FBF57751EA98C6694C07382B /* Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E61C39E93D40AE93D79E3 /* Pods_boilerplate_ios_swiftui_boilerplate_ios_swiftuiUITests.framework */; };
@@ -655,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D191953428DC605F006C08B3 /* StringExtensions.swift in Sources */,
 				18CADB3A28A97CC8007FC2C8 /* boilerplate_ios_swiftuiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,7 +46,7 @@ extension String {
     /// - Returns: True if all characters alphanumeric
     func isAlphanumeric(turkishCharactersAllowed: Bool = false) -> Bool {
         let regex = turkishCharactersAllowed ? "[^a-zA-Z0-9çÇğĞıİöÖşŞüÜ]" : "[^a-zA-Z0-9]"
-        return !isEmpty && range(of: regex, options: .regularExpression) != nil
+        return !isEmpty && range(of: regex, options: .regularExpression) == nil
     }
 
     func isValidPassword(minCharCount: Int,
@@ -64,13 +64,23 @@ extension String {
             case .letter:
                 return firstCondition && isOnlyLetters(turkishCharactersAllowed: turkishCharacterAllowed)
             case .numberAndLetter:
-                return firstCondition && hasNumbersAndLetters(turkishCharactersAllowed: turkishCharacterAllowed)
+                return firstCondition
+                        && hasNumbersAndLetters(turkishCharactersAllowed: turkishCharacterAllowed)
+                        && isAlphanumeric(turkishCharactersAllowed: turkishCharacterAllowed)
             case .upperLowerCased:
-                return firstCondition && !hasNumbers() && hasUpperAndLowerCase(turkishCharactersAllowed: turkishCharacterAllowed)
+                return firstCondition
+                        && isOnlyLetters(turkishCharactersAllowed: turkishCharacterAllowed)
+                        && hasUpperAndLowerCase(turkishCharactersAllowed: turkishCharacterAllowed)
             case .numberAndULCased:
-                return firstCondition && hasNumbersAndLetters(turkishCharactersAllowed: turkishCharacterAllowed)
+                return firstCondition
+                    && hasNumbersAndLetters(turkishCharactersAllowed: turkishCharacterAllowed)
+                    && hasUpperAndLowerCase(turkishCharactersAllowed: turkishCharacterAllowed)
+                    && isAlphanumeric(turkishCharactersAllowed: turkishCharacterAllowed)
             case .highSecure:
-                return firstCondition && isHighSecurePassword(turkishCharactersAllowed: turkishCharacterAllowed)
+                return firstCondition
+                    && hasNumbersAndLetters(turkishCharactersAllowed: turkishCharacterAllowed)
+                    && hasUpperAndLowerCase(turkishCharactersAllowed: turkishCharacterAllowed)
+                    && !isAlphanumeric(turkishCharactersAllowed: true)
         }
     }
 
@@ -88,9 +98,9 @@ extension String {
 
     /// > Warning: Non-ASCII characters not allowed default.
     ///
-    /// - Returns: True if at least one lower cased and one upper cased character included without any other character
+    /// - Returns: True if at least one lower cased and one upper cased character
     fileprivate func hasUpperAndLowerCase(turkishCharactersAllowed: Bool = false) -> Bool {
-        let regex = turkishCharactersAllowed ? "^(?=.*[A-ZÇĞİÖŞÜ])(?=.*[a-z]zçğıöşü)" : "^(?=.*[A-Z])(?=.*[a-z])"
+        let regex = turkishCharactersAllowed ? "^(?=.*[A-ZÇĞİÖŞÜ])(?=.*[a-zçğıöşü])" : "^(?=.*[A-Z])(?=.*[a-z])"
         return !isEmpty && range(of: regex, options: .regularExpression) != nil
     }
 
@@ -100,32 +110,14 @@ extension String {
     }
 
     /// > Warning: Non-ASCII characters not allowed default.
-    ///
-    /// - Returns: True if at least one lower cased and one upper cased and one number character included without any other character
-    fileprivate func hasNumberUpperAndLowerCase(turkishCharactersAllowed: Bool = false) -> Bool {
-        let regex = turkishCharactersAllowed ? "^[0-9][a-zçğıöşü][A-ZÇĞİÖŞÜ]+$" : "^[0-9][a-z][A-Z]+$"
-        return !isEmpty && range(of: regex, options: .regularExpression) != nil
-    }
-
-    /// > Warning: Non-ASCII characters not allowed default.
     /// > Warning: Letter can be uppercased or lowercased. It doesn't matter
     ///
-    /// - Returns: True if at least one lower cased and one upper cased character included without any other character
+    /// - Returns: True if at least one lower cased and one upper cased character
     fileprivate func hasNumbersAndLetters(turkishCharactersAllowed: Bool = false) -> Bool {
-        let regex = turkishCharactersAllowed ? "[^a-zA-Z0-9çÇğĞıİöÖşŞüÜ]" : "[^a-zA-Z0-9]"
+        let regex = turkishCharactersAllowed ?  "^(?=.+[a-zA-ZçÇğĞıİöÖşŞüÜ])(?=.+[0-9])" : "^(?=.+[a-zA-Z])(?=.+[0-9])"
         return !isEmpty && range(of: regex, options: .regularExpression) != nil
     }
 
-    /// > Warning: Non-ASCII characters not allowed default.
-    /// > Warning: Doesn't check string length!
-    ///
-    /// - Returns: True if at least one lower cased and one upper cased character and one special character
-    fileprivate func isHighSecurePassword(turkishCharactersAllowed: Bool = false) -> Bool {
-        let regex = turkishCharactersAllowed ?
-        "^[a-zçğıöşü][A-ZÇĞİÖŞÜ][0-9][!@#$&*]$" :
-        "^[a-z][A-Z][0-9][!@#$&*]$"
-        return !isEmpty && range(of: regex, options: .regularExpression) != nil
-    }
 }
 /// Password Rule Enum
 enum PasswordRule {
