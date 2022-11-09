@@ -37,6 +37,7 @@
 		2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */; };
 		D1703A4C28C9CD440071EF00 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4B28C9CD440071EF00 /* Swifter */; };
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
+		D1736F12291B7CDF00CD1882 /* MultiDevicePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1736F11291B7CDF00CD1882 /* MultiDevicePreviewView.swift */; };
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_boilerplate_ios_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_boilerplate_ios_swiftuiTests.framework */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
@@ -110,6 +111,7 @@
 		9B86CF0688E998F9C642504D /* Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.development.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.development.xcconfig"; sourceTree = "<group>"; };
 		A090B752C5E3F28629178692 /* Pods-boilerplate_ios_swiftui.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui.development.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui/Pods-boilerplate_ios_swiftui.development.xcconfig"; sourceTree = "<group>"; };
 		BED19158C7A8F53AEB325928 /* Pods-boilerplate_ios_swiftui.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui.appstore.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui/Pods-boilerplate_ios_swiftui.appstore.xcconfig"; sourceTree = "<group>"; };
+		D1736F11291B7CDF00CD1882 /* MultiDevicePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDevicePreviewView.swift; sourceTree = "<group>"; };
 		D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
 		F2A1669AD3998030C9F73813 /* Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.appstore.xcconfig"; path = "Target Support Files/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests/Pods-boilerplate_ios_swiftui-boilerplate_ios_swiftuiUITests.appstore.xcconfig"; sourceTree = "<group>"; };
 		F856462E28D12DC90015D3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */,
+				D1736F11291B7CDF00CD1882 /* MultiDevicePreviewView.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
 				2FCDE0F62565722400203445 /* AppDelegate.swift in Sources */,
+				D1736F12291B7CDF00CD1882 /* MultiDevicePreviewView.swift in Sources */,
 				26BCDA252579852700096894 /* LoggingService.swift in Sources */,
 				26BCDA102579826700096894 /* LoggerManager.swift in Sources */,
 				26C4C58A25766B6100358DAE /* SwifterManager.swift in Sources */,
