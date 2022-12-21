@@ -4,9 +4,9 @@
 # Runs at every commit and checks for an error.
 # For the test, you can run `git commit` with an empty` commit message`
 
-export PATH=/usr/local/bin:$PATH
+export PATH=${PATH}:/opt/homebrew/bin:/usr/local/bin
 #Path to swiftlint
-LINT=./Pods/SwiftLint/swiftlint
+LINT= $(which swiftlint)
 
 if [[ -e "${LINT}" ]]; then
 	echo "SwiftLint Start..."
