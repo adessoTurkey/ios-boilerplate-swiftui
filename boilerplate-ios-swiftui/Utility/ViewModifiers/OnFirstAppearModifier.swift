@@ -1,6 +1,6 @@
 //
 //  OnFirstAppearModifier.swift
-//  boilerplate_ios_swiftui
+//  BoilerPlateSwiftUI
 //
 //  Created by Said on 10.10.2022.
 //  Copyright © 2022 Adesso Turkey. All rights reserved.

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:boilerplate_ios_swiftui.xcodeproj">
+      location = "group:BoilerPlateSwiftUI.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

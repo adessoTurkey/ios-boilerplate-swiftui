@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2FCDE0F12565722400203445"
-               BuildableName = "boilerplate_ios_swiftui.app"
-               BlueprintName = "boilerplate_ios_swiftui"
-               ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+               BuildableName = "BoilerPlateSwiftUI.app"
+               BlueprintName = "BoilerPlateSwiftUI"
+               ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2FCDE1072565722600203445"
-               BuildableName = "boilerplate_ios_swiftuiTests.xctest"
-               BlueprintName = "boilerplate_ios_swiftuiTests"
-               ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+               BuildableName = "BoilerPlateSwiftUITests.xctest"
+               BlueprintName = "BoilerPlateSwiftUITests"
+               ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2FCDE1072565722600203445"
-               BuildableName = "boilerplate_ios_swiftuiTests.xctest"
-               BlueprintName = "boilerplate_ios_swiftuiTests"
-               ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+               BuildableName = "BoilerPlateSwiftUITests.xctest"
+               BlueprintName = "BoilerPlateSwiftUITests"
+               ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -57,9 +57,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2FCDE1122565722600203445"
-               BuildableName = "boilerplate_ios_swiftuiUITests.xctest"
-               BlueprintName = "boilerplate_ios_swiftuiUITests"
-               ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+               BuildableName = "BoilerPlateSwiftUIUITests.xctest"
+               BlueprintName = "BoilerPlateSwiftUIUITests"
+               ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2FCDE0F12565722400203445"
-            BuildableName = "boilerplate_ios_swiftui.app"
-            BlueprintName = "boilerplate_ios_swiftui"
-            ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+            BuildableName = "BoilerPlateSwiftUI.app"
+            BlueprintName = "BoilerPlateSwiftUI"
+            ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2FCDE0F12565722400203445"
-            BuildableName = "boilerplate_ios_swiftui.app"
-            BlueprintName = "boilerplate_ios_swiftui"
-            ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+            BuildableName = "BoilerPlateSwiftUI.app"
+            BlueprintName = "BoilerPlateSwiftUI"
+            ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

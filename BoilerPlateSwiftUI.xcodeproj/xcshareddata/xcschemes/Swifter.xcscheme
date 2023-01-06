@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2FCDE0F12565722400203445"
-               BuildableName = "boilerplate_ios_swiftui.app"
-               BlueprintName = "boilerplate_ios_swiftui"
-               ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+               BuildableName = "BoilerPlateSwiftUI.app"
+               BlueprintName = "BoilerPlateSwiftUI"
+               ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2FCDE0F12565722400203445"
-            BuildableName = "boilerplate_ios_swiftui.app"
-            BlueprintName = "boilerplate_ios_swiftui"
-            ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+            BuildableName = "BoilerPlateSwiftUI.app"
+            BlueprintName = "BoilerPlateSwiftUI"
+            ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2FCDE0F12565722400203445"
-            BuildableName = "boilerplate_ios_swiftui.app"
-            BlueprintName = "boilerplate_ios_swiftui"
-            ReferencedContainer = "container:boilerplate_ios_swiftui.xcodeproj">
+            BuildableName = "BoilerPlateSwiftUI.app"
+            BlueprintName = "BoilerPlateSwiftUI"
+            ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
