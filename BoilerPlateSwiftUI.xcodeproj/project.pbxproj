@@ -227,9 +227,9 @@
 		2FCDE0E92565722400203445 = {
 			isa = PBXGroup;
 			children = (
-				2FCDE0F42565722400203445 /* boilerplate-ios-swiftui */,
-				2FCDE10B2565722600203445 /* boilerplate-ios-swiftuiTests */,
-				2FCDE1162565722600203445 /* boilerplate-ios-swiftuiUITests */,
+				2FCDE0F42565722400203445 /* BoilerPlateSwiftUI */,
+				2FCDE10B2565722600203445 /* BoilerPlateSwiftUITests */,
+				2FCDE1162565722600203445 /* BoilerPlateSwiftUIUITests */,
 				2FCDE0F32565722400203445 /* Products */,
 				08C81C6F027E6BE0E71341DC /* Pods */,
 				4EBC274D2ACDC3D81404D3B0 /* Frameworks */,
@@ -246,7 +246,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2FCDE0F42565722400203445 /* boilerplate-ios-swiftui */ = {
+		2FCDE0F42565722400203445 /* BoilerPlateSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				2FCDE1252565B96500203445 /* Application */,
@@ -257,25 +257,25 @@
 				2FCDE1262566412700203445 /* Resources */,
 				2FCDE13725665B5E00203445 /* Utility */,
 			);
-			path = "boilerplate-ios-swiftui";
+			path = BoilerPlateSwiftUI;
 			sourceTree = "<group>";
 		};
-		2FCDE10B2565722600203445 /* boilerplate-ios-swiftuiTests */ = {
+		2FCDE10B2565722600203445 /* BoilerPlateSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
 				18CADB3928A97CC8007FC2C8 /* BoilerPlateSwiftUITests.swift */,
 				2FCDE10E2565722600203445 /* Info.plist */,
 			);
-			path = "boilerplate-ios-swiftuiTests";
+			path = BoilerPlateSwiftUITests;
 			sourceTree = "<group>";
 		};
-		2FCDE1162565722600203445 /* boilerplate-ios-swiftuiUITests */ = {
+		2FCDE1162565722600203445 /* BoilerPlateSwiftUIUITests */ = {
 			isa = PBXGroup;
 			children = (
 				18CADB3B28A97CDF007FC2C8 /* BoilerPlateSwiftUIUITests.swift */,
 				2FCDE1192565722600203445 /* Info.plist */,
 			);
-			path = "boilerplate-ios-swiftuiUITests";
+			path = BoilerPlateSwiftUIUITests;
 			sourceTree = "<group>";
 		};
 		2FCDE1252565B96500203445 /* Application */ = {
