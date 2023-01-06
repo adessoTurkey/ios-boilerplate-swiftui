@@ -5,7 +5,7 @@
 iOS Boilerplate
 ============================
 
-This is the iOS boilerplate created by Adesso Turkey for new projects using Swift 5. The project's primary objective is to help the development of a new one to kick-start the environment with configurations, the required features used in common Adesso projects, and the helpful functionalities.
+This is the iOS boilerplate created by adesso Turkey for new projects using Swift 5. The project's primary objective is to help the development of a new one to kick-start the environment with configurations, the required features used in common adesso projects, and the helpful functionalities.
 
 Table of Contents
 -----------------
