@@ -787,7 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
-				INFOPLIST_FILE = "boilerplate-ios-swiftui/Resources/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -921,7 +921,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftui/Resources/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1113,7 +1113,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftui/Resources/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1133,7 +1133,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
-				INFOPLIST_FILE = "boilerplate-ios-swiftui/Resources/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
