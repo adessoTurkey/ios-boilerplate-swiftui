@@ -809,7 +809,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -833,7 +833,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUIUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -943,7 +943,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -967,7 +967,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUIUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1155,7 +1155,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1179,7 +1179,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiTests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1203,7 +1203,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUIUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1228,7 +1228,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8J8CUXWK9;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
-				INFOPLIST_FILE = "boilerplate-ios-swiftuiUITests/Info.plist";
+				INFOPLIST_FILE = BoilerPlateSwiftUIUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
