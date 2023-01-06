@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import boilerplate_ios_swiftui
+@testable import BoilerPlateSwiftUI
 
-class boilerplate_ios_swiftuiTests: XCTestCase {
+class BoilerPlateSwiftUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
