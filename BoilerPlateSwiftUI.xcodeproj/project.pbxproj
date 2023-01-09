@@ -39,6 +39,10 @@
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_BoilerPlateSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_BoilerPlateSwiftUITests.framework */; };
+		E67AB662296C058B006F2E13 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67AB661296C058B006F2E13 /* Api.swift */; };
+		E67AB664296C05EA006F2E13 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67AB663296C05EA006F2E13 /* Environment.swift */; };
+		E67AB666296C0ACE006F2E13 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67AB665296C0ACE006F2E13 /* ApiManager.swift */; };
+		E67AB66C296C0EC9006F2E13 /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67AB66B296C0EC9006F2E13 /* RequestSerializer.swift */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 		FBF57751EA98C6694C07382B /* Pods_BoilerPlateSwiftUI_BoilerPlateSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E61C39E93D40AE93D79E3 /* Pods_BoilerPlateSwiftUI_BoilerPlateSwiftUIUITests.framework */; };
 /* End PBXBuildFile section */
@@ -111,6 +115,10 @@
 		A090B752C5E3F28629178692 /* Pods-BoilerPlateSwiftUI.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI.development.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI/Pods-BoilerPlateSwiftUI.development.xcconfig"; sourceTree = "<group>"; };
 		BED19158C7A8F53AEB325928 /* Pods-BoilerPlateSwiftUI.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI.appstore.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI/Pods-BoilerPlateSwiftUI.appstore.xcconfig"; sourceTree = "<group>"; };
 		D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
+		E67AB661296C058B006F2E13 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		E67AB663296C05EA006F2E13 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		E67AB665296C0ACE006F2E13 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		E67AB66B296C0EC9006F2E13 /* RequestSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSerializer.swift; sourceTree = "<group>"; };
 		F2A1669AD3998030C9F73813 /* Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig"; sourceTree = "<group>"; };
 		F856462E28D12DC90015D3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F856463028D12DDD0015D3DF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 		26BCDA36257A398600096894 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E67AB660296C0576006F2E13 /* Core */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -365,6 +374,17 @@
 				D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		E67AB660296C0576006F2E13 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E67AB663296C05EA006F2E13 /* Environment.swift */,
+				E67AB661296C058B006F2E13 /* Api.swift */,
+				E67AB665296C0ACE006F2E13 /* ApiManager.swift */,
+				E67AB66B296C0EC9006F2E13 /* RequestSerializer.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67AB66C296C0EC9006F2E13 /* RequestSerializer.swift in Sources */,
 				2F56AE8C256E44F00007D0A2 /* UIViewControllerExtensions.swift in Sources */,
 				26C4C565257651F500358DAE /* SwifterServerService.swift in Sources */,
 				2F56AE86256E44730007D0A2 /* UICollectionViewExtensions.swift in Sources */,
@@ -647,17 +668,20 @@
 				18CADB3228A92CDC007FC2C8 /* MainView.swift in Sources */,
 				2F56AE8A256E44BB0007D0A2 /* UICollectionViewCellExtensions.swift in Sources */,
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
+				E67AB664296C05EA006F2E13 /* Environment.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
 				2FCDE0F62565722400203445 /* AppDelegate.swift in Sources */,
 				26BCDA252579852700096894 /* LoggingService.swift in Sources */,
 				26BCDA102579826700096894 /* LoggerManager.swift in Sources */,
 				26C4C58A25766B6100358DAE /* SwifterManager.swift in Sources */,
 				2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */,
+				E67AB662296C058B006F2E13 /* Api.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
 				18CADB3528A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift in Sources */,
 				D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */,
 				2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */,
 				2F56AE88256E44A10007D0A2 /* UITableViewCellExtensions.swift in Sources */,
+				E67AB666296C0ACE006F2E13 /* ApiManager.swift in Sources */,
 				26BCDA2F2579859500096894 /* UIDeviceExtension.swift in Sources */,
 				18CADB3828A93B4F007FC2C8 /* HomeView.swift in Sources */,
 			);
