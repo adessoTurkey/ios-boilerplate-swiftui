@@ -43,22 +43,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2FCDE1072565722600203445"
                BuildableName = "BoilerPlateSwiftUITests.xctest"
                BlueprintName = "BoilerPlateSwiftUITests"
-               ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2FCDE1122565722600203445"
-               BuildableName = "BoilerPlateSwiftUIUITests.xctest"
-               BlueprintName = "BoilerPlateSwiftUIUITests"
                ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
             </BuildableReference>
          </TestableReference>

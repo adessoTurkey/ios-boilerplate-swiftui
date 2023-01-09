@@ -20,7 +20,7 @@ extension ApiManager {
         parameters: [String: String] = [:],
         method: HttpMethod = .get,
         headers: [String: String] = [:],
-        body: Data?) throws -> URLRequest {
+        body: Data? = nil) throws -> URLRequest {
             guard let url = URL(string: url.urlString) else { throw ClientError.invalidURL }
             
             guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
