@@ -14,7 +14,7 @@ protocol AdessoServiceProtocol {
     var baseService: BaseServiceProtocol { get }
 
     func build(endpoint: Endpoint) -> String
-    func request<T: Decodable>(with object: RequestObject) -> Result<T, AdessoError>
+    func request<T: Decodable>(with object: RequestObject) async throws -> Result<T, AdessoError>
 //    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject) -> Result<T, AdessoError>
 }
 
