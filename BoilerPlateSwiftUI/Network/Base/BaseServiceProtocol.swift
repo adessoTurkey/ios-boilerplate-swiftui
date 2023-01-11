@@ -10,5 +10,12 @@ import Foundation
 
 protocol BaseServiceProtocol {
     func request<T: Decodable>(with requestObject: RequestObject,
-                               decoder: JSONDecoder) async -> Result<T, AdessoError>
+                               decoder: JSONDecoder) async throws -> Result<T, AdessoError>
+}
+
+extension BaseServiceProtocol {
+    func request<T: Decodable>(with requestObject: RequestObject,
+                               decoder: JSONDecoder = JSONDecoder()) async throws -> Result<T, AdessoError> {
+        try await request(with: requestObject, decoder: decoder)
+    }
 }
