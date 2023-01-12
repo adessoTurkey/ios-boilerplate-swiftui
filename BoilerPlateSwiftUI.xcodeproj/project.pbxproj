@@ -52,6 +52,7 @@
 		E68EEF38296E9E2400A839B6 /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF37296E9E2400A839B6 /* EndpointBuilder.swift */; };
 		E68EEF3A296ED91F00A839B6 /* BaseServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF39296ED91F00A839B6 /* BaseServiceProvider.swift */; };
 		E68EEF3D296EDD6000A839B6 /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF3C296EDD6000A839B6 /* BaseEndpoint.swift */; };
+		E6F149F529709E1A00D96675 /* ExampleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F149F429709E1A00D96675 /* ExampleUseCase.swift */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 		FBF57751EA98C6694C07382B /* Pods_BoilerPlateSwiftUI_BoilerPlateSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E61C39E93D40AE93D79E3 /* Pods_BoilerPlateSwiftUI_BoilerPlateSwiftUIUITests.framework */; };
 /* End PBXBuildFile section */
@@ -137,6 +138,7 @@
 		E68EEF37296E9E2400A839B6 /* EndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
 		E68EEF39296ED91F00A839B6 /* BaseServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProvider.swift; sourceTree = "<group>"; };
 		E68EEF3C296EDD6000A839B6 /* BaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpoint.swift; sourceTree = "<group>"; };
+		E6F149F429709E1A00D96675 /* ExampleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUseCase.swift; sourceTree = "<group>"; };
 		F2A1669AD3998030C9F73813 /* Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig"; sourceTree = "<group>"; };
 		F856462E28D12DC90015D3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F856463028D12DDD0015D3DF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		26BCDA36257A398600096894 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E6F149F329709E0800D96675 /* Example */,
 				E68EEF3B296EDD3C00A839B6 /* Endpoints */,
 				E68EEF34296E9DEB00A839B6 /* URLBuilder */,
 				E68EEF2C296D9AEE00A839B6 /* Extensions */,
@@ -460,6 +463,14 @@
 				E68EEF3C296EDD6000A839B6 /* BaseEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		E6F149F329709E0800D96675 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				E6F149F429709E1A00D96675 /* ExampleUseCase.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -753,6 +764,7 @@
 				26C4C58A25766B6100358DAE /* SwifterManager.swift in Sources */,
 				E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */,
 				E68EEF27296D8E3900A839B6 /* HTTPStatus.swift in Sources */,
+				E6F149F529709E1A00D96675 /* ExampleUseCase.swift in Sources */,
 				2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */,
 				E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */,
 				E68EEF2E296D9B0400A839B6 /* HTTPURLResponseExtensions.swift in Sources */,
