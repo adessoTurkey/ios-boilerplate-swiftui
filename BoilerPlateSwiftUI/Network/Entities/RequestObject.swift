@@ -28,17 +28,10 @@ struct RequestObject {
     }
 }
 
-struct HTTPMethod: RawRepresentable {
-    let rawValue: String
-    
-    init(rawValue: String) {
-        self.rawValue = rawValue
-    }
-    
-    static let get = Self(rawValue: "GET")
-    static let post = Self(rawValue: "POST")
-    static let put = Self(rawValue: "PUT")
-    static let patch = Self(rawValue: "PATCH")
-    static let delete = Self(rawValue: "DELETE")
-    static let head = Self(rawValue: "HEAD")
+enum HTTPMethod: String {
+    case delete = "DELETE"
+    case get = "GET"
+    case patch = "PATCH"
+    case post = "POST"
+    case put = "PUT"
 }

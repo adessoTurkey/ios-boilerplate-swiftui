@@ -9,13 +9,27 @@
 import Foundation
 
 protocol BaseServiceProtocol {
-    func request<T: Decodable>(with requestObject: RequestObject,
-                               decoder: JSONDecoder) async throws -> Result<T, AdessoError>
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type,
+                               decoder: JSONDecoder) async -> Result<T, AdessoError>
 }
 
 extension BaseServiceProtocol {
-    func request<T: Decodable>(with requestObject: RequestObject,
-                               decoder: JSONDecoder = JSONDecoder()) async throws -> Result<T, AdessoError> {
-        try await request(with: requestObject, decoder: decoder)
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type,
+                               decoder: JSONDecoder = JSONDecoder()) async -> Result<T, AdessoError> {
+        guard let url = URL(string: requestObject.url) else { return .failure(.customError(1, "Bad url")) }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = requestObject.method.rawValue
+        request.allHTTPHeaderFields = requestObject.headers
+        request.httpBody = requestObject.body
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else { return .failure(.badResponse) }
+            guard let decodedData = try? decoder.decode(responseModel, from: data) else { return .failure(.badResponse) }
+            return.success(decodedData)
+        } catch {
+            return .failure(.badResponse)
+        }
     }
 }
