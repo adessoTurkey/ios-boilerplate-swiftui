@@ -30,7 +30,7 @@ extension BaseServiceProtocol {
         request.httpBody = requestObject.body
         
         do {
-            let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
+            let (data, response) = try await session.data(for: request, delegate: nil)
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { return .failure(.badResponse) }
             guard let decodedData = try? decoder.decode(responseModel, from: data) else { return .failure(.badResponse) }
             return.success(decodedData)

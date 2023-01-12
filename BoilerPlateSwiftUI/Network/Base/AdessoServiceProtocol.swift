@@ -25,7 +25,7 @@ extension AdessoServiceProtocol {
     }
 
     func request<T: Decodable>(with object: RequestObject, responseModel: T.Type, session: URLSessionProtocol) async throws -> Result<T, AdessoError> {
-        await baseService.request(with: object, responseModel: responseModel)
+        await baseService.request(with: object, responseModel: responseModel, session: session)
     }
     
     //TODO: - how to handle authenticatedRequest with urlSession
