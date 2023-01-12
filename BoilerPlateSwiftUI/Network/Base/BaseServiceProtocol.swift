@@ -8,13 +8,19 @@
 
 import Foundation
 
+protocol URLSessionProtocol {
+    func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
+}
+
+extension URLSession: URLSessionProtocol { }
+
 protocol BaseServiceProtocol {
-    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type,
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type, session: URLSessionProtocol,
                                decoder: JSONDecoder) async -> Result<T, AdessoError>
 }
 
 extension BaseServiceProtocol {
-    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type,
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type, session: URLSessionProtocol = URLSession.shared,
                                decoder: JSONDecoder = JSONDecoder()) async -> Result<T, AdessoError> {
         guard let url = URL(string: requestObject.url) else { return .failure(.customError(1, "Bad url")) }
         
