@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import BoilerPlateSwiftUI
+@testable import BoilerPlateSwiftUI
 
 class BoilerPlateSwiftUITests: XCTestCase {
 
