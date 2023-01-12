@@ -8,4 +8,7 @@
 
 import Foundation
 
-class BaseService: BaseServiceProtocol {}
+class BaseService: BaseServiceProtocol {
+    var session: URLSessionProtocol = URLSession.shared
+    var decoder: JSONDecoder = JSONDecoder()
+}

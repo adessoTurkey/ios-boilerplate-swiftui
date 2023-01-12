@@ -13,67 +13,32 @@ import XCTest
 final class BaseServiceTests: XCTestCase {
     
     func test_request_performsOneGETRequestWithRequestObject() {
-        let sut = makeSUT()
         let session = URLSessionSpy()
-        let requestObject = RequestObject(url: "http://www.a-url.com")
+        let service = BaseServiceMock(session: session)
+        let sut = makeSUT(service: service)
+        let requestObject = RequestObject(url: anyURL())
         let expectation = expectation(description: "Wait for request")
         
         Task {
-            _ = await sut.exampleRequest(with: requestObject, responseModel: ResponseModel.self, session: session)
+            _ = try await sut.request(with: requestObject, responseModel: String.self)
             expectation.fulfill()
             
-            XCTAssertEqual(session.requestedURL?.absoluteString, requestObject.url)
-            XCTAssertEqual(session.dataForRequestCallCount, 1)
-            XCTAssertEqual(session.requestMethod, "GET")
+            XCTAssertEqual(session.requestedURL?.absoluteString, requestObject.url, "expected \(requestObject.url), received \(session.requestedURL) instead.")
+            XCTAssertEqual(session.dataForRequestCallCount, 1, "expected 1, received \(session.dataForRequestCallCount) instead")
+            XCTAssertEqual(session.requestMethod, "GET", "expected GET, get \(session.requestMethod ?? "") instead.")
         }
         
         wait(for: [expectation], timeout: 5)
-
     }
     
     //MARK: - Helpers
     
-    private func makeSUT() -> ExampleService {
-        let sut = ExampleService()
-        return sut
+    private func makeSUT(service: BaseServiceProtocol) -> ExampleService {
+        ExampleService(baseService: service)
     }
     
-    class ExampleService: AdessoServiceProtocol {
-        
-        typealias Endpoint = ExampleServiceEndpoint
-        
-        let baseService: BaseServiceProtocol
-        
-        init(baseService: BaseServiceProtocol = BaseServiceProvider.shared.baseService) {
-            self.baseService = baseService
-        }
-        
-        func exampleRequest(with requestObject: RequestObject, responseModel: ResponseModel.Type, session: URLSessionProtocol) async -> Result<ResponseModel, AdessoError> {
-            do {
-                let result = try await request(with: requestObject, responseModel: responseModel, session: session)
-                return result
-            } catch {
-                return .failure(.mappingFailed)
-            }
-        }
-    }
-    
-    
-    struct ResponseModel: Decodable {}
-    
-    enum ExampleServiceEndpoint: TargetEndpointProtocol {
-        case example(firstParameter: String, secondParameter: String)
-        
-        private struct Constants {
-            static let exampleEndpoint = "exampleEndpoint/%@/%@"
-        }
-        
-        var path: String {
-            switch self {
-            case .example(let firstParameter, let secondParameter):
-                return BaseEndpoint.base.path + String(format: Constants.exampleEndpoint, firstParameter, secondParameter)
-            }
-        }
+    private func anyURL() -> String {
+        return "http://www.a-url.com"
     }
     
     private class URLSessionSpy: URLSessionProtocol {
@@ -86,6 +51,15 @@ final class BaseServiceTests: XCTestCase {
             requestedURL = request.url
             requestMethod = request.httpMethod
             return (Data(), URLResponse())
+        }
+    }
+    
+    private class BaseServiceMock: BaseServiceProtocol {
+        var session: URLSessionProtocol
+        var decoder: JSONDecoder = JSONDecoder()
+        
+        init(session: URLSessionProtocol) {
+            self.session = session
         }
     }
 }

@@ -15,15 +15,15 @@ protocol URLSessionProtocol {
 extension URLSession: URLSessionProtocol { }
 
 protocol BaseServiceProtocol {
-    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type, session: URLSessionProtocol,
-                               decoder: JSONDecoder) async -> Result<T, AdessoError>
+    var session: URLSessionProtocol { get set }
+    var decoder: JSONDecoder { get set }
+    
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async -> Result<T, AdessoError>
 }
 
 extension BaseServiceProtocol {
-    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type, session: URLSessionProtocol = URLSession.shared,
-                               decoder: JSONDecoder = JSONDecoder()) async -> Result<T, AdessoError> {
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async -> Result<T, AdessoError> {
         guard let url = URL(string: requestObject.url) else { return .failure(.customError(1, "Bad url")) }
-        
         var request = URLRequest(url: url)
         request.httpMethod = requestObject.method.rawValue
         request.allHTTPHeaderFields = requestObject.headers
@@ -31,11 +31,13 @@ extension BaseServiceProtocol {
         
         do {
             let (data, response) = try await session.data(for: request, delegate: nil)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else { return .failure(.badResponse) }
-            guard let decodedData = try? decoder.decode(responseModel, from: data) else { return .failure(.badResponse) }
-            return.success(decodedData)
+            let successCodeRange = 200...299
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
+                  successCodeRange.contains(statusCode) else { return .failure(.badResponse) }
+            let decodedData = try decoder.decode(responseModel, from: data)
+            return .success(decodedData)
         } catch {
-            return .failure(.badResponse)
+            return .failure(.unknown(error: error as NSError))
         }
     }
 }
