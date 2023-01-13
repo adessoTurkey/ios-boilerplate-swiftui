@@ -20,7 +20,7 @@ final class BaseServiceTests: XCTestCase {
         let expectation = expectation(description: "Wait for request")
         
         Task {
-            _ = try await sut.request(with: requestObject, responseModel: String.self)
+            _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
             expectation.fulfill()
             
             XCTAssertEqual(session.requestedURL?.absoluteString, requestObject.url, "expected \(requestObject.url), received \(session.requestedURL) instead.")
