@@ -39,6 +39,7 @@
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_BoilerPlateSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_BoilerPlateSwiftUITests.framework */; };
+		E646738D29715E6A00FF49A7 /* ExampleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646738C29715E6A00FF49A7 /* ExampleResponse.swift */; };
 		E68EEF1F296D7F5A00A839B6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF1E296D7F5A00A839B6 /* BaseService.swift */; };
 		E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */; };
 		E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF22296D7FCB00A839B6 /* RequestObject.swift */; };
@@ -125,6 +126,7 @@
 		A090B752C5E3F28629178692 /* Pods-BoilerPlateSwiftUI.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI.development.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI/Pods-BoilerPlateSwiftUI.development.xcconfig"; sourceTree = "<group>"; };
 		BED19158C7A8F53AEB325928 /* Pods-BoilerPlateSwiftUI.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI.appstore.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI/Pods-BoilerPlateSwiftUI.appstore.xcconfig"; sourceTree = "<group>"; };
 		D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
+		E646738C29715E6A00FF49A7 /* ExampleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleResponse.swift; sourceTree = "<group>"; };
 		E68EEF1E296D7F5A00A839B6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
 		E68EEF22296D7FCB00A839B6 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		26BCDA36257A398600096894 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E646738B29715E5700FF49A7 /* ResponseModels */,
 				E6F149F329709E0800D96675 /* Example */,
 				E68EEF3B296EDD3C00A839B6 /* Endpoints */,
 				E68EEF34296E9DEB00A839B6 /* URLBuilder */,
@@ -409,6 +412,14 @@
 				E68EEF2F296E8A3B00A839B6 /* BaseServiceTests.swift */,
 			);
 			path = NetworkLayerTests;
+			sourceTree = "<group>";
+		};
+		E646738B29715E5700FF49A7 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				E646738C29715E6A00FF49A7 /* ExampleResponse.swift */,
+			);
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 		E68EEF2A296D998E00A839B6 /* Base */ = {
@@ -753,6 +764,7 @@
 				E68EEF33296E9D1D00A839B6 /* AdessoServiceProtocol.swift in Sources */,
 				18CADB3228A92CDC007FC2C8 /* MainView.swift in Sources */,
 				2F56AE8A256E44BB0007D0A2 /* UICollectionViewCellExtensions.swift in Sources */,
+				E646738D29715E6A00FF49A7 /* ExampleResponse.swift in Sources */,
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
 				E68EEF3D296EDD6000A839B6 /* BaseEndpoint.swift in Sources */,
