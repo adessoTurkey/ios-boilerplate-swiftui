@@ -8,7 +8,9 @@
 
 import Foundation
 
-final class ExampleService: AdessoServiceProtocol {
+protocol ExampleServiceProtocol { }
+
+final class ExampleService: ExampleServiceProtocol, AdessoServiceProtocol {
     
     typealias Endpoint = ExampleServiceEndpoint
             

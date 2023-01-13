@@ -40,6 +40,7 @@
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_BoilerPlateSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_BoilerPlateSwiftUITests.framework */; };
 		E646738D29715E6A00FF49A7 /* ExampleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646738C29715E6A00FF49A7 /* ExampleResponse.swift */; };
+		E64673902971961900FF49A7 /* WebServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646738F2971961900FF49A7 /* WebServiceProvider.swift */; };
 		E68EEF1F296D7F5A00A839B6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF1E296D7F5A00A839B6 /* BaseService.swift */; };
 		E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */; };
 		E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF22296D7FCB00A839B6 /* RequestObject.swift */; };
@@ -127,6 +128,7 @@
 		BED19158C7A8F53AEB325928 /* Pods-BoilerPlateSwiftUI.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI.appstore.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI/Pods-BoilerPlateSwiftUI.appstore.xcconfig"; sourceTree = "<group>"; };
 		D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
 		E646738C29715E6A00FF49A7 /* ExampleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleResponse.swift; sourceTree = "<group>"; };
+		E646738F2971961900FF49A7 /* WebServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProvider.swift; sourceTree = "<group>"; };
 		E68EEF1E296D7F5A00A839B6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
 		E68EEF22296D7FCB00A839B6 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		26BCDA36257A398600096894 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E646738E297195EF00FF49A7 /* WebServices */,
 				E646738B29715E5700FF49A7 /* ResponseModels */,
 				E6F149F329709E0800D96675 /* Example */,
 				E68EEF3B296EDD3C00A839B6 /* Endpoints */,
@@ -420,6 +423,14 @@
 				E646738C29715E6A00FF49A7 /* ExampleResponse.swift */,
 			);
 			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		E646738E297195EF00FF49A7 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				E646738F2971961900FF49A7 /* WebServiceProvider.swift */,
+			);
+			path = WebServices;
 			sourceTree = "<group>";
 		};
 		E68EEF2A296D998E00A839B6 /* Base */ = {
@@ -758,6 +769,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F56AE8C256E44F00007D0A2 /* UIViewControllerExtensions.swift in Sources */,
+				E64673902971961900FF49A7 /* WebServiceProvider.swift in Sources */,
 				26C4C565257651F500358DAE /* SwifterServerService.swift in Sources */,
 				2F56AE86256E44730007D0A2 /* UICollectionViewExtensions.swift in Sources */,
 				2F56AE8E256E487F0007D0A2 /* StringExtensions.swift in Sources */,
