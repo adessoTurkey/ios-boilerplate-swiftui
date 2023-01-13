@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol ExampleServiceProtocol { }
+protocol ExampleServiceProtocol {
+    func exampleRequest() async throws -> Result<ExampleResponse, AdessoError>
+}
 
 final class ExampleService: ExampleServiceProtocol, AdessoServiceProtocol {
     
@@ -18,6 +20,12 @@ final class ExampleService: ExampleServiceProtocol, AdessoServiceProtocol {
     
     init(baseService: BaseServiceProtocol = BaseServiceProvider.shared.baseService) {
         self.baseService = baseService
+    }
+    
+    func exampleRequest() async throws -> Result<ExampleResponse, AdessoError> {
+        try await request(with: RequestObject(url: build(endpoint: .example(firstParameter: "",
+                                                                  secondParameter: ""))),
+                responseModel: ExampleResponse.self)
     }
 }
     

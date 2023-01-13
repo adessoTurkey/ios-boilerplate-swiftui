@@ -41,6 +41,8 @@
 		E50BB41AA460239E70C85ED2 /* Pods_BoilerPlateSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_BoilerPlateSwiftUITests.framework */; };
 		E646738D29715E6A00FF49A7 /* ExampleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646738C29715E6A00FF49A7 /* ExampleResponse.swift */; };
 		E64673902971961900FF49A7 /* WebServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646738F2971961900FF49A7 /* WebServiceProvider.swift */; };
+		E64673962971995F00FF49A7 /* ExampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64673952971995F00FF49A7 /* ExampleRepository.swift */; };
+		E646739929719A1000FF49A7 /* ExampleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */; };
 		E68EEF1F296D7F5A00A839B6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF1E296D7F5A00A839B6 /* BaseService.swift */; };
 		E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */; };
 		E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF22296D7FCB00A839B6 /* RequestObject.swift */; };
@@ -129,6 +131,8 @@
 		D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
 		E646738C29715E6A00FF49A7 /* ExampleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleResponse.swift; sourceTree = "<group>"; };
 		E646738F2971961900FF49A7 /* WebServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProvider.swift; sourceTree = "<group>"; };
+		E64673952971995F00FF49A7 /* ExampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRepository.swift; sourceTree = "<group>"; };
+		E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRemoteDataSource.swift; sourceTree = "<group>"; };
 		E68EEF1E296D7F5A00A839B6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
 		E68EEF22296D7FCB00A839B6 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 		26BCDA36257A398600096894 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E6467397297199FE00FF49A7 /* RemoteDataSources */,
+				E64673942971994B00FF49A7 /* WebServiceRepositories */,
 				E646738E297195EF00FF49A7 /* WebServices */,
 				E646738B29715E5700FF49A7 /* ResponseModels */,
 				E6F149F329709E0800D96675 /* Example */,
@@ -431,6 +437,22 @@
 				E646738F2971961900FF49A7 /* WebServiceProvider.swift */,
 			);
 			path = WebServices;
+			sourceTree = "<group>";
+		};
+		E64673942971994B00FF49A7 /* WebServiceRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				E64673952971995F00FF49A7 /* ExampleRepository.swift */,
+			);
+			path = WebServiceRepositories;
+			sourceTree = "<group>";
+		};
+		E6467397297199FE00FF49A7 /* RemoteDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */,
+			);
+			path = RemoteDataSources;
 			sourceTree = "<group>";
 		};
 		E68EEF2A296D998E00A839B6 /* Base */ = {
@@ -779,6 +801,7 @@
 				E646738D29715E6A00FF49A7 /* ExampleResponse.swift in Sources */,
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
+				E646739929719A1000FF49A7 /* ExampleRemoteDataSource.swift in Sources */,
 				E68EEF3D296EDD6000A839B6 /* BaseEndpoint.swift in Sources */,
 				2FCDE0F62565722400203445 /* AppDelegate.swift in Sources */,
 				26BCDA252579852700096894 /* LoggingService.swift in Sources */,
@@ -794,6 +817,7 @@
 				E68EEF2E296D9B0400A839B6 /* HTTPURLResponseExtensions.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
 				18CADB3528A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift in Sources */,
+				E64673962971995F00FF49A7 /* ExampleRepository.swift in Sources */,
 				D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */,
 				2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */,
 				E68EEF38296E9E2400A839B6 /* EndpointBuilder.swift in Sources */,

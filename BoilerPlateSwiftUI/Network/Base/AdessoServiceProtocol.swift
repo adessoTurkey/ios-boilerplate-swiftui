@@ -23,6 +23,10 @@ extension AdessoServiceProtocol {
         await baseService.request(with: object, responseModel: responseModel)
     }
     
+    func build(endpoint: Endpoint) -> String {
+        endpoint.path
+    }
+    
     //TODO: - how to handle authenticatedRequest with urlSession
 
 //    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject) async throws -> Result<T, AdessoError> {
