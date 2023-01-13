@@ -12,13 +12,13 @@ struct RequestObject {
     var url: String
     let method: HTTPMethod
     var data: Encodable?
-    var headers: [String : String]?
+    var headers: [String: String]?
     var body: Data?
 
     init(url: String,
          method: HTTPMethod = .get,
          data: Encodable? = nil,
-         headers: [String : String] = [:],
+         headers: [String: String] = [:],
          body: Data? = nil) {
         self.url = url
         self.method = method
