@@ -13,32 +13,29 @@ protocol AdessoServiceProtocol {
 
     var baseService: BaseServiceProtocol { get }
 
-    func request<T: Decodable>(with object: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError>
-//    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject) -> Result<T, AdessoError>
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError>
+    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError>
 }
 
 extension AdessoServiceProtocol {
 
-    func request<T: Decodable>(with object: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
-        await baseService.request(with: object, responseModel: responseModel)
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
+        await baseService.request(with: requestObject, responseModel: responseModel)
     }
     
     func build(endpoint: Endpoint) -> String {
         endpoint.path
     }
     
-    //TODO: - how to handle authenticatedRequest with urlSession
+    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
+        var requestObject = requestObject
+        return await baseService.request(with: prepareAuthenticatedRequest(with: requestObject), responseModel: responseModel)
+    }
+    
+    private func prepareAuthenticatedRequest(with requestObject: RequestObject) -> RequestObject {
+        #warning("This does not return an authenticated request")
+        //TODO: - how to handle authenticatedRequest with urlSession
 
-//    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject) async throws -> Result<T, AdessoError> {
-//        var requestObject = requestObject
-//        return await baseService.request(with: prepareAuthenticatedRequest(with: &requestObject))
-//    }
-//
-//    private func prepareAuthenticatedRequest(with requestObject: inout RequestObject) -> RequestObject {
-//        var adapters = requestObject.requestInterceptor?.adapters ?? []
-//        adapters.append(build(requestAdapters: [.authAdapter]))
-//        requestObject.requestInterceptor = Interceptor(adapters: adapters,
-//                                                       retriers: requestObject.requestInterceptor?.retriers ?? [])
-//        return requestObject
-//    }
+        return requestObject
+    }
 }
