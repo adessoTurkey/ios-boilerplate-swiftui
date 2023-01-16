@@ -43,6 +43,8 @@
 		E64673902971961900FF49A7 /* WebServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646738F2971961900FF49A7 /* WebServiceProvider.swift */; };
 		E64673962971995F00FF49A7 /* ExampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64673952971995F00FF49A7 /* ExampleRepository.swift */; };
 		E646739929719A1000FF49A7 /* ExampleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */; };
+		E646739C297546D100FF49A7 /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646739B297546D100FF49A7 /* ExampleService.swift */; };
+		E646739E297546DD00FF49A7 /* ExampleServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646739D297546DD00FF49A7 /* ExampleServiceEndpoint.swift */; };
 		E68EEF1F296D7F5A00A839B6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF1E296D7F5A00A839B6 /* BaseService.swift */; };
 		E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */; };
 		E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF22296D7FCB00A839B6 /* RequestObject.swift */; };
@@ -133,6 +135,8 @@
 		E646738F2971961900FF49A7 /* WebServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProvider.swift; sourceTree = "<group>"; };
 		E64673952971995F00FF49A7 /* ExampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRepository.swift; sourceTree = "<group>"; };
 		E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRemoteDataSource.swift; sourceTree = "<group>"; };
+		E646739B297546D100FF49A7 /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
+		E646739D297546DD00FF49A7 /* ExampleServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleServiceEndpoint.swift; sourceTree = "<group>"; };
 		E68EEF1E296D7F5A00A839B6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
 		E68EEF22296D7FCB00A839B6 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -234,7 +238,7 @@
 				E64673942971994B00FF49A7 /* WebServiceRepositories */,
 				E646738E297195EF00FF49A7 /* WebServices */,
 				E646738B29715E5700FF49A7 /* ResponseModels */,
-				E6F149F329709E0800D96675 /* Example */,
+				E6F149F329709E0800D96675 /* UseCases */,
 				E68EEF3B296EDD3C00A839B6 /* Endpoints */,
 				E68EEF34296E9DEB00A839B6 /* URLBuilder */,
 				E68EEF2C296D9AEE00A839B6 /* Extensions */,
@@ -434,6 +438,7 @@
 		E646738E297195EF00FF49A7 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				E646739A297546B100FF49A7 /* ExampleService */,
 				E646738F2971961900FF49A7 /* WebServiceProvider.swift */,
 			);
 			path = WebServices;
@@ -453,6 +458,15 @@
 				E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */,
 			);
 			path = RemoteDataSources;
+			sourceTree = "<group>";
+		};
+		E646739A297546B100FF49A7 /* ExampleService */ = {
+			isa = PBXGroup;
+			children = (
+				E646739B297546D100FF49A7 /* ExampleService.swift */,
+				E646739D297546DD00FF49A7 /* ExampleServiceEndpoint.swift */,
+			);
+			path = ExampleService;
 			sourceTree = "<group>";
 		};
 		E68EEF2A296D998E00A839B6 /* Base */ = {
@@ -509,12 +523,12 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		E6F149F329709E0800D96675 /* Example */ = {
+		E6F149F329709E0800D96675 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				E6F149F429709E1A00D96675 /* ExampleUseCase.swift */,
 			);
-			path = Example;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -800,6 +814,7 @@
 				2F56AE8A256E44BB0007D0A2 /* UICollectionViewCellExtensions.swift in Sources */,
 				E646738D29715E6A00FF49A7 /* ExampleResponse.swift in Sources */,
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
+				E646739E297546DD00FF49A7 /* ExampleServiceEndpoint.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
 				E646739929719A1000FF49A7 /* ExampleRemoteDataSource.swift in Sources */,
 				E68EEF3D296EDD6000A839B6 /* BaseEndpoint.swift in Sources */,
@@ -812,6 +827,7 @@
 				E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */,
 				E68EEF27296D8E3900A839B6 /* HTTPStatus.swift in Sources */,
 				E6F149F529709E1A00D96675 /* ExampleUseCase.swift in Sources */,
+				E646739C297546D100FF49A7 /* ExampleService.swift in Sources */,
 				2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */,
 				E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */,
 				E68EEF2E296D9B0400A839B6 /* HTTPURLResponseExtensions.swift in Sources */,
