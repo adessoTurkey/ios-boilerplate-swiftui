@@ -29,10 +29,10 @@ extension AdessoServiceProtocol {
     
     func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
         var requestObject = requestObject
-        return await baseService.request(with: prepareAuthenticatedRequest(with: requestObject), responseModel: responseModel)
+        return await baseService.request(with: prepareAuthenticatedRequest(with: &requestObject), responseModel: responseModel)
     }
     
-    private func prepareAuthenticatedRequest(with requestObject: RequestObject) -> RequestObject {
+    private func prepareAuthenticatedRequest(with requestObject: inout RequestObject) -> RequestObject {
         #warning("This does not return an authenticated request")
         //TODO: - how to handle authenticatedRequest with urlSession
 
