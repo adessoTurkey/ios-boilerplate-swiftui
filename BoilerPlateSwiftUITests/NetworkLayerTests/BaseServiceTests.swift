@@ -31,6 +31,28 @@ final class BaseServiceTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    func test_request_failsOnRequestError() {
+        let session = URLSessionSpy()
+        let service = BaseServiceMock(session: session)
+        let sut = makeSUT(service: service)
+        let requestObject = RequestObject(url: anyURL())
+        let anyError = anyNSError()
+        let expectation = expectation(description: "Wait for request")
+        session.completeWith(error: anyNSError())
+        
+        Task {
+            do {
+                _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
+            } catch {
+                let capturedError = error as NSError
+                XCTAssertEqual(capturedError.domain, anyError.domain)
+            }
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT(service: BaseServiceProtocol) -> ExampleService {
@@ -41,16 +63,29 @@ final class BaseServiceTests: XCTestCase {
         return "http://www.a-url.com"
     }
     
+    private func anyNSError() -> NSError {
+        NSError(domain: "any error", code: 0)
+    }
+    
     private class URLSessionSpy: URLSessionProtocol {
         var dataForRequestCallCount = 0
         var requestedURL: URL?
         var requestMethod: String?
+        var error: NSError?
         
         func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse) {
             dataForRequestCallCount += 1
             requestedURL = request.url
             requestMethod = request.httpMethod
-            return (Data(), URLResponse())
+            if let error {
+                throw error
+            } else {
+                return (Data(), URLResponse())
+            }
+        }
+        
+        func completeWith(error: NSError) {
+            self.error = error
         }
     }
     

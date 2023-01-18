@@ -20,7 +20,7 @@ protocol AdessoServiceProtocol {
 extension AdessoServiceProtocol {
 
     func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
-        await baseService.request(with: requestObject, responseModel: responseModel)
+        try await baseService.request(with: requestObject, responseModel: responseModel)
     }
     
     func build(endpoint: Endpoint) -> String {
@@ -29,7 +29,7 @@ extension AdessoServiceProtocol {
     
     func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
         var requestObject = requestObject
-        return await baseService.request(with: prepareAuthenticatedRequest(with: &requestObject), responseModel: responseModel)
+        return try await baseService.request(with: prepareAuthenticatedRequest(with: &requestObject), responseModel: responseModel)
     }
     
     private func prepareAuthenticatedRequest(with requestObject: inout RequestObject) -> RequestObject {
