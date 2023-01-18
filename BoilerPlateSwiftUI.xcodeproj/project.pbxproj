@@ -45,18 +45,18 @@
 		E646739929719A1000FF49A7 /* ExampleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */; };
 		E646739C297546D100FF49A7 /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646739B297546D100FF49A7 /* ExampleService.swift */; };
 		E646739E297546DD00FF49A7 /* ExampleServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646739D297546DD00FF49A7 /* ExampleServiceEndpoint.swift */; };
-		E68EEF1F296D7F5A00A839B6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF1E296D7F5A00A839B6 /* BaseService.swift */; };
-		E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */; };
+		E68EEF1F296D7F5A00A839B6 /* NetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF1E296D7F5A00A839B6 /* NetworkLoader.swift */; };
+		E68EEF21296D7FA100A839B6 /* NetworkLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF20296D7FA100A839B6 /* NetworkLoaderProtocol.swift */; };
 		E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF22296D7FCB00A839B6 /* RequestObject.swift */; };
 		E68EEF25296D8E0900A839B6 /* AdessoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF24296D8E0900A839B6 /* AdessoError.swift */; };
 		E68EEF27296D8E3900A839B6 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF26296D8E3900A839B6 /* HTTPStatus.swift */; };
 		E68EEF29296D8E6D00A839B6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF28296D8E6D00A839B6 /* ErrorResponse.swift */; };
 		E68EEF2E296D9B0400A839B6 /* HTTPURLResponseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF2D296D9B0400A839B6 /* HTTPURLResponseExtensions.swift */; };
-		E68EEF30296E8A3B00A839B6 /* BaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF2F296E8A3B00A839B6 /* BaseServiceTests.swift */; };
+		E68EEF30296E8A3B00A839B6 /* NetworkLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF2F296E8A3B00A839B6 /* NetworkLoaderTests.swift */; };
 		E68EEF33296E9D1D00A839B6 /* AdessoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF32296E9D1D00A839B6 /* AdessoServiceProtocol.swift */; };
 		E68EEF36296E9E0900A839B6 /* TargetEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF35296E9E0900A839B6 /* TargetEndpointProtocol.swift */; };
 		E68EEF38296E9E2400A839B6 /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF37296E9E2400A839B6 /* EndpointBuilder.swift */; };
-		E68EEF3A296ED91F00A839B6 /* BaseServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF39296ED91F00A839B6 /* BaseServiceProvider.swift */; };
+		E68EEF3A296ED91F00A839B6 /* NetworkLoaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF39296ED91F00A839B6 /* NetworkLoaderProvider.swift */; };
 		E68EEF3D296EDD6000A839B6 /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF3C296EDD6000A839B6 /* BaseEndpoint.swift */; };
 		E6F149F529709E1A00D96675 /* ExampleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F149F429709E1A00D96675 /* ExampleUseCase.swift */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
@@ -137,18 +137,18 @@
 		E646739829719A1000FF49A7 /* ExampleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRemoteDataSource.swift; sourceTree = "<group>"; };
 		E646739B297546D100FF49A7 /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
 		E646739D297546DD00FF49A7 /* ExampleServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleServiceEndpoint.swift; sourceTree = "<group>"; };
-		E68EEF1E296D7F5A00A839B6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
-		E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
+		E68EEF1E296D7F5A00A839B6 /* NetworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoader.swift; sourceTree = "<group>"; };
+		E68EEF20296D7FA100A839B6 /* NetworkLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoaderProtocol.swift; sourceTree = "<group>"; };
 		E68EEF22296D7FCB00A839B6 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
 		E68EEF24296D8E0900A839B6 /* AdessoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdessoError.swift; sourceTree = "<group>"; };
 		E68EEF26296D8E3900A839B6 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		E68EEF28296D8E6D00A839B6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		E68EEF2D296D9B0400A839B6 /* HTTPURLResponseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseExtensions.swift; sourceTree = "<group>"; };
-		E68EEF2F296E8A3B00A839B6 /* BaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceTests.swift; sourceTree = "<group>"; };
+		E68EEF2F296E8A3B00A839B6 /* NetworkLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoaderTests.swift; sourceTree = "<group>"; };
 		E68EEF32296E9D1D00A839B6 /* AdessoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdessoServiceProtocol.swift; sourceTree = "<group>"; };
 		E68EEF35296E9E0900A839B6 /* TargetEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetEndpointProtocol.swift; sourceTree = "<group>"; };
 		E68EEF37296E9E2400A839B6 /* EndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
-		E68EEF39296ED91F00A839B6 /* BaseServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProvider.swift; sourceTree = "<group>"; };
+		E68EEF39296ED91F00A839B6 /* NetworkLoaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoaderProvider.swift; sourceTree = "<group>"; };
 		E68EEF3C296EDD6000A839B6 /* BaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpoint.swift; sourceTree = "<group>"; };
 		E6F149F429709E1A00D96675 /* ExampleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUseCase.swift; sourceTree = "<group>"; };
 		F2A1669AD3998030C9F73813 /* Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.appstore.xcconfig"; sourceTree = "<group>"; };
@@ -422,7 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				E68EEF31296E8C1C00A839B6 /* Helpers */,
-				E68EEF2F296E8A3B00A839B6 /* BaseServiceTests.swift */,
+				E68EEF2F296E8A3B00A839B6 /* NetworkLoaderTests.swift */,
 			);
 			path = NetworkLayerTests;
 			sourceTree = "<group>";
@@ -472,10 +472,10 @@
 		E68EEF2A296D998E00A839B6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				E68EEF20296D7FA100A839B6 /* BaseServiceProtocol.swift */,
-				E68EEF1E296D7F5A00A839B6 /* BaseService.swift */,
+				E68EEF20296D7FA100A839B6 /* NetworkLoaderProtocol.swift */,
+				E68EEF1E296D7F5A00A839B6 /* NetworkLoader.swift */,
 				E68EEF32296E9D1D00A839B6 /* AdessoServiceProtocol.swift */,
-				E68EEF39296ED91F00A839B6 /* BaseServiceProvider.swift */,
+				E68EEF39296ED91F00A839B6 /* NetworkLoaderProvider.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -822,14 +822,14 @@
 				26BCDA252579852700096894 /* LoggingService.swift in Sources */,
 				E68EEF36296E9E0900A839B6 /* TargetEndpointProtocol.swift in Sources */,
 				26BCDA102579826700096894 /* LoggerManager.swift in Sources */,
-				E68EEF1F296D7F5A00A839B6 /* BaseService.swift in Sources */,
+				E68EEF1F296D7F5A00A839B6 /* NetworkLoader.swift in Sources */,
 				26C4C58A25766B6100358DAE /* SwifterManager.swift in Sources */,
 				E68EEF23296D7FCB00A839B6 /* RequestObject.swift in Sources */,
 				E68EEF27296D8E3900A839B6 /* HTTPStatus.swift in Sources */,
 				E6F149F529709E1A00D96675 /* ExampleUseCase.swift in Sources */,
 				E646739C297546D100FF49A7 /* ExampleService.swift in Sources */,
 				2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */,
-				E68EEF21296D7FA100A839B6 /* BaseServiceProtocol.swift in Sources */,
+				E68EEF21296D7FA100A839B6 /* NetworkLoaderProtocol.swift in Sources */,
 				E68EEF2E296D9B0400A839B6 /* HTTPURLResponseExtensions.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
 				18CADB3528A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift in Sources */,
@@ -841,7 +841,7 @@
 				E68EEF25296D8E0900A839B6 /* AdessoError.swift in Sources */,
 				26BCDA2F2579859500096894 /* UIDeviceExtension.swift in Sources */,
 				18CADB3828A93B4F007FC2C8 /* HomeView.swift in Sources */,
-				E68EEF3A296ED91F00A839B6 /* BaseServiceProvider.swift in Sources */,
+				E68EEF3A296ED91F00A839B6 /* NetworkLoaderProvider.swift in Sources */,
 				E68EEF29296D8E6D00A839B6 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,7 +850,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E68EEF30296E8A3B00A839B6 /* BaseServiceTests.swift in Sources */,
+				E68EEF30296E8A3B00A839B6 /* NetworkLoaderTests.swift in Sources */,
 				18CADB3A28A97CC8007FC2C8 /* BoilerPlateSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

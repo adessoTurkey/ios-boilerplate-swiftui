@@ -1,5 +1,5 @@
 //
-//  BaseServiceProtocol.swift
+//  NetworkLoaderProtocol.swift
 //  BoilerPlateSwiftUI
 //
 //  Created by Saglam, Fatih on 10.01.2023.
@@ -14,14 +14,14 @@ protocol URLSessionProtocol {
 
 extension URLSession: URLSessionProtocol { }
 
-protocol BaseServiceProtocol {
+protocol NetworkLoaderProtocol {
     var session: URLSessionProtocol { get set }
     var decoder: JSONDecoder { get set }
     
     func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T
 }
 
-extension BaseServiceProtocol {
+extension NetworkLoaderProtocol {
     func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T {
         guard let url = URL(string: requestObject.url) else { throw AdessoError.customError(1, "Bad url") }
         var request = URLRequest(url: url)

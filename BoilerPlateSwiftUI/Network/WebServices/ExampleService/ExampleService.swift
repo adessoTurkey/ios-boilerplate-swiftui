@@ -16,10 +16,10 @@ final class ExampleService: ExampleServiceProtocol, AdessoServiceProtocol {
     
     typealias Endpoint = ExampleServiceEndpoint
             
-    let baseService: BaseServiceProtocol
+    let networkLoader: NetworkLoaderProtocol
     
-    init(baseService: BaseServiceProtocol = BaseServiceProvider.shared.baseService) {
-        self.baseService = baseService
+    init(networkLoader: NetworkLoaderProtocol = NetworkLoaderProvider.shared.networkLoader) {
+        self.networkLoader = networkLoader
     }
     
     func exampleRequest() async throws -> ExampleResponse {

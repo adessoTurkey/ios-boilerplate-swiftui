@@ -1,5 +1,5 @@
 //
-//  BaseService.swift
+//  NetworkLoader.swift
 //  BoilerPlateSwiftUI
 //
 //  Created by Saglam, Fatih on 10.01.2023.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BaseService: BaseServiceProtocol {
+class NetworkLoader: NetworkLoaderProtocol {
     var session: URLSessionProtocol = URLSession.shared
     var decoder: JSONDecoder = JSONDecoder()
 }

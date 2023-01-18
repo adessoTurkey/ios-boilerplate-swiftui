@@ -1,5 +1,5 @@
 //
-//  BaseServiceTests.swift
+//  NetworkLoaderTests.swift
 //  BoilerPlateSwiftUITests
 //
 //  Created by Saglam, Fatih on 11.01.2023.
@@ -10,12 +10,12 @@
 import XCTest
 @testable import BoilerPlateSwiftUI
 
-final class BaseServiceTests: XCTestCase {
+final class NetworkLoaderTests: XCTestCase {
     
     func test_request_performsOneGETRequestWithRequestObject() {
         let session = URLSessionSpy()
-        let service = BaseServiceMock(session: session)
-        let sut = makeSUT(service: service)
+        let service = NetworkLoaderMock(session: session)
+        let sut = makeSUT(networkLoader: service)
         let requestObject = RequestObject(url: anyURL())
         let expectation = expectation(description: "Wait for request")
         
@@ -33,8 +33,8 @@ final class BaseServiceTests: XCTestCase {
     
     func test_request_failsOnRequestError() {
         let session = URLSessionSpy()
-        let service = BaseServiceMock(session: session)
-        let sut = makeSUT(service: service)
+        let service = NetworkLoaderMock(session: session)
+        let sut = makeSUT(networkLoader: service)
         let requestObject = RequestObject(url: anyURL())
         let anyError = anyNSError()
         let expectation = expectation(description: "Wait for request")
@@ -55,8 +55,8 @@ final class BaseServiceTests: XCTestCase {
     
     func test_request_failsOnNonOKHTTPStatusCode() {
         let session = URLSessionSpy()
-        let service = BaseServiceMock(session: session)
-        let sut = makeSUT(service: service)
+        let service = NetworkLoaderMock(session: session)
+        let sut = makeSUT(networkLoader: service)
         let requestObject = RequestObject(url: anyURL())
         let expectation = expectation(description: "Wait for request")
         session.completeWith(httpStatusCode: 199)
@@ -76,8 +76,8 @@ final class BaseServiceTests: XCTestCase {
     
     //MARK: - Helpers
     
-    private func makeSUT(service: BaseServiceProtocol) -> ExampleService {
-        ExampleService(baseService: service)
+    private func makeSUT(networkLoader: NetworkLoaderProtocol) -> ExampleService {
+        ExampleService(networkLoader: networkLoader)
     }
     
     private func anyURL() -> String {
@@ -116,7 +116,7 @@ final class BaseServiceTests: XCTestCase {
         }
     }
     
-    private class BaseServiceMock: BaseServiceProtocol {
+    private class NetworkLoaderMock: NetworkLoaderProtocol {
         var session: URLSessionProtocol
         var decoder: JSONDecoder = JSONDecoder()
         

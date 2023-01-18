@@ -11,7 +11,7 @@ import Foundation
 protocol AdessoServiceProtocol {
     associatedtype Endpoint: TargetEndpointProtocol
 
-    var baseService: BaseServiceProtocol { get }
+    var networkLoader: NetworkLoaderProtocol { get }
 
     func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T
     func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T
@@ -20,7 +20,7 @@ protocol AdessoServiceProtocol {
 extension AdessoServiceProtocol {
 
     func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T {
-        try await baseService.request(with: requestObject, responseModel: responseModel)
+        try await networkLoader.request(with: requestObject, responseModel: responseModel)
     }
     
     func build(endpoint: Endpoint) -> String {
@@ -29,7 +29,7 @@ extension AdessoServiceProtocol {
     
     func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T {
         var requestObject = requestObject
-        return try await baseService.request(with: prepareAuthenticatedRequest(with: &requestObject), responseModel: responseModel)
+        return try await networkLoader.request(with: prepareAuthenticatedRequest(with: &requestObject), responseModel: responseModel)
     }
     
     private func prepareAuthenticatedRequest(with requestObject: inout RequestObject) -> RequestObject {
