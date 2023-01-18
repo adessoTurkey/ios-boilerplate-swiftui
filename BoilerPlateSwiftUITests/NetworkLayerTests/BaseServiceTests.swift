@@ -20,15 +20,15 @@ final class BaseServiceTests: XCTestCase {
         let expectation = expectation(description: "Wait for request")
         
         Task {
-            _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
+            _ = try? await sut.request(with: requestObject, responseModel: ExampleResponse.self)
             expectation.fulfill()
             
-            XCTAssertEqual(session.requestedURL?.absoluteString, requestObject.url, "expected \(requestObject.url), received \(session.requestedURL) instead.")
+            XCTAssertEqual(session.requestedURL?.absoluteString, requestObject.url)
             XCTAssertEqual(session.dataForRequestCallCount, 1, "expected 1, received \(session.dataForRequestCallCount) instead")
             XCTAssertEqual(session.requestMethod, "GET", "expected GET, get \(session.requestMethod ?? "") instead.")
         }
         
-        wait(for: [expectation], timeout: 5)
+        wait(for: [expectation], timeout: 1)
     }
     
     func test_request_failsOnRequestError() {
@@ -80,7 +80,8 @@ final class BaseServiceTests: XCTestCase {
             if let error {
                 throw error
             } else {
-                return (Data(), URLResponse())
+                let urlResponse = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
+                return (Data("any data".utf8), urlResponse)
             }
         }
         

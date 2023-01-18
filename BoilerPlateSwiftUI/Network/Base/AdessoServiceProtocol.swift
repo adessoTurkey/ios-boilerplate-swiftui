@@ -13,13 +13,13 @@ protocol AdessoServiceProtocol {
 
     var baseService: BaseServiceProtocol { get }
 
-    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError>
-    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError>
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T
+    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T
 }
 
 extension AdessoServiceProtocol {
 
-    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
+    func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T {
         try await baseService.request(with: requestObject, responseModel: responseModel)
     }
     
@@ -27,7 +27,7 @@ extension AdessoServiceProtocol {
         endpoint.path
     }
     
-    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> Result<T, AdessoError> {
+    func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T {
         var requestObject = requestObject
         return try await baseService.request(with: prepareAuthenticatedRequest(with: &requestObject), responseModel: responseModel)
     }

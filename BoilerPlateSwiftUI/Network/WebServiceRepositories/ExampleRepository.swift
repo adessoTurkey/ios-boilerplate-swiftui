@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ExampleRepositoryProtocol {
-    func getExample() async throws -> Result<ExampleResponse, AdessoError>
+    func getExample() async throws -> ExampleResponse
 }
 
 class ExampleRepository: ExampleRepositoryProtocol {
@@ -19,7 +19,7 @@ class ExampleRepository: ExampleRepositoryProtocol {
         self.exampleRemoteDataSource = exampleRemoteDataSource
     }
 
-    func getExample() async throws -> Result<ExampleResponse, AdessoError> {
+    func getExample() async throws -> ExampleResponse {
         try await exampleRemoteDataSource.getExample()
     }
 }
