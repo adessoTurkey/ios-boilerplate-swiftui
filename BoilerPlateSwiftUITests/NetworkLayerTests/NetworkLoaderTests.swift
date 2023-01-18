@@ -65,8 +65,8 @@ final class NetworkLoaderTests: XCTestCase {
             do {
                 _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
             } catch {
-                let capturedError = error as NSError
-                XCTAssertNotNil(capturedError)
+                let capturedError = error as? AdessoError
+                XCTAssertEqual(capturedError?.errorCode, AdessoError.badResponse.errorCode)
             }
             expectation.fulfill()
         }
@@ -102,7 +102,7 @@ final class NetworkLoaderTests: XCTestCase {
             if let error {
                 throw error
             } else {
-                let urlResponse = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
+                let urlResponse = HTTPURLResponse(url: request.url!, statusCode: statusCode, httpVersion: nil, headerFields: nil)!
                 return (Data("any data".utf8), urlResponse)
             }
         }
