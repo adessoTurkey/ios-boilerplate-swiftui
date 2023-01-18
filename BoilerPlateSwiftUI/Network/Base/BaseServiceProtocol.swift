@@ -1,5 +1,5 @@
 //
-//  AdessoServiceProtocol.swift
+//  BaseServiceProtocol.swift
 //  BoilerPlateSwiftUI
 //
 //  Created by Saglam, Fatih on 11.01.2023.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AdessoServiceProtocol {
+protocol BaseServiceProtocol {
     associatedtype Endpoint: TargetEndpointProtocol
 
     var networkLoader: NetworkLoaderProtocol { get }
@@ -17,7 +17,7 @@ protocol AdessoServiceProtocol {
     func authenticatedRequest<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T
 }
 
-extension AdessoServiceProtocol {
+extension BaseServiceProtocol {
 
     func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T {
         try await networkLoader.request(with: requestObject, responseModel: responseModel)

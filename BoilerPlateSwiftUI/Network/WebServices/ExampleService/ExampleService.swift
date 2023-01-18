@@ -12,7 +12,7 @@ protocol ExampleServiceProtocol {
     func exampleRequest() async throws -> ExampleResponse
 }
 
-final class ExampleService: ExampleServiceProtocol, AdessoServiceProtocol {
+final class ExampleService: ExampleServiceProtocol, BaseServiceProtocol {
     
     typealias Endpoint = ExampleServiceEndpoint
             
