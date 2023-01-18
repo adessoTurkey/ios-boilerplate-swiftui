@@ -14,8 +14,7 @@ final class NetworkLoaderTests: XCTestCase {
     
     func test_request_performsOneGETRequestWithRequestObject() {
         let session = URLSessionSpy()
-        let service = NetworkLoaderMock(session: session)
-        let sut = makeSUT(networkLoader: service)
+        let sut = makeSUT(session: session)
         let requestObject = RequestObject(url: anyURL())
         let expectation = expectation(description: "Wait for request")
         
@@ -33,8 +32,7 @@ final class NetworkLoaderTests: XCTestCase {
     
     func test_request_failsOnRequestError() {
         let session = URLSessionSpy()
-        let service = NetworkLoaderMock(session: session)
-        let sut = makeSUT(networkLoader: service)
+        let sut = makeSUT(session: session)
         let requestObject = RequestObject(url: anyURL())
         let anyError = anyNSError()
         let expectation = expectation(description: "Wait for request")
@@ -55,8 +53,7 @@ final class NetworkLoaderTests: XCTestCase {
     
     func test_request_failsOnNonOKHTTPStatusCode() {
         let session = URLSessionSpy()
-        let service = NetworkLoaderMock(session: session)
-        let sut = makeSUT(networkLoader: service)
+        let sut = makeSUT(session: session)
         let requestObject = RequestObject(url: anyURL())
         let expectation = expectation(description: "Wait for request")
         session.completeWith(httpStatusCode: 199)
@@ -76,8 +73,10 @@ final class NetworkLoaderTests: XCTestCase {
     
     //MARK: - Helpers
     
-    private func makeSUT(networkLoader: NetworkLoaderProtocol) -> ExampleService {
-        ExampleService(networkLoader: networkLoader)
+    private func makeSUT(session: URLSessionProtocol) -> NetworkLoaderProtocol {
+        var loader = NetworkLoader()
+        loader.session = session
+        return loader
     }
     
     private func anyURL() -> String {
@@ -113,15 +112,6 @@ final class NetworkLoaderTests: XCTestCase {
         
         func completeWith(httpStatusCode: Int) {
             self.statusCode = httpStatusCode
-        }
-    }
-    
-    private class NetworkLoaderMock: NetworkLoaderProtocol {
-        var session: URLSessionProtocol
-        var decoder: JSONDecoder = JSONDecoder()
-        
-        init(session: URLSessionProtocol) {
-            self.session = session
         }
     }
 }
