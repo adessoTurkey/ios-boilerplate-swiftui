@@ -50,7 +50,7 @@ final class BaseServiceTests: XCTestCase {
             expectation.fulfill()
         }
         
-        wait(for: [expectation], timeout: 5)
+        wait(for: [expectation], timeout: 1)
     }
     
     func test_request_failsOnNonOKHTTPStatusCode() {
@@ -71,7 +71,7 @@ final class BaseServiceTests: XCTestCase {
             expectation.fulfill()
         }
         
-        wait(for: [expectation], timeout: 5)
+        wait(for: [expectation], timeout: 1)
     }
     
     //MARK: - Helpers
