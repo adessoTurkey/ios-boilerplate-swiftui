@@ -53,6 +53,27 @@ final class BaseServiceTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    func test_request_failsOnNonOKHTTPStatusCode() {
+        let session = URLSessionSpy()
+        let service = BaseServiceMock(session: session)
+        let sut = makeSUT(service: service)
+        let requestObject = RequestObject(url: anyURL())
+        let expectation = expectation(description: "Wait for request")
+        session.completeWith(httpStatusCode: 199)
+        
+        Task {
+            do {
+                _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
+            } catch {
+                let capturedError = error as NSError
+                XCTAssertNotNil(capturedError)
+            }
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT(service: BaseServiceProtocol) -> ExampleService {
@@ -71,7 +92,8 @@ final class BaseServiceTests: XCTestCase {
         var dataForRequestCallCount = 0
         var requestedURL: URL?
         var requestMethod: String?
-        var error: NSError?
+        private(set) var error: NSError?
+        private(set) var statusCode: Int = 200
         
         func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse) {
             dataForRequestCallCount += 1
@@ -87,6 +109,10 @@ final class BaseServiceTests: XCTestCase {
         
         func completeWith(error: NSError) {
             self.error = error
+        }
+        
+        func completeWith(httpStatusCode: Int) {
+            self.statusCode = httpStatusCode
         }
     }
     
