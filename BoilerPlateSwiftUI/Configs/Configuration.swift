@@ -33,7 +33,7 @@ final class Configuration {
             return false
         #endif
     }
-    
+
     static var baseURL: String {
         ""
     }

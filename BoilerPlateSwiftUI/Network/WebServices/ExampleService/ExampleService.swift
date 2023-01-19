@@ -13,15 +13,15 @@ protocol ExampleServiceProtocol {
 }
 
 final class ExampleService: ExampleServiceProtocol, BaseServiceProtocol {
-    
+
     typealias Endpoint = ExampleServiceEndpoint
-            
+
     let networkLoader: NetworkLoaderProtocol
-    
+
     init(networkLoader: NetworkLoaderProtocol = NetworkLoaderProvider.shared.networkLoader) {
         self.networkLoader = networkLoader
     }
-    
+
     func exampleRequest() async throws -> ExampleResponse {
         try await request(with: RequestObject(url: build(endpoint: .example(firstParameter: "firstParameter",
                                                                   secondParameter: "secondParameter"))),

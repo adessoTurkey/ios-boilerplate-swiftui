@@ -10,11 +10,11 @@ import Foundation
 
 enum ExampleServiceEndpoint: TargetEndpointProtocol {
     case example(firstParameter: String, secondParameter: String)
-    
+
     private struct Constants {
         static let exampleEndpoint = "exampleEndpoint/%@/%@"
     }
-    
+
     var path: String {
         switch self {
             case .example(let firstParameter, let secondParameter):

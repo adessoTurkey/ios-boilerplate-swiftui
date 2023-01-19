@@ -13,7 +13,7 @@ protocol ExampleRemoteDataSourceProtocol {
 }
 
 class ExampleRemoteDataSource: ExampleRemoteDataSourceProtocol {
-    
+
     let exampleService: ExampleServiceProtocol
 
     init(exampleService: ExampleServiceProtocol = WebServiceProvider.shared.exampleService) {

@@ -12,8 +12,9 @@ import XCTest
 
 final class NetworkLoaderTests: XCTestCase {
     
+    private let session = URLSessionSpy()
+    
     func test_request_performsOneGETRequestWithRequestObject() {
-        let session = URLSessionSpy()
         let sut = makeSUT(session: session)
         let url = anyURL()
         let requestObject = RequestObject(url: url.absoluteString)
@@ -31,7 +32,6 @@ final class NetworkLoaderTests: XCTestCase {
     }
     
     func test_request_failsOnRequestError() {
-        let session = URLSessionSpy()
         let sut = makeSUT(session: session)
         
         expect(sut, toCompleteWith: .badResponse) {
@@ -40,10 +40,9 @@ final class NetworkLoaderTests: XCTestCase {
     }
     
     func test_request_failsOnNonOKHTTPStatusCode() {
-        let session = URLSessionSpy()
         let sut = makeSUT(session: session)
         
-        expect(sut, toCompleteWith: .badResponse) {
+        expect(sut, toCompleteWith: .httpError(status: .badRequest)) {
             session.completeWith(httpStatusCode: 199)
         }
     }
@@ -66,7 +65,7 @@ final class NetworkLoaderTests: XCTestCase {
                 _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
             } catch {
                 let capturedError = error as? AdessoError
-                XCTAssertEqual(capturedError?.errorCode, expectedError.errorCode, file: file, line: line)
+                XCTAssertEqual(capturedError, expectedError, file: file, line: line)
             }
             expectation.fulfill()
         }
@@ -109,4 +108,3 @@ final class NetworkLoaderTests: XCTestCase {
         }
     }
 }
-

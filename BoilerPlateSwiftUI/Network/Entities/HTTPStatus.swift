@@ -9,12 +9,12 @@
 import Foundation
 
 enum HTTPStatus: Int, Error {
-    //1xx Informational
+    // 1xx Informational
     case `continue` = 100
     case switchingProtocols = 101
     case processing = 102
 
-    //2xx Success
+    // 2xx Success
     case okay = 200
     case created = 201
     case accepted = 202
