@@ -33,28 +33,30 @@ final class NetworkLoaderTests: XCTestCase {
     func test_request_failsOnRequestError() {
         let session = URLSessionSpy()
         let sut = makeSUT(session: session)
-        let url = anyURL()
-        let requestObject = RequestObject(url: url.absoluteString)
-        let anyError = anyNSError()
-        let expectation = expectation(description: "Wait for request")
         
-        Task {
-            do {
-                _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
-            } catch {
-                let capturedError = error as NSError
-                XCTAssertEqual(capturedError.domain, anyError.domain)
-            }
-            expectation.fulfill()
+        expect(sut, toCompleteWith: .badResponse) {
+            session.completeWith(error: anyNSError())
         }
-        
-        session.completeWith(error: anyNSError())
-        wait(for: [expectation], timeout: 1)
     }
     
     func test_request_failsOnNonOKHTTPStatusCode() {
         let session = URLSessionSpy()
         let sut = makeSUT(session: session)
+        
+        expect(sut, toCompleteWith: .badResponse) {
+            session.completeWith(httpStatusCode: 199)
+        }
+    }
+    
+    //MARK: - Helpers
+    
+    private func makeSUT(session: URLSessionProtocol) -> NetworkLoaderProtocol {
+        let loader = NetworkLoader()
+        loader.session = session
+        return loader
+    }
+    
+    private func expect(_ sut: NetworkLoaderProtocol, toCompleteWith expectedError: AdessoError, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let url = anyURL()
         let requestObject = RequestObject(url: url.absoluteString)
         let expectation = expectation(description: "Wait for request")
@@ -64,21 +66,13 @@ final class NetworkLoaderTests: XCTestCase {
                 _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
             } catch {
                 let capturedError = error as? AdessoError
-                XCTAssertEqual(capturedError?.errorCode, AdessoError.badResponse.errorCode)
+                XCTAssertEqual(capturedError?.errorCode, expectedError.errorCode, file: file, line: line)
             }
             expectation.fulfill()
         }
         
-        session.completeWith(httpStatusCode: 199)
+        action()
         wait(for: [expectation], timeout: 1)
-    }
-    
-    //MARK: - Helpers
-    
-    private func makeSUT(session: URLSessionProtocol) -> NetworkLoaderProtocol {
-        let loader = NetworkLoader()
-        loader.session = session
-        return loader
     }
     
     private func anyURL() -> URL {
@@ -99,7 +93,7 @@ final class NetworkLoaderTests: XCTestCase {
             requestedURLs.append(request.url)
             requestMethods.append(request.httpMethod)
             if !errors.isEmpty {
-                throw errors.last!
+                throw AdessoError.badResponse
             } else {
                 let urlResponse = HTTPURLResponse(url: request.url!, statusCode: statusCode, httpVersion: nil, headerFields: nil)!
                 return (Data("any data".utf8), urlResponse)
@@ -110,7 +104,7 @@ final class NetworkLoaderTests: XCTestCase {
             errors.append(error)
         }
         
-        func completeWith(httpStatusCode: Int) {
+        func completeWith(httpStatusCode: Int, at index: Int = 0) {
             self.statusCode = httpStatusCode
         }
     }
