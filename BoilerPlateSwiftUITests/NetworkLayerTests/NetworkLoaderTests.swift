@@ -108,3 +108,9 @@ final class NetworkLoaderTests: XCTestCase {
         }
     }
 }
+
+extension AdessoError: Equatable {
+    public static func == (lhs: AdessoError, rhs: AdessoError) -> Bool {
+        return lhs.errorCode == rhs.errorCode && lhs.localizedDescription == rhs.localizedDescription
+    }
+}

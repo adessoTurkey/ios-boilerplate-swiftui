@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AdessoError: Error, Equatable {
+enum AdessoError: Error {
     case httpError(status: HTTPStatus, data: Data? = nil)
     case unknown(error: NSError)
     case customError(_ code: Int, _ message: String, _ data: Data? = nil)
