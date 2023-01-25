@@ -21,7 +21,7 @@ final class NetworkLoaderTests: XCTestCase {
     func test_request_performsOneGETRequestWithRequestObject() {
         let (session, sut) = makeSUT()
         let url = anyURL()
-        let requestObject = RequestObject(url: url.absoluteString)
+        let requestObject = anyRequestObject(with: url.absoluteString)
         let expectation = expectation(description: "Wait for request")
         
         Task {
@@ -35,10 +35,17 @@ final class NetworkLoaderTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
+    func test_request_deliversErrorOnBadURL() {
+        let (_, sut) = makeSUT()
+        let requestObject = anyRequestObject(with: "bad url")
+        
+        expect(sut, toCompleteWith: .badURL, using: requestObject) { }
+    }
+    
     func test_request_deliversErrorOnRequestError() {
         let (session, sut) = makeSUT()
 
-        expect(sut, toCompleteWith: .badResponse) {
+        expect(sut, toCompleteWith: .badResponse, using: anyRequestObject()) {
             session.completeWith(error: anyNSError())
         }
     }
@@ -46,7 +53,7 @@ final class NetworkLoaderTests: XCTestCase {
     func test_request_deliversErrorOnNonOKHTTPStatusCode() {
         let (session, sut) = makeSUT()
 
-        expect(sut, toCompleteWith: .httpError(status: .notFound)) {
+        expect(sut, toCompleteWith: .httpError(status: .notFound), using: anyRequestObject()) {
             session.completeWith(httpStatusCode: 404)
         }
     }
@@ -60,9 +67,7 @@ final class NetworkLoaderTests: XCTestCase {
         return (session, sut)
     }
     
-    private func expect(_ sut: NetworkLoaderProtocol, toCompleteWith expectedError: AdessoError, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
-        let url = anyURL()
-        let requestObject = RequestObject(url: url.absoluteString)
+    private func expect(_ sut: NetworkLoaderProtocol, toCompleteWith expectedError: AdessoError, using requestObject: RequestObject, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let expectation = expectation(description: "Wait for request")
         
         Task {
@@ -79,10 +84,14 @@ final class NetworkLoaderTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
-    private func anyURL() -> URL {
-        return URL(string: "http://www.a-url.com")!
+    private func anyRequestObject(with url: String = "http://www.a-url.com") -> RequestObject {
+        RequestObject(url: url)
     }
     
+    private func anyURL() -> URL {
+        URL(string: "http://www.a-url.com")!
+    }
+
     private func anyNSError() -> NSError {
         NSError(domain: "any error", code: 0)
     }

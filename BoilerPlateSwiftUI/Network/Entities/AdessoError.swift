@@ -10,6 +10,7 @@ import Foundation
 
 enum AdessoError: Error, Equatable {
     case httpError(status: HTTPStatus, data: Data? = nil)
+    case badURL
     case unknown(error: NSError)
     case customError(_ code: Int, _ message: String, _ data: Data? = nil)
     case mappingFailed(data: Data? = nil)
@@ -26,6 +27,8 @@ enum AdessoError: Error, Equatable {
             case .mappingFailed:
                 return 0
             case .badResponse:
+                return 0
+            case .badURL:
                 return 0
         }
     }
@@ -44,7 +47,7 @@ extension AdessoError {
                     return response
                 }
                 return nil
-            case .badResponse, .mappingFailed, .unknown:
+            case .badResponse, .mappingFailed, .unknown, .badURL:
                 return nil
         }
     }

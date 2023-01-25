@@ -37,7 +37,7 @@ extension NetworkLoaderProtocol {
 
     private func prepareURLRequest(with requestObject: RequestObject) throws -> URLRequest {
         guard let url = URL(string: requestObject.url) else {
-            throw AdessoError.customError(1, "Bad url")
+            throw AdessoError.badURL
         }
         var request = URLRequest(url: url)
         request.httpMethod = requestObject.method.rawValue
