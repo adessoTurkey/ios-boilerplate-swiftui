@@ -35,7 +35,7 @@ final class NetworkLoaderTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
-    func test_request_failsOnRequestError() {
+    func test_request_deliversErrorOnRequestError() {
         let (session, sut) = makeSUT()
 
         expect(sut, toCompleteWith: .badResponse) {
@@ -43,7 +43,7 @@ final class NetworkLoaderTests: XCTestCase {
         }
     }
     
-    func test_request_failsOnNonOKHTTPStatusCode() {
+    func test_request_deliversErrorOnNonOKHTTPStatusCode() {
         let (session, sut) = makeSUT()
 
         expect(sut, toCompleteWith: .httpError(status: .badRequest)) {
