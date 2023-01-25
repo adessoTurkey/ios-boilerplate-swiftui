@@ -12,7 +12,7 @@ enum AdessoError: Error, Equatable {
     case httpError(status: HTTPStatus, data: Data? = nil)
     case unknown(error: NSError)
     case customError(_ code: Int, _ message: String, _ data: Data? = nil)
-    case mappingFailed
+    case mappingFailed(data: Data? = nil)
     case badResponse
 
     var errorCode: Int {

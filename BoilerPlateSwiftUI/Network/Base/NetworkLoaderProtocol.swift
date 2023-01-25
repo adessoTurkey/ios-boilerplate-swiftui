@@ -25,10 +25,14 @@ extension NetworkLoaderProtocol {
     func request<T: Decodable>(with requestObject: RequestObject, responseModel: T.Type) async throws -> T {
         let (data, response) = try await session.data(for: prepareURLRequest(with: requestObject), delegate: nil)
         let successCodeRange = 200...299
-        guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
-              successCodeRange.contains(statusCode) else { throw AdessoError.httpError(status: .badRequest) }
-        let decodedData = try decoder.decode(responseModel, from: data)
-        return decodedData
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode else { throw AdessoError.badResponse }
+        guard successCodeRange.contains(statusCode) else { throw AdessoError.httpError(status: HTTPStatus(rawValue: statusCode) ?? .notFound) }
+        do {
+            let decodedData = try decoder.decode(responseModel, from: data)
+            return decodedData
+        } catch {
+            throw AdessoError.mappingFailed(data: data)
+        }
     }
 
     private func prepareURLRequest(with requestObject: RequestObject) throws -> URLRequest {

@@ -46,8 +46,8 @@ final class NetworkLoaderTests: XCTestCase {
     func test_request_deliversErrorOnNonOKHTTPStatusCode() {
         let (session, sut) = makeSUT()
 
-        expect(sut, toCompleteWith: .httpError(status: .badRequest)) {
-            session.completeWith(httpStatusCode: 199)
+        expect(sut, toCompleteWith: .httpError(status: .notFound)) {
+            session.completeWith(httpStatusCode: 404)
         }
     }
     
