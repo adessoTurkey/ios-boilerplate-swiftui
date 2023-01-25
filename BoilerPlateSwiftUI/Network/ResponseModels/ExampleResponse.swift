@@ -8,6 +8,6 @@
 
 import Foundation
 
-class ExampleResponse: Decodable {
+struct ExampleResponse: Decodable {
     var value: String?
 }
