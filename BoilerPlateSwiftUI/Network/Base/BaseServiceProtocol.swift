@@ -33,8 +33,7 @@ extension BaseServiceProtocol {
     }
 
     private func prepareAuthenticatedRequest(with requestObject: inout RequestObject) -> RequestObject {
-        #warning("This does not return an authenticated request")
-        // TODO: - how to handle authenticatedRequest with urlSession
+        // TODO: - handle authenticatedRequest with urlSession
 
         return requestObject
     }

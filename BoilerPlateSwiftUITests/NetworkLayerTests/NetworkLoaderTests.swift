@@ -15,7 +15,7 @@ final class NetworkLoaderTests: XCTestCase {
     private let session = URLSessionSpy()
     
     func test_request_performsOneGETRequestWithRequestObject() {
-        let sut = makeSUT(session: session)
+        let (session, sut) = makeSUT()
         let url = anyURL()
         let requestObject = RequestObject(url: url.absoluteString)
         let expectation = expectation(description: "Wait for request")
@@ -32,16 +32,16 @@ final class NetworkLoaderTests: XCTestCase {
     }
     
     func test_request_failsOnRequestError() {
-        let sut = makeSUT(session: session)
-        
+        let (session, sut) = makeSUT()
+
         expect(sut, toCompleteWith: .badResponse) {
             session.completeWith(error: anyNSError())
         }
     }
     
     func test_request_failsOnNonOKHTTPStatusCode() {
-        let sut = makeSUT(session: session)
-        
+        let (session, sut) = makeSUT()
+
         expect(sut, toCompleteWith: .httpError(status: .badRequest)) {
             session.completeWith(httpStatusCode: 199)
         }
@@ -49,10 +49,11 @@ final class NetworkLoaderTests: XCTestCase {
     
     //MARK: - Helpers
     
-    private func makeSUT(session: URLSessionProtocol) -> NetworkLoaderProtocol {
-        let loader = NetworkLoader()
-        loader.session = session
-        return loader
+    private func makeSUT() -> (URLSessionSpy, NetworkLoaderProtocol) {
+        let session = URLSessionSpy()
+        let sut = NetworkLoader()
+        sut.session = session
+        return (session, sut)
     }
     
     private func expect(_ sut: NetworkLoaderProtocol, toCompleteWith expectedError: AdessoError, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
