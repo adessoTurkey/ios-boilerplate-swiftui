@@ -11,8 +11,12 @@ import XCTest
 @testable import BoilerPlateSwiftUI
 
 final class NetworkLoaderTests: XCTestCase {
-    
-    private let session = URLSessionSpy()
+        
+    func test_init_doesNotRequest() {
+        let (session, _) = makeSUT()
+        
+        XCTAssertTrue(session.requestedURLs.isEmpty)
+    }
     
     func test_request_performsOneGETRequestWithRequestObject() {
         let (session, sut) = makeSUT()
