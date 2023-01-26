@@ -9,6 +9,9 @@
 import Foundation
 
 enum HTTPStatus: Int, Error {
+    // Default
+    case notValidCode = 0
+
     // 1xx Informational
     case `continue` = 100
     case switchingProtocols = 101

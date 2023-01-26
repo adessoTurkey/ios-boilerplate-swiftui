@@ -26,7 +26,7 @@ extension NetworkLoaderProtocol {
         let (data, response) = try await session.data(for: prepareURLRequest(with: requestObject), delegate: nil)
         let successCodeRange = 200...299
         guard let statusCode = (response as? HTTPURLResponse)?.statusCode else { throw AdessoError.badResponse }
-        guard successCodeRange.contains(statusCode) else { throw AdessoError.httpError(status: HTTPStatus(rawValue: statusCode) ?? .notFound) }
+        guard successCodeRange.contains(statusCode) else { throw AdessoError.httpError(status: HTTPStatus(rawValue: statusCode) ?? .notValidCode) }
         do {
             let decodedData = try decoder.decode(responseModel, from: data)
             return decodedData

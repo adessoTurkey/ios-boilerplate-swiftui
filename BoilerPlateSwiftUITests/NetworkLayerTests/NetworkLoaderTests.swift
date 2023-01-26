@@ -59,6 +59,14 @@ final class NetworkLoaderTests: XCTestCase {
         }
     }
     
+    func test_request_deliversErrorOnNotValidStatusCode() {
+        let (session, sut) = makeSUT()
+
+        expect(sut, toCompleteWith: .httpError(status: .notValidCode), using: anyRequestObject()) {
+            session.completeWith(httpStatusCode: 99)
+        }
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> (URLSessionSpy, NetworkLoaderProtocol) {
