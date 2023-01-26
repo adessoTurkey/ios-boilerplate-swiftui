@@ -37,9 +37,10 @@ final class NetworkLoaderTests: XCTestCase {
     
     func test_request_deliversErrorOnBadURL() {
         let (_, sut) = makeSUT()
-        let requestObject = anyRequestObject(with: "bad url")
+        let url = "a bad url"
+        let requestObject = anyRequestObject(with: url)
         
-        expect(sut, toCompleteWith: .badURL, using: requestObject) { }
+        expect(sut, toCompleteWith: .badURL(url), using: requestObject) { }
     }
     
     func test_request_deliversErrorOnRequestError() {
