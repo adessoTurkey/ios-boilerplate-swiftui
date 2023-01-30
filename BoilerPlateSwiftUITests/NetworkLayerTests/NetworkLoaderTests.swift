@@ -75,6 +75,21 @@ final class NetworkLoaderTests: XCTestCase {
         }
     }
     
+    func test_request_succeedsOnHTTPURLResponseWithData() {
+        let (session, sut) = makeSUT()
+        let data = anyJsonRepresentation("example")
+        let expectation = expectation(description: "Wait for request")
+        
+        Task {
+            let receivedObject = try await sut.request(with: anyRequestObject(), responseModel: ExampleResponse.self)
+            XCTAssertEqual(receivedObject.value, "example")
+            expectation.fulfill()
+        }
+        
+        session.completeWith(data: data)
+        wait(for: [expectation], timeout: 1)
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> (URLSessionSpy, NetworkLoaderProtocol) {
@@ -107,6 +122,11 @@ final class NetworkLoaderTests: XCTestCase {
     
     func anyInvalidData() -> Data {
         Data("any invalid data".utf8)
+    }
+    
+    func anyJsonRepresentation(_ value: String) -> Data {
+        let json = ["value": value]
+        return try! JSONSerialization.data(withJSONObject: json)
     }
     
     private func anyURL() -> URL {
