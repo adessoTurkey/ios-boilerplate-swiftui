@@ -67,6 +67,14 @@ final class NetworkLoaderTests: XCTestCase {
         }
     }
     
+    func test_request_deliversErrorOnInvalidData() {
+        let (session, sut) = makeSUT()
+        
+        expect(sut, toCompleteWith: .mappingFailed(data: anyInvalidData()), using: anyRequestObject()) {
+            session.completeWith(data: anyInvalidData())
+        }
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> (URLSessionSpy, NetworkLoaderProtocol) {
@@ -97,6 +105,10 @@ final class NetworkLoaderTests: XCTestCase {
         RequestObject(url: url)
     }
     
+    func anyInvalidData() -> Data {
+        Data("any invalid data".utf8)
+    }
+    
     private func anyURL() -> URL {
         URL(string: "http://www.a-url.com")!
     }
@@ -109,6 +121,7 @@ final class NetworkLoaderTests: XCTestCase {
         var requestedURLs = [URL?]()
         var requestMethods = [String?]()
         var errors = [NSError]()
+        var datas = [Data]()
         private(set) var statusCode = 200
         
         func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse) {
@@ -118,7 +131,7 @@ final class NetworkLoaderTests: XCTestCase {
                 throw AdessoError.badResponse
             } else {
                 let urlResponse = HTTPURLResponse(url: request.url!, statusCode: statusCode, httpVersion: nil, headerFields: nil)!
-                return (Data("any data".utf8), urlResponse)
+                return (datas.first ?? Data("any data".utf8), urlResponse)
             }
         }
         
@@ -128,6 +141,10 @@ final class NetworkLoaderTests: XCTestCase {
         
         func completeWith(httpStatusCode: Int, at index: Int = 0) {
             self.statusCode = httpStatusCode
+        }
+        
+        func completeWith(data: Data, at index: Int = 0) {
+            datas.append(data)
         }
     }
 }
