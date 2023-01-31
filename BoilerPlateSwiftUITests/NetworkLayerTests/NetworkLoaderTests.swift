@@ -25,7 +25,7 @@ final class NetworkLoaderTests: XCTestCase {
         let expectation = expectation(description: "Wait for request")
         
         Task {
-            _ = try? await sut.request(with: requestObject, responseModel: ExampleResponse.self)
+            _ = try? await sut.request(with: requestObject, responseModel: TestResponse.self)
             expectation.fulfill()
             
             XCTAssertEqual(session.requestedURLs, [url])
@@ -81,7 +81,7 @@ final class NetworkLoaderTests: XCTestCase {
         let expectation = expectation(description: "Wait for request")
         
         Task {
-            let receivedObject = try await sut.request(with: anyRequestObject(), responseModel: ExampleResponse.self)
+            let receivedObject = try await sut.request(with: anyRequestObject(), responseModel: TestResponse.self)
             XCTAssertEqual(receivedObject.value, "example")
             expectation.fulfill()
         }
@@ -104,7 +104,7 @@ final class NetworkLoaderTests: XCTestCase {
         
         Task {
             do {
-                _ = try await sut.request(with: requestObject, responseModel: ExampleResponse.self)
+                _ = try await sut.request(with: requestObject, responseModel: TestResponse.self)
             } catch {
                 let capturedError = error as? AdessoError
                 XCTAssertEqual(capturedError, expectedError, file: file, line: line)
@@ -167,4 +167,8 @@ final class NetworkLoaderTests: XCTestCase {
             datas.append(data)
         }
     }
+}
+
+struct TestResponse: Decodable {
+    var value: String?
 }
