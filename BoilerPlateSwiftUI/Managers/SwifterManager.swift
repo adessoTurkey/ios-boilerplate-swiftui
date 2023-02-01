@@ -29,22 +29,29 @@ class SwifterManager {
     func startSwifterServer() {
         #if canImport(Swifter)
         swifterServer = HttpServer()
-        swifterServer!["/hello"] = { .ok(.htmlBody("You asked for \($0)")) }
-        guard let path = Bundle.main.path(forResource: Constants.sampleData, ofType: Constants.fileType ) else { return }
-        swifterServer!["/sample"] = shareFile(path)
-        
-        swifterServer?.POST["/sample"] = { r in
-            return .ok(.text("Hello from POST : " + (r.params["id"] ?? "no parameter named id") ))
+        if let swifterServer {
+            swifterServer["/hello"] = { .ok(.htmlBody("You asked for \($0)")) }
+            guard let path = Bundle.main.path(forResource: Constants.sampleData, ofType: Constants.fileType ) else { return }
+            swifterServer["/sample"] = shareFile(path)
+            
+            swifterServer.POST["/sample"] = { r in
+                return .ok(.text("Hello from POST : " + (r.params["id"] ?? "no parameter named id") ))
+            }
+            do {
+                try swifterServer.start(Constants.port)
+            } catch let error {
+                print(error)
+            }
         }
-        
-        try! swifterServer!.start(Constants.port)
         #endif
     }
     // swiftlint:enable all
 
     func stopSwifterServer() {
         #if canImport(Swifter)
-        swifterServer?.stop()
+        if let swifterServer {
+            swifterServer.stop()
+        }
         #endif
     }
 }
