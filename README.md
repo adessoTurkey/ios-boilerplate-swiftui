@@ -2,10 +2,10 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/adessoTurkey/boilerplate-ios-swiftui/iOS%20Build%20Check%20Workflow/develop)
 
-iOS SwiftUI
+iOS SwiftUI Boilerplate
 ============================
 
-This is the iOS SwiftUI created by adesso Turkey for new projects using Swift 5. The project's primary objective is to help the development of a new one to kick-start the environment with configurations, the required features used in common adesso projects, and the helpful functionalities.
+This is the iOS SwiftUI Boilerplate created by adesso Turkey for new projects using Swift 5. The project's primary objective is to help the development of a new one to kick-start the environment with configurations, the required features used in common adesso projects, and the helpful functionalities.
 
 Table of Contents
 -----------------
@@ -19,7 +19,7 @@ Table of Contents
 
 ## Prerequisites
 
-- [MacOS Monterey (21.5 or higher)](https://support.apple.com/kb/SP777)
+- [MacOS Monterey (12.5 or higher)](https://support.apple.com/kb/SP777)
 - [Xcode 14 or higher](https://developer.apple.com/download/) ~ Swift 5.7
 - [CocoaPods 1.4.0 or higher](https://cocoapods.org/#install)
 - Swiftlint - To Install SwiftLint, please check Swiftlint Installation section from read me file 
@@ -61,18 +61,7 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 
 ## Workspace Preparing
 
-- On the directory of `{project_root}/scripts/installation`, via terminal
-	- run `./rename-project.swift "$NEW_PROJECT_NAME"` to change project name.
-	- run `sh install-githooks.sh` to install git-hooks into your project. Includes following git hooks; Git hooks include SwiftLint validation, git message character limitation and issue-id check
-		- pre-commit: This hook provides swiftlint control to detect errors quickly before commit.
-		- commit-msg: This hook checks that messages must have a minimum 50 characters. It also tells it should contain an issue tag. Ticket id must be between square brackets and [ticketid] separated by hyphens. See example: "[ISSUE-123] commit message" or "[JIRA-56] - commit message"
-	
-- On your project root via terminal
-	- run `pod install` - this command will regenerate workspace with Xcode.
-		- [pod](https://cocoapods.org/) command & project's dependences.
-	- run `open *.xcw*` - this command will open generated workspace with Xcode.
-
-#### Networking   
+#### Networking Layer (Optional)   
  
 - If you wish to use an `async-await network layer` in your application
     - you can merge the `BSU-0020` optional branch. This is an optional feature, and merging it into your codebase will enable the use of async-await for network requests.
@@ -86,10 +75,19 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 
     # merge the "BSU-0020" branch into the "develop" branch
     git merge origin/BSU-0020
-
-    # push the changes to the remote repository
-    git push origin develop
     ```
+    then you can start the workspace preparing.
+
+- On the directory of `{project_root}/scripts/installation`, via terminal
+	- run `./rename-project.swift "$NEW_PROJECT_NAME"` to change project name.
+	- run `sh install-githooks.sh` to install git-hooks into your project. Includes following git hooks; Git hooks include SwiftLint validation, git message character limitation and issue-id check
+		- pre-commit: This hook provides swiftlint control to detect errors quickly before commit.
+		- commit-msg: This hook checks that messages must have a minimum 50 characters. It also tells it should contain an issue tag. Ticket id must be between square brackets and [ticketid] separated by hyphens. See example: "[ISSUE-123] commit message" or "[JIRA-56] - commit message"
+	
+- On your project root via terminal
+	- run `pod install` - this command will regenerate workspace with Xcode.
+		- [pod](https://cocoapods.org/) command & project's dependences.
+	- run `open *.xcw*` - this command will open generated workspace with Xcode.
 
 ## List of Frameworks
 
