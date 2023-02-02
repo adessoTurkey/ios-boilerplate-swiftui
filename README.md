@@ -76,6 +76,7 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
     # merge the "BSU-0020" branch into the "develop" branch
     git merge origin/BSU-0020
     ```
+
     then you can start the workspace preparing.
 
 - On the directory of `{project_root}/scripts/installation`, via terminal
