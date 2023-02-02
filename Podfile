@@ -11,7 +11,6 @@ target 'BoilerPlateSwiftUI' do
   # Pods for boilerplate-ios-swiftui
 
   # Utils
-  pod 'Swifter', '~> 1.5.0', :configurations => ['Swifter']
   pod 'CocoaDebug', '1.7.1', :configurations => ['Development','Swifter']
 
   target 'BoilerPlateSwiftUITests' do
