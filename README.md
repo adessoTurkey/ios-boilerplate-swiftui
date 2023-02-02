@@ -2,10 +2,10 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/adessoTurkey/boilerplate-ios-swiftui/iOS%20Build%20Check%20Workflow/develop)
 
-iOS Boilerplate
+iOS SwiftUI Boilerplate
 ============================
 
-This is the iOS boilerplate created by Adesso Turkey for new projects using Swift 5. The project's primary objective is to help the development of a new one to kick-start the environment with configurations, the required features used in common Adesso projects, and the helpful functionalities.
+This is the iOS SwiftUI Boilerplate created by adesso Turkey for new projects using Swift 5. The project's primary objective is to help the development of a new one to kick-start the environment with configurations, the required features used in common adesso projects, and the helpful functionalities.
 
 Table of Contents
 -----------------
@@ -19,8 +19,8 @@ Table of Contents
 
 ## Prerequisites
 
-- [MacOS Mojave (10.14.3 or higher)](https://support.apple.com/kb/SP777)
-- [Xcode 11 or higher](https://developer.apple.com/download/) ~ Swift 5.0
+- [MacOS Monterey (12.5 or higher)](https://support.apple.com/kb/SP777)
+- [Xcode 14 or higher](https://developer.apple.com/download/) ~ Swift 5.7
 - [CocoaPods 1.4.0 or higher](https://cocoapods.org/#install)
 - Swiftlint - To Install SwiftLint, please check Swiftlint Installation section from read me file 
 
@@ -60,6 +60,24 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 | **Resources**/ | Images, icons, assets, fonts, Mocks, `Localizable.strings`... 
 
 ## Workspace Preparing
+
+#### Networking Layer (Optional)   
+ 
+- If you wish to use an `async-await network layer` in your application
+    - you can merge the `BSU-0020` optional branch. This is an optional feature, and merging it into your codebase will enable the use of async-await for network requests.
+
+    ```shell
+    # switch to the "develop" branch
+    git checkout develop
+
+    # fetch the latest version of the "BSU-0020" branch
+    git fetch origin BSU-0020
+
+    # merge the "BSU-0020" branch into the "develop" branch
+    git merge origin/BSU-0020
+    ```
+
+    then you can start the workspace preparing.
 
 - On the directory of `{project_root}/scripts/installation`, via terminal
 	- run `./rename-project.swift "$NEW_PROJECT_NAME"` to change project name.

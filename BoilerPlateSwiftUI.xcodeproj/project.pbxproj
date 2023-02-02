@@ -35,7 +35,6 @@
 		2FCDE0FF2565722600203445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE0FE2565722600203445 /* Assets.xcassets */; };
 		2FCDE1022565722600203445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE1002565722600203445 /* LaunchScreen.storyboard */; };
 		2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */; };
-		D1703A4C28C9CD440071EF00 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4B28C9CD440071EF00 /* Swifter */; };
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_BoilerPlateSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_BoilerPlateSwiftUITests.framework */; };
@@ -60,6 +59,7 @@
 		E68EEF3D296EDD6000A839B6 /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68EEF3C296EDD6000A839B6 /* BaseEndpoint.swift */; };
 		E6C5EDE12982CC8100317C91 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C5EDDF2982C12700317C91 /* TestExtensions.swift */; };
 		E6F149F529709E1A00D96675 /* ExampleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F149F429709E1A00D96675 /* ExampleUseCase.swift */; };
+		E670F255298A9B9B00351959 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = E670F254298A9B9B00351959 /* Swifter */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 		FBF57751EA98C6694C07382B /* Pods_BoilerPlateSwiftUI_BoilerPlateSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E61C39E93D40AE93D79E3 /* Pods_BoilerPlateSwiftUI_BoilerPlateSwiftUIUITests.framework */; };
 /* End PBXBuildFile section */
@@ -166,7 +166,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EC0C2453748A46E5EA50303 /* Pods_BoilerPlateSwiftUI.framework in Frameworks */,
-				D1703A4C28C9CD440071EF00 /* Swifter in Frameworks */,
 				D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E50BB41AA460239E70C85ED2 /* Pods_BoilerPlateSwiftUITests.framework in Frameworks */,
+				E670F255298A9B9B00351959 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +562,6 @@
 			);
 			name = BoilerPlateSwiftUI;
 			packageProductDependencies = (
-				D1703A4B28C9CD440071EF00 /* Swifter */,
 				D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */,
 			);
 			productName = "boilerplate-ios-swiftui";
@@ -584,6 +583,9 @@
 				2FCDE10A2565722600203445 /* PBXTargetDependency */,
 			);
 			name = BoilerPlateSwiftUITests;
+			packageProductDependencies = (
+				E670F254298A9B9B00351959 /* Swifter */,
+			);
 			productName = "boilerplate-ios-swiftuiTests";
 			productReference = 2FCDE1082565722600203445 /* BoilerPlateSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -644,8 +646,8 @@
 			);
 			mainGroup = 2FCDE0E92565722400203445;
 			packageReferences = (
-				D1703A4A28C9CD440071EF00 /* XCRemoteSwiftPackageReference "swifter" */,
 				D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				E670F253298A9B9B00351959 /* XCRemoteSwiftPackageReference "swifter" */,
 			);
 			productRefGroup = 2FCDE0F32565722400203445 /* Products */;
 			projectDirPath = "";
@@ -1491,14 +1493,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D1703A4A28C9CD440071EF00 /* XCRemoteSwiftPackageReference "swifter" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/httpswift/swifter";
-			requirement = {
-				kind = exactVersion;
-				version = 1.5.0;
-			};
-		};
 		D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack";
@@ -1507,18 +1501,26 @@
 				minimumVersion = 3.7.0;
 			};
 		};
+		E670F253298A9B9B00351959 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D1703A4B28C9CD440071EF00 /* Swifter */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D1703A4A28C9CD440071EF00 /* XCRemoteSwiftPackageReference "swifter" */;
-			productName = Swifter;
-		};
 		D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
+		};
+		E670F254298A9B9B00351959 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E670F253298A9B9B00351959 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
