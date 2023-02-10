@@ -16,12 +16,6 @@ struct HomeView: View {
                 Text("Hello, World!")
                     .font(.largeTitle)
                     .bold()
-                ImagePickerView()
-                    .padding(.all)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .shadow(radius: 8)
-                    .padding(.all)
             }
         }
         .ignoresSafeArea()

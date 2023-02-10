@@ -14,9 +14,7 @@ struct NewPhotoPickerView: View {
 
     @State private var selectedItem: PhotosPickerItem?
     @Binding var selectedImage: Image?
-
     var body: some View {
-
         VStack {
             PhotosPicker(
                 selection: $selectedItem,
@@ -34,6 +32,5 @@ struct NewPhotoPickerView: View {
                     }
                 }
         }
-
     }
 }

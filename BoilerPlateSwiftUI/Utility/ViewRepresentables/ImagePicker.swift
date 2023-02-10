@@ -21,7 +21,6 @@ struct ImagePicker: UIViewControllerRepresentable {
         imagePickerController.allowsEditing = true
         imagePickerController.sourceType = sourceType
         imagePickerController.delegate = context.coordinator
-
         return imagePickerController
 
     }
@@ -31,9 +30,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 
 extension ImagePicker {
 
-    func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self)
-    }
+    func makeCoordinator() -> Coordinator { Coordinator(parent: self) }
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         var parent: ImagePicker
 
