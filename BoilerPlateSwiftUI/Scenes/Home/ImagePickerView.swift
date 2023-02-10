@@ -72,9 +72,11 @@ struct ImagePickerView: View {
                 }
             }
         }
-        .sheet(isPresented: $shouldShowImagePicker) {
-            ImagePicker(sourceType: sourceType, selectedImage: $selectedImage)
-        }
+        .sheet(isPresented: $shouldShowImagePicker, onDismiss: {
+            // make an action after it's dismissed
+        }, content: {
+            ImagePicker(sourceType: sourceType, compressQuality: 0.8, selectedImage: $selectedImage)
+        })
     }
 }
 
