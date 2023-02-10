@@ -10,7 +10,7 @@ import SwiftUI
 
 struct OnFirstAppearModifier: ViewModifier {
 
-    let perform : () -> Void
+    let perform: () -> Void
     @State private var firstTime: Bool = true
 
     func body(content: Content) -> some View {
@@ -23,10 +23,9 @@ struct OnFirstAppearModifier: ViewModifier {
     }
 }
 
-
 extension View {
 
     func onFirstAppear(perform: @escaping () -> Void) -> some View {
-        return self.modifier(OnFirstAppearModifier(perform: perform))
+        self.modifier(OnFirstAppearModifier(perform: perform))
     }
 }

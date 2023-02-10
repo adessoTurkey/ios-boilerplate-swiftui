@@ -12,7 +12,17 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             Color.red
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/.localized)
+            VStack {
+                Text("Hello, World!")
+                    .font(.largeTitle)
+                    .bold()
+                ImagePickerView()
+                    .padding(.all)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 8)
+                    .padding(.all)
+            }
         }
         .ignoresSafeArea()
     }

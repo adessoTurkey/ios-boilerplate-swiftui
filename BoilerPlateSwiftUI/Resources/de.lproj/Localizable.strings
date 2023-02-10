@@ -7,3 +7,10 @@
 */
 
 "Hello, World!" = "Hallo";
+"select_photo" = "Wähle ein Foto";
+"take_photo" = "Mach ein Foto";
+"delete_image" = "Foto Löschen";
+"source_library" = "Bibliothek";
+"source_camera" = "Kamera";
+"source_saved_album" = "Gespeichertes Album";
+"source_select_title" = "Wählen Sie eine Quelle aus";
