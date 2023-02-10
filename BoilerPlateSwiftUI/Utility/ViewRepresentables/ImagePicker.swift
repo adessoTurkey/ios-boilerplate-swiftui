@@ -22,7 +22,6 @@ struct ImagePicker: UIViewControllerRepresentable {
         imagePickerController.sourceType = sourceType
         imagePickerController.delegate = context.coordinator
         return imagePickerController
-
     }
 
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
