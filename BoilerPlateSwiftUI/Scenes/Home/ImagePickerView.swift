@@ -90,25 +90,5 @@ struct ImagePickerView_Previews: PreviewProvider {
             ImagePickerView()
                 .environment(\.locale, .init(identifier: "de"))
         }
-
-    }
-}
-
-extension UIImagePickerController.SourceType: CaseIterable {
-    public static var allCases: [UIImagePickerController.SourceType] {
-        [.camera, .photoLibrary, .savedPhotosAlbum]
-    }
-
-    func text() -> String {
-        switch self.rawValue {
-            case 0:
-                return "source_library"
-            case 1:
-                return "source_camera"
-            case 2:
-                return "source_saved_album"
-            default:
-                return ""
-        }
     }
 }

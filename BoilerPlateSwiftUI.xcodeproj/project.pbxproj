@@ -39,6 +39,7 @@
 		72B44092299654B5004D1FC5 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B44091299654B5004D1FC5 /* ImagePickerView.swift */; };
 		72B440942996688B004D1FC5 /* BigButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */; };
 		72B4409629966B1C004D1FC5 /* NewPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */; };
+		72B4409829967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */; };
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
 		E50BB41AA460239E70C85ED2 /* Pods_BoilerPlateSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA8343AF26103C22D43403D /* Pods_BoilerPlateSwiftUITests.framework */; };
@@ -113,6 +114,7 @@
 		72B44091299654B5004D1FC5 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonTextModifier.swift; sourceTree = "<group>"; };
 		72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotoPickerView.swift; sourceTree = "<group>"; };
+		72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerSourceTypeExtension.swift; sourceTree = "<group>"; };
 		74D8BCE834C7B5683630A1ED /* Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.swifter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.swifter.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.swifter.xcconfig"; sourceTree = "<group>"; };
 		7AA8343AF26103C22D43403D /* Pods_BoilerPlateSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoilerPlateSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B86CF0688E998F9C642504D /* Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.development.xcconfig"; path = "Target Support Files/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests/Pods-BoilerPlateSwiftUI-BoilerPlateSwiftUIUITests.development.xcconfig"; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				2F56AE8D256E487F0007D0A2 /* StringExtensions.swift */,
 				26BCDA292579857E00096894 /* UIApplicationExtension.swift */,
 				26BCDA2E2579859500096894 /* UIDeviceExtension.swift */,
+				72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				72B44092299654B5004D1FC5 /* ImagePickerView.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
 				18CADB3528A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift in Sources */,
+				72B4409829967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */,
 				72B440942996688B004D1FC5 /* BigButtonTextModifier.swift in Sources */,
 				D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */,
 				2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */,
