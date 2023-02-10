@@ -34,9 +34,7 @@ extension ImagePicker {
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         var parent: ImagePicker
 
-        init(parent: ImagePicker) {
-            self.parent = parent
-        }
+        init(parent: ImagePicker) { self.parent = parent }
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             if let uiImage = info[.editedImage] as? UIImage {
                 parent.selectedImage = Image(uiImage: uiImage)
