@@ -17,12 +17,12 @@ struct HomeView: View {
                     .font(.largeTitle)
                     .bold()
                 /// You can use the code block below to test out the old & new photo picker.
-                ImagePickerView()
-                    .padding(.all)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .shadow(radius: 8)
-                    .padding(.all)
+//                ImagePickerView()
+//                    .padding(.all)
+//                    .background(Color.white)
+//                    .cornerRadius(10)
+//                    .shadow(radius: 8)
+//                    .padding(.all)
             }
         }
         .ignoresSafeArea()
