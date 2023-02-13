@@ -10,18 +10,20 @@ import UIKit
 
 extension UIImagePickerController.SourceType: CaseIterable {
     public static var allCases: [UIImagePickerController.SourceType] {
-        [.camera, .photoLibrary, .savedPhotosAlbum]
+        [.camera, .savedPhotosAlbum, .photoLibrary].filter { sourceType in
+            UIImagePickerController.isSourceTypeAvailable(sourceType)
+        }
     }
 
     func text() -> String {
-        switch self.rawValue {
-            case 0:
-                return "source_library"
-            case 1:
+        switch self {
+            case .camera:
                 return "source_camera"
-            case 2:
+            case .savedPhotosAlbum:
                 return "source_saved_album"
-            default:
+            case .photoLibrary:
+                return "source_library"
+            default: // Since the available type will be now filtered, this will not trigger.
                 return ""
         }
     }
