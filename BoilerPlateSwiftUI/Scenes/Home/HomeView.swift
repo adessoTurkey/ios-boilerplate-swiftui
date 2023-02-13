@@ -16,7 +16,7 @@ struct HomeView: View {
                 Text("Hello, World!")
                     .font(.largeTitle)
                     .bold()
-                /// You can use the code block below to test out the old & new photo picker.
+                // You can use the code block below to test out the old & new photo picker.
 //                ImagePickerView()
 //                    .padding(.all)
 //                    .background(Color.white)
