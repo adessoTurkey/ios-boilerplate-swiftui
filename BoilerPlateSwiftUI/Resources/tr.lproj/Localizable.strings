@@ -7,3 +7,10 @@
 */
 
 "Hello, World!" = "Merhaba";
+"select_photo" = "Bir Fotoğraf Seç";
+"take_photo" = "Fotoğraf Çek";
+"delete_image" = "Fotoğrafı Sil";
+"source_library" = "Kütüphane";
+"source_camera" = "Kamera";
+"source_saved_album" = "Kaydedilmiş Albüm";
+"source_select_title" = "Bir kaynak seç";
