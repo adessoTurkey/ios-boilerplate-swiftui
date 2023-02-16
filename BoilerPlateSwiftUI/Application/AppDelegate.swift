@@ -6,7 +6,11 @@
 //  Copyright © 2020 Adesso Turkey. All rights reserved.
 //
 
+// Uncomment Pulse related codes to test network debugging.
 import UIKit
+// #if canImport(Pulse)
+// import Pulse
+// #endif
 
 class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
 
@@ -14,6 +18,8 @@ class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        Experimental.URLSessionProxy.shared.isEnabled = true
+//        URLSessionProxyDelegate.enableAutomaticRegistration()
         return services.allSatisfy { service -> Bool in
             service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? true
         }

@@ -37,8 +37,43 @@
 		72B440942996688B004D1FC5 /* BigButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */; };
 		72B4409629966B1C004D1FC5 /* NewPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */; };
 		72B4409829967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */; };
-		72EB0170299E310000DF6C24 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB016F299E310000DF6C24 /* Pulse */; };
-		72EB0172299E310000DF6C24 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB0171299E310000DF6C24 /* PulseUI */; };
+		72EB017A299E362700DF6C24 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F56AE8B256E44F00007D0A2 /* UIViewControllerExtensions.swift */; };
+		72EB017B299E362700DF6C24 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F56AE85256E44730007D0A2 /* UICollectionViewExtensions.swift */; };
+		72EB017C299E362700DF6C24 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4408F29965134004D1FC5 /* ImagePicker.swift */; };
+		72EB017D299E362700DF6C24 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F56AE8D256E487F0007D0A2 /* StringExtensions.swift */; };
+		72EB017E299E362700DF6C24 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3128A92CDC007FC2C8 /* MainView.swift */; };
+		72EB017F299E362700DF6C24 /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F56AE89256E44BB0007D0A2 /* UICollectionViewCellExtensions.swift */; };
+		72EB0180299E362700DF6C24 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA292579857E00096894 /* UIApplicationExtension.swift */; };
+		72EB0181299E362700DF6C24 /* NewPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */; };
+		72EB0182299E362700DF6C24 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4C62425769BE400358DAE /* Configuration.swift */; };
+		72EB0183299E362700DF6C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE0F52565722400203445 /* AppDelegate.swift */; };
+		72EB0184299E362700DF6C24 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA242579852700096894 /* LoggingService.swift */; };
+		72EB0185299E362700DF6C24 /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA0F2579826700096894 /* LoggerManager.swift */; };
+		72EB0186299E362700DF6C24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE0F72565722400203445 /* SceneDelegate.swift */; };
+		72EB0187299E362700DF6C24 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B44091299654B5004D1FC5 /* ImagePickerView.swift */; };
+		72EB0188299E362700DF6C24 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA1F2579833600096894 /* Logger.swift */; };
+		72EB0189299E362700DF6C24 /* boilerplate-ios-swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3428A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift */; };
+		72EB018A299E362700DF6C24 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */; };
+		72EB018B299E362700DF6C24 /* BigButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */; };
+		72EB018C299E362700DF6C24 /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
+		72EB018D299E362700DF6C24 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */; };
+		72EB018E299E362700DF6C24 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F56AE87256E44A10007D0A2 /* UITableViewCellExtensions.swift */; };
+		72EB018F299E362700DF6C24 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA2E2579859500096894 /* UIDeviceExtension.swift */; };
+		72EB0190299E362700DF6C24 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3728A93B4F007FC2C8 /* HomeView.swift */; };
+		72EB0194299E362700DF6C24 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB0174299E362700DF6C24 /* CocoaLumberjackSwift */; };
+		72EB0196299E362700DF6C24 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE91256E4CD30007D0A2 /* Colors.xcassets */; };
+		72EB0197299E362700DF6C24 /* sample-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 26C4C7002578BFE600358DAE /* sample-data.json */; };
+		72EB0198299E362700DF6C24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE93256E65910007D0A2 /* Images.xcassets */; };
+		72EB0199299E362700DF6C24 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
+		72EB019A299E362700DF6C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE1002565722600203445 /* LaunchScreen.storyboard */; };
+		72EB019B299E362700DF6C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE0FE2565722600203445 /* Assets.xcassets */; };
+		72EB019C299E362700DF6C24 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE9B256E6EF70007D0A2 /* Icons.xcassets */; };
+		72EB01A6299E39D700DF6C24 /* URLSessionAutoLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */; };
+		72EB01A7299E39D700DF6C24 /* URLSessionAutoLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */; };
+		72EB01AA299E3DDF00DF6C24 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB01A9299E3DDF00DF6C24 /* Pulse */; };
+		72EB01AC299E3DDF00DF6C24 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB01AB299E3DDF00DF6C24 /* PulseUI */; };
+		72EB01AE299E3DF100DF6C24 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB01AD299E3DF100DF6C24 /* Pulse */; };
+		72EB01B0299E3DF100DF6C24 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB01AF299E3DF100DF6C24 /* PulseUI */; };
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
@@ -101,6 +136,9 @@
 		72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonTextModifier.swift; sourceTree = "<group>"; };
 		72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotoPickerView.swift; sourceTree = "<group>"; };
 		72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerSourceTypeExtension.swift; sourceTree = "<group>"; };
+		72EB01A3299E362700DF6C24 /* Pulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72EB01A4299E362700DF6C24 /* BoilerPlateSwiftUI copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BoilerPlateSwiftUI copy-Info.plist"; path = "/Users/ege.sucu/Developer/boilerplate-ios-swiftui/BoilerPlateSwiftUI copy-Info.plist"; sourceTree = "<absolute>"; };
+		72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAutoLogging.swift; sourceTree = "<group>"; };
 		D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
 		F856462E28D12DC90015D3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F856463028D12DDD0015D3DF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -112,8 +150,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72EB0172299E310000DF6C24 /* PulseUI in Frameworks */,
-				72EB0170299E310000DF6C24 /* Pulse in Frameworks */,
+				72EB01B0299E3DF100DF6C24 /* PulseUI in Frameworks */,
+				72EB01AE299E3DF100DF6C24 /* Pulse in Frameworks */,
 				D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +167,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72EB0191299E362700DF6C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72EB01AC299E3DDF00DF6C24 /* PulseUI in Frameworks */,
+				72EB01AA299E3DDF00DF6C24 /* Pulse in Frameworks */,
+				72EB0194299E362700DF6C24 /* CocoaLumberjackSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				26BCDA0F2579826700096894 /* LoggerManager.swift */,
+				72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -199,6 +248,8 @@
 				2FCDE10B2565722600203445 /* BoilerPlateSwiftUITests */,
 				2FCDE1162565722600203445 /* BoilerPlateSwiftUIUITests */,
 				2FCDE0F32565722400203445 /* Products */,
+				72EB01A4299E362700DF6C24 /* BoilerPlateSwiftUI copy-Info.plist */,
+				72EB01A8299E3DDF00DF6C24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +259,7 @@
 				2FCDE0F22565722400203445 /* BoilerPlateSwiftUI.app */,
 				2FCDE1082565722600203445 /* BoilerPlateSwiftUITests.xctest */,
 				2FCDE1132565722600203445 /* BoilerPlateSwiftUIUITests.xctest */,
+				72EB01A3299E362700DF6C24 /* Pulse.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,6 +377,13 @@
 			path = ViewRepresentables;
 			sourceTree = "<group>";
 		};
+		72EB01A8299E3DDF00DF6C24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1AC819828F69C9600E5B0AE /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,8 +412,8 @@
 			name = BoilerPlateSwiftUI;
 			packageProductDependencies = (
 				D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */,
-				72EB016F299E310000DF6C24 /* Pulse */,
-				72EB0171299E310000DF6C24 /* PulseUI */,
+				72EB01AD299E3DF100DF6C24 /* Pulse */,
+				72EB01AF299E3DF100DF6C24 /* PulseUI */,
 			);
 			productName = "boilerplate-ios-swiftui";
 			productReference = 2FCDE0F22565722400203445 /* BoilerPlateSwiftUI.app */;
@@ -397,6 +456,29 @@
 			productName = "boilerplate-ios-swiftuiUITests";
 			productReference = 2FCDE1132565722600203445 /* BoilerPlateSwiftUIUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		72EB0173299E362700DF6C24 /* Pulse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72EB019E299E362700DF6C24 /* Build configuration list for PBXNativeTarget "Pulse" */;
+			buildPhases = (
+				72EB0179299E362700DF6C24 /* Sources */,
+				72EB0191299E362700DF6C24 /* Frameworks */,
+				72EB0195299E362700DF6C24 /* Resources */,
+				72EB019D299E362700DF6C24 /* Swiftlint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pulse;
+			packageProductDependencies = (
+				72EB0174299E362700DF6C24 /* CocoaLumberjackSwift */,
+				72EB01A9299E3DDF00DF6C24 /* Pulse */,
+				72EB01AB299E3DDF00DF6C24 /* PulseUI */,
+			);
+			productName = "boilerplate-ios-swiftui";
+			productReference = 72EB01A3299E362700DF6C24 /* Pulse.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -442,6 +524,7 @@
 			projectRoot = "";
 			targets = (
 				2FCDE0F12565722400203445 /* BoilerPlateSwiftUI */,
+				72EB0173299E362700DF6C24 /* Pulse */,
 				2FCDE1072565722600203445 /* BoilerPlateSwiftUITests */,
 				2FCDE1122565722600203445 /* BoilerPlateSwiftUIUITests */,
 			);
@@ -477,10 +560,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72EB0195299E362700DF6C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72EB0196299E362700DF6C24 /* Colors.xcassets in Resources */,
+				72EB0197299E362700DF6C24 /* sample-data.json in Resources */,
+				72EB0198299E362700DF6C24 /* Images.xcassets in Resources */,
+				72EB0199299E362700DF6C24 /* Localizable.strings in Resources */,
+				72EB019A299E362700DF6C24 /* LaunchScreen.storyboard in Resources */,
+				72EB019B299E362700DF6C24 /* Assets.xcassets in Resources */,
+				72EB019C299E362700DF6C24 /* Icons.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		26C4C4452575230A00358DAE /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=${PATH}:/opt/homebrew/bin:/usr/local/bin\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		72EB019D299E362700DF6C24 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -518,6 +633,7 @@
 				26BCDA252579852700096894 /* LoggingService.swift in Sources */,
 				26BCDA102579826700096894 /* LoggerManager.swift in Sources */,
 				2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */,
+				72EB01A6299E39D700DF6C24 /* URLSessionAutoLogging.swift in Sources */,
 				72B44092299654B5004D1FC5 /* ImagePickerView.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
 				18CADB3528A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift in Sources */,
@@ -544,6 +660,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CADB3C28A97CDF007FC2C8 /* BoilerPlateSwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72EB0179299E362700DF6C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72EB017A299E362700DF6C24 /* UIViewControllerExtensions.swift in Sources */,
+				72EB017B299E362700DF6C24 /* UICollectionViewExtensions.swift in Sources */,
+				72EB017C299E362700DF6C24 /* ImagePicker.swift in Sources */,
+				72EB017D299E362700DF6C24 /* StringExtensions.swift in Sources */,
+				72EB017E299E362700DF6C24 /* MainView.swift in Sources */,
+				72EB017F299E362700DF6C24 /* UICollectionViewCellExtensions.swift in Sources */,
+				72EB0180299E362700DF6C24 /* UIApplicationExtension.swift in Sources */,
+				72EB0181299E362700DF6C24 /* NewPhotoPickerView.swift in Sources */,
+				72EB0182299E362700DF6C24 /* Configuration.swift in Sources */,
+				72EB0183299E362700DF6C24 /* AppDelegate.swift in Sources */,
+				72EB0184299E362700DF6C24 /* LoggingService.swift in Sources */,
+				72EB0185299E362700DF6C24 /* LoggerManager.swift in Sources */,
+				72EB0186299E362700DF6C24 /* SceneDelegate.swift in Sources */,
+				72EB01A7299E39D700DF6C24 /* URLSessionAutoLogging.swift in Sources */,
+				72EB0187299E362700DF6C24 /* ImagePickerView.swift in Sources */,
+				72EB0188299E362700DF6C24 /* Logger.swift in Sources */,
+				72EB0189299E362700DF6C24 /* boilerplate-ios-swiftuiApp.swift in Sources */,
+				72EB018A299E362700DF6C24 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */,
+				72EB018B299E362700DF6C24 /* BigButtonTextModifier.swift in Sources */,
+				72EB018C299E362700DF6C24 /* OnFirstAppearModifier.swift in Sources */,
+				72EB018D299E362700DF6C24 /* UITableViewExtensions.swift in Sources */,
+				72EB018E299E362700DF6C24 /* UITableViewCellExtensions.swift in Sources */,
+				72EB018F299E362700DF6C24 /* UIDeviceExtension.swift in Sources */,
+				72EB0190299E362700DF6C24 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1099,6 +1246,84 @@
 			};
 			name = AppStore;
 		};
+		72EB019F299E362700DF6C24 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = "BoilerPlateSwiftUI copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Development;
+		};
+		72EB01A0299E362700DF6C24 /* Swifter */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				INFOPLIST_FILE = "BoilerPlateSwiftUI copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Swifter;
+		};
+		72EB01A1299E362700DF6C24 /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = "BoilerPlateSwiftUI copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Production;
+		};
+		72EB01A2299E362700DF6C24 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8J8CUXWK9;
+				INFOPLIST_FILE = "BoilerPlateSwiftUI copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1146,6 +1371,17 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = AppStore;
 		};
+		72EB019E299E362700DF6C24 /* Build configuration list for PBXNativeTarget "Pulse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72EB019F299E362700DF6C24 /* Development */,
+				72EB01A0299E362700DF6C24 /* Swifter */,
+				72EB01A1299E362700DF6C24 /* Production */,
+				72EB01A2299E362700DF6C24 /* AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = AppStore;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1155,6 +1391,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.0.0;
+			};
+		};
+		72EB0175299E362700DF6C24 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.7.0;
 			};
 		};
 		D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
@@ -1168,12 +1412,27 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		72EB016F299E310000DF6C24 /* Pulse */ = {
+		72EB0174299E362700DF6C24 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72EB0175299E362700DF6C24 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		72EB01A9299E3DDF00DF6C24 /* Pulse */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */;
 			productName = Pulse;
 		};
-		72EB0171299E310000DF6C24 /* PulseUI */ = {
+		72EB01AB299E3DDF00DF6C24 /* PulseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseUI;
+		};
+		72EB01AD299E3DF100DF6C24 /* Pulse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = Pulse;
+		};
+		72EB01AF299E3DF100DF6C24 /* PulseUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */;
 			productName = PulseUI;
