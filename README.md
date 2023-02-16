@@ -21,7 +21,6 @@ Table of Contents
 
 - [MacOS Monterey (12.5 or higher)](https://support.apple.com/kb/SP777)
 - [Xcode 14 or higher](https://developer.apple.com/download/) ~ Swift 5.7
-- [CocoaPods 1.4.0 or higher](https://cocoapods.org/#install)
 - Swiftlint - To Install SwiftLint, please check Swiftlint Installation section from read me file 
 
 ## Swiftlint Installation 
@@ -85,23 +84,17 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 		- pre-commit: This hook provides swiftlint control to detect errors quickly before commit.
 		- commit-msg: This hook checks that messages must have a minimum 50 characters. It also tells it should contain an issue tag. Ticket id must be between square brackets and [ticketid] separated by hyphens. See example: "[ISSUE-123] commit message" or "[JIRA-56] - commit message"
 	
-- On your project root via terminal
-	- run `pod install` - this command will regenerate workspace with Xcode.
-		- [pod](https://cocoapods.org/) command & project's dependences.
-	- run `open *.xcw*` - this command will open generated workspace with Xcode.
 
 ## List of Frameworks
 
 | Framework | Description |
 | ------------------------------- | --------------------------------------------------------------------- |
 | [SwiftLint](https://github.com/realm/SwiftLint) | A tool to enforce Swift style and conventions. |
-| [Swifter](https://github.com/SwifterSwift/SwifterSwift) | Tiny http server engine written in Swift programming language. |
+| [Pulse](https://github.com/kean/Pulse) | Pulse is a powerful logging system for Apple Platforms. Native. Built with SwiftUI. |
 | [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) | Powerful & flexible logging framework. |
-| [CocoaDebug](https://github.com/CocoaDebug/CocoaDebug) | iOS debugging tool. |
 
 ## Useful Tools and Resources
 
-- [CocoaPods](https://cocoapods.org/) - CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. It has over 33 thousand libraries and is used in over 2.2 million apps. CocoaPods can help you scale your projects elegantly.
 - [SwiftLint](https://github.com/realm/SwiftLint) - A tool to enforce Swift style and conventions.
 - [TestFlight](https://help.apple.com/itunes-connect/developer/#/devdc42b26b8) - TestFlight beta testing lets you distribute beta builds of your app to testers and collect feedback.
 - [Appcenter](https://appcenter.ms/) - Continuously build, test, release, and monitor apps for every platform.
