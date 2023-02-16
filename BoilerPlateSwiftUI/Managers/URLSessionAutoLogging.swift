@@ -5,14 +5,11 @@
 //  Created by Sucu, Ege on 16.02.2023.
 //  Copyright © 2023 Adesso Turkey. All rights reserved.
 //
-#if canImport(Pulse)
+#if DEBUG && canImport(Pulse)
 import Pulse
-#endif
 import Foundation
 import ObjectiveC.runtime
 
-#if DEBUG
-#if canImport(Pulse)
 extension Experimental {
 
     static var networkLogger = NetworkLogger()
@@ -103,5 +100,4 @@ extension Experimental {
         }
     }
 }
-#endif
 #endif

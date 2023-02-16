@@ -42,12 +42,10 @@ struct HomeView: View {
         .ignoresSafeArea()
         .sheet(isPresented: $showPulse) {
             NavigationView {
-#if canImport(Pulse)
+                #if canImport(Pulse)
                 ConsoleView()
-                    .navigationBarItems(leading: Button("Close") {
-                        showPulse = false
-                    })
-#endif
+                    .navigationBarItems(leading: Button("Close") { showPulse = false })
+                #endif
             }
         }
     }
