@@ -5,7 +5,7 @@
 //  Created by Sucu, Ege on 16.02.2023.
 //  Copyright © 2023 Adesso Turkey. All rights reserved.
 //
-#if DEBUG && canImport(Pulse)
+#if PULSE
 import Pulse
 import Foundation
 import ObjectiveC.runtime

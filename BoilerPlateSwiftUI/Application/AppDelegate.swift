@@ -7,7 +7,7 @@
 //
 
 import UIKit
-#if canImport(Pulse)
+#if PULSE
 import Pulse
 #endif
 
@@ -17,7 +17,7 @@ class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        #if DEBUG && canImport(Pulse)
+        #if PULSE
         Experimental.URLSessionProxy.shared.isEnabled = true
         URLSessionProxyDelegate.enableAutomaticRegistration()
         #endif

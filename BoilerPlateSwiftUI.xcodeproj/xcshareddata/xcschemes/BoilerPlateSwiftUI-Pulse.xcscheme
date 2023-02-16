@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2FCDE0F12565722400203445"
-               BuildableName = "BoilerPlateSwiftUI.app"
-               BlueprintName = "BoilerPlateSwiftUI"
+               BlueprintIdentifier = "7259FCB4299EAD3300BF8309"
+               BuildableName = "BoilerPlateSwiftUI-Pulse.app"
+               BlueprintName = "BoilerPlateSwiftUI-Pulse"
                ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2FCDE0F12565722400203445"
-            BuildableName = "BoilerPlateSwiftUI.app"
-            BlueprintName = "BoilerPlateSwiftUI"
+            BlueprintIdentifier = "7259FCB4299EAD3300BF8309"
+            BuildableName = "BoilerPlateSwiftUI-Pulse.app"
+            BlueprintName = "BoilerPlateSwiftUI-Pulse"
             ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2FCDE0F12565722400203445"
-            BuildableName = "BoilerPlateSwiftUI.app"
-            BlueprintName = "BoilerPlateSwiftUI"
+            BlueprintIdentifier = "7259FCB4299EAD3300BF8309"
+            BuildableName = "BoilerPlateSwiftUI-Pulse.app"
+            BlueprintName = "BoilerPlateSwiftUI-Pulse"
             ReferencedContainer = "container:BoilerPlateSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
