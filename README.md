@@ -83,6 +83,10 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 	- run `sh install-githooks.sh` to install git-hooks into your project. Includes following git hooks; Git hooks include SwiftLint validation, git message character limitation and issue-id check
 		- pre-commit: This hook provides swiftlint control to detect errors quickly before commit.
 		- commit-msg: This hook checks that messages must have a minimum 50 characters. It also tells it should contain an issue tag. Ticket id must be between square brackets and [ticketid] separated by hyphens. See example: "[ISSUE-123] commit message" or "[JIRA-56] - commit message"
+  
+  #### Encryption Choice (Optional)
+           
+  - If you wish to silence App Store Connect's "Encryption Ask" or don't use any external encryption in your project, you can define `ITSAppUsesNonExemptEncryption` key as `NO` in the Info.plist. [Learn More](https://developer.apple.com/documentation/bundleresources/information_property_list/itsappusesnonexemptencryption)
 	
 
 ## List of Frameworks
