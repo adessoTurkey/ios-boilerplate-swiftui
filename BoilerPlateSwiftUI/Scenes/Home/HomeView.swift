@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
- #if canImport(Pulse)
+ #if DEBUG && canImport(Pulse)
  import PulseUI
  #endif
 
@@ -28,6 +28,7 @@ struct HomeView: View {
                 //                    .shadow(radius: 8)
                 //                    .padding(.all)
             }
+            #if DEBUG && canImport(Pulse)
             Button {
                 showPulse.toggle()
                 // Write a test function to make a fetch request in order to track Network activity.
@@ -37,12 +38,13 @@ struct HomeView: View {
                     .bold()
                     .foregroundColor(.white)
             }.offset(.init(width: 0, height: 200))
+            #endif
 
         }
         .ignoresSafeArea()
         .sheet(isPresented: $showPulse) {
             NavigationView {
-                #if canImport(Pulse)
+                #if DEBUG && canImport(Pulse)
                 ConsoleView()
                     .navigationBarItems(leading: Button("Close") { showPulse = false })
                 #endif
