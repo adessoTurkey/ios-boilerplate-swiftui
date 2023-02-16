@@ -12,6 +12,7 @@ import Foundation
 import ObjectiveC.runtime
 
 #if DEBUG
+#if canImport(Pulse)
 extension Experimental {
 
     static var networkLogger = NetworkLogger()
@@ -102,4 +103,5 @@ extension Experimental {
         }
     }
 }
+#endif
 #endif

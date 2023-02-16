@@ -8,9 +8,9 @@
 
 // Uncomment Pulse related codes to test network debugging.
 import UIKit
-// #if canImport(Pulse)
-// import Pulse
-// #endif
+#if canImport(Pulse)
+import Pulse
+#endif
 
 class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
 
@@ -18,8 +18,15 @@ class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        Experimental.URLSessionProxy.shared.isEnabled = true
-//        URLSessionProxyDelegate.enableAutomaticRegistration()
+#if DEBUG
+#if canImport(Pulse)
+        Experimental.URLSessionProxy.shared.isEnabled = true
+        URLSessionProxyDelegate.enableAutomaticRegistration()
+#endif
+#endif
+        // swiftlint:disable:next force_unwrapping, force_cast
+        let bundle = Bundle.main.infoDictionary?["CFBundleName"] as! String
+        print(bundle)
         return services.allSatisfy { service -> Bool in
             service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? true
         }

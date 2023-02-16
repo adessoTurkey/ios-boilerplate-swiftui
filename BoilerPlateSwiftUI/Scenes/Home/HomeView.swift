@@ -6,15 +6,13 @@
 //  Copyright © 2022 Adesso Turkey. All rights reserved.
 //
 
-// Uncomment Pulse related codes to test network debugging.
-
 import SwiftUI
-// #if canImport(Pulse)
-// import PulseUI
-// #endif
+ #if canImport(Pulse)
+ import PulseUI
+ #endif
 
 struct HomeView: View {
-//    @State private var showPulse = false
+    @State private var showPulse = false
     var body: some View {
         ZStack {
             Color.red
@@ -30,28 +28,28 @@ struct HomeView: View {
                 //                    .shadow(radius: 8)
                 //                    .padding(.all)
             }
-//            Button {
-//                showPulse.toggle()
-//                startNetworking()
-//            } label: {
-//                Text("Test Networking")
-//                    .font(.title)
-//                    .bold()
-//                    .foregroundColor(.white)
-//            }.offset(.init(width: 0, height: 200))
+            Button {
+                showPulse.toggle()
+                startNetworking()
+            } label: {
+                Text("Test Networking")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.white)
+            }.offset(.init(width: 0, height: 200))
 
         }
         .ignoresSafeArea()
-//        .sheet(isPresented: $showPulse) {
-//            NavigationView {
-// #if canImport(Pulse)
-//                ConsoleView()
-//                    .navigationBarItems(leading: Button("Close") {
-//                        showPulse = false
-//                    })
-// #endif
-//            }
-//        }
+        .sheet(isPresented: $showPulse) {
+            NavigationView {
+#if canImport(Pulse)
+                ConsoleView()
+                    .navigationBarItems(leading: Button("Close") {
+                        showPulse = false
+                    })
+#endif
+            }
+        }
     }
 
     func startNetworking() {
