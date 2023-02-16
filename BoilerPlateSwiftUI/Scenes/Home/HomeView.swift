@@ -30,7 +30,7 @@ struct HomeView: View {
             }
             Button {
                 showPulse.toggle()
-                startNetworking()
+                testNetworking()
             } label: {
                 Text("Test Networking")
                     .font(.title)
@@ -49,8 +49,7 @@ struct HomeView: View {
             }
         }
     }
-
-    func startNetworking() {
+    func testNetworking() {
         guard let url = URL(string: "https://www.google.com") else { return }
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
