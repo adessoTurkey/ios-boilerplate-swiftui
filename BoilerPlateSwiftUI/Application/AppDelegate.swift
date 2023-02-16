@@ -6,7 +6,6 @@
 //  Copyright © 2020 Adesso Turkey. All rights reserved.
 //
 
-// Uncomment Pulse related codes to test network debugging.
 import UIKit
 #if canImport(Pulse)
 import Pulse
@@ -24,9 +23,6 @@ class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject 
         URLSessionProxyDelegate.enableAutomaticRegistration()
 #endif
 #endif
-        // swiftlint:disable:next force_unwrapping, force_cast
-        let bundle = Bundle.main.infoDictionary?["CFBundleName"] as! String
-        print(bundle)
         return services.allSatisfy { service -> Bool in
             service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? true
         }
