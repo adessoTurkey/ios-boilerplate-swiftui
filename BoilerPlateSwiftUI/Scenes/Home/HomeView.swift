@@ -30,7 +30,7 @@ struct HomeView: View {
             }
             Button {
                 showPulse.toggle()
-                testNetworking()
+                // Write a test function to make a fetch request in order to track Network activity.
             } label: {
                 Text("Test Networking")
                     .font(.title)
@@ -48,24 +48,6 @@ struct HomeView: View {
                 #endif
             }
         }
-    }
-    func testNetworking() {
-        guard let url = URL(string: "https://www.google.com") else { return }
-        let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error {
-                print(error)
-            } else if let response = response as? HTTPURLResponse {
-                if (200...300).contains(response.statusCode) {
-                    print("We're good to go")
-                } else {
-                    print("Error: \(response.debugDescription) with the code \(response.statusCode)")
-                }
-            }
-            if let data {
-                print(data)
-            }
-        }.resume()
     }
 }
 
