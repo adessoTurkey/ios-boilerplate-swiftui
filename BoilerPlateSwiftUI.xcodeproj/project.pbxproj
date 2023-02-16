@@ -17,8 +17,6 @@
 		26BCDA252579852700096894 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA242579852700096894 /* LoggingService.swift */; };
 		26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA292579857E00096894 /* UIApplicationExtension.swift */; };
 		26BCDA2F2579859500096894 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA2E2579859500096894 /* UIDeviceExtension.swift */; };
-		26C4C565257651F500358DAE /* SwifterServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4C564257651F500358DAE /* SwifterServerService.swift */; };
-		26C4C58A25766B6100358DAE /* SwifterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4C58925766B6100358DAE /* SwifterManager.swift */; };
 		26C4C62525769BE400358DAE /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4C62425769BE400358DAE /* Configuration.swift */; };
 		26C4C7012578BFE600358DAE /* sample-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 26C4C7002578BFE600358DAE /* sample-data.json */; };
 		2F56AE86256E44730007D0A2 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F56AE85256E44730007D0A2 /* UICollectionViewExtensions.swift */; };
@@ -39,9 +37,10 @@
 		72B440942996688B004D1FC5 /* BigButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */; };
 		72B4409629966B1C004D1FC5 /* NewPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */; };
 		72B4409829967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */; };
+		72EB0170299E310000DF6C24 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB016F299E310000DF6C24 /* Pulse */; };
+		72EB0172299E310000DF6C24 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB0171299E310000DF6C24 /* PulseUI */; };
 		D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */; };
 		D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
-		E670F255298A9B9B00351959 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = E670F254298A9B9B00351959 /* Swifter */; };
 		F856462D28D12DC90015D3DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +72,6 @@
 		26BCDA242579852700096894 /* LoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingService.swift; sourceTree = "<group>"; };
 		26BCDA292579857E00096894 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		26BCDA2E2579859500096894 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
-		26C4C564257651F500358DAE /* SwifterServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifterServerService.swift; sourceTree = "<group>"; };
-		26C4C58925766B6100358DAE /* SwifterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifterManager.swift; sourceTree = "<group>"; };
 		26C4C62425769BE400358DAE /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		26C4C7002578BFE600358DAE /* sample-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sample-data.json"; sourceTree = "<group>"; };
 		2F56AE85256E44730007D0A2 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
@@ -115,6 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72EB0172299E310000DF6C24 /* PulseUI in Frameworks */,
+				72EB0170299E310000DF6C24 /* Pulse in Frameworks */,
 				D1703A4F28C9CDA70071EF00 /* CocoaLumberjackSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E670F255298A9B9B00351959 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +171,6 @@
 		26C4C5632576519000358DAE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				26C4C564257651F500358DAE /* SwifterServerService.swift */,
 				26BCDA242579852700096894 /* LoggingService.swift */,
 			);
 			path = Services;
@@ -182,7 +179,6 @@
 		26C4C58825766B4400358DAE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				26C4C58925766B6100358DAE /* SwifterManager.swift */,
 				26BCDA0F2579826700096894 /* LoggerManager.swift */,
 			);
 			path = Managers;
@@ -357,6 +353,8 @@
 			name = BoilerPlateSwiftUI;
 			packageProductDependencies = (
 				D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */,
+				72EB016F299E310000DF6C24 /* Pulse */,
+				72EB0171299E310000DF6C24 /* PulseUI */,
 			);
 			productName = "boilerplate-ios-swiftui";
 			productReference = 2FCDE0F22565722400203445 /* BoilerPlateSwiftUI.app */;
@@ -377,7 +375,6 @@
 			);
 			name = BoilerPlateSwiftUITests;
 			packageProductDependencies = (
-				E670F254298A9B9B00351959 /* Swifter */,
 			);
 			productName = "boilerplate-ios-swiftuiTests";
 			productReference = 2FCDE1082565722600203445 /* BoilerPlateSwiftUITests.xctest */;
@@ -438,7 +435,7 @@
 			mainGroup = 2FCDE0E92565722400203445;
 			packageReferences = (
 				D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
-				E670F253298A9B9B00351959 /* XCRemoteSwiftPackageReference "swifter" */,
+				72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */,
 			);
 			productRefGroup = 2FCDE0F32565722400203445 /* Products */;
 			projectDirPath = "";
@@ -509,7 +506,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F56AE8C256E44F00007D0A2 /* UIViewControllerExtensions.swift in Sources */,
-				26C4C565257651F500358DAE /* SwifterServerService.swift in Sources */,
 				2F56AE86256E44730007D0A2 /* UICollectionViewExtensions.swift in Sources */,
 				72B4409029965134004D1FC5 /* ImagePicker.swift in Sources */,
 				2F56AE8E256E487F0007D0A2 /* StringExtensions.swift in Sources */,
@@ -521,7 +517,6 @@
 				2FCDE0F62565722400203445 /* AppDelegate.swift in Sources */,
 				26BCDA252579852700096894 /* LoggingService.swift in Sources */,
 				26BCDA102579826700096894 /* LoggerManager.swift in Sources */,
-				26C4C58A25766B6100358DAE /* SwifterManager.swift in Sources */,
 				2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */,
 				72B44092299654B5004D1FC5 /* ImagePickerView.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
@@ -1154,6 +1149,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Pulse";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack";
@@ -1162,26 +1165,23 @@
 				minimumVersion = 3.7.0;
 			};
 		};
-		E670F253298A9B9B00351959 /* XCRemoteSwiftPackageReference "swifter" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/httpswift/swifter";
-			requirement = {
-				kind = exactVersion;
-				version = 1.5.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		72EB016F299E310000DF6C24 /* Pulse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = Pulse;
+		};
+		72EB0171299E310000DF6C24 /* PulseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72EB016E299E310000DF6C24 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseUI;
+		};
 		D1703A4E28C9CDA70071EF00 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D1703A4D28C9CDA70071EF00 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
-		};
-		E670F254298A9B9B00351959 /* Swifter */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E670F253298A9B9B00351959 /* XCRemoteSwiftPackageReference "swifter" */;
-			productName = Swifter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

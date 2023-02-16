@@ -90,7 +90,7 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 | Framework | Description |
 | ------------------------------- | --------------------------------------------------------------------- |
 | [SwiftLint](https://github.com/realm/SwiftLint) | A tool to enforce Swift style and conventions. |
-| [Swifter](https://github.com/SwifterSwift/SwifterSwift) | Tiny http server engine written in Swift programming language. |
+| [Pulse](https://github.com/kean/Pulse) | Pulse is a powerful logging system for Apple Platforms. Native. Built with SwiftUI. |
 | [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) | Powerful & flexible logging framework. |
 
 ## Useful Tools and Resources
