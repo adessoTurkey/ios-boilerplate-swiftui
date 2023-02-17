@@ -29,7 +29,7 @@ struct BoilerPlateSwiftUIApp: App {
         WindowGroup {
             MainView()
                 .onChange(of: phase, perform: manageChanges(for:))
-                .onOpenURL(perform: urlOpened(_:))
+                .onOpenURL(perform: onOpenURL(_:))
         }
     }
 
@@ -56,5 +56,5 @@ extension BoilerPlateSwiftUIApp {
     func appActivated() {}
     func appInBackground() {}
     func appDeactivated() {}
-    func urlOpened(_ url: URL) {} // URL Opening management. Same as AppDelegate's `application(_:open:options:)`
+    func onOpenURL(_ url: URL) {} // URL Opening management. Same as AppDelegate's `application(_:open:options:)`
 }
