@@ -37,13 +37,13 @@ struct BoilerPlateSwiftUIApp: App {
         switch phase {
             case .active:
                 // App became active
-                appActivated()
+                activated()
             case .background:
                 // App is running in the background
-                appInBackground()
+                backgrounded()
             case .inactive:
                 // App became inactive
-                appDeactivated()
+                deactivated()
             @unknown default:
                 // Fallback for future cases
                 break
@@ -53,8 +53,8 @@ struct BoilerPlateSwiftUIApp: App {
 
 // MARK: - App Life Cycle
 extension BoilerPlateSwiftUIApp {
-    func appActivated() {}
-    func appInBackground() {}
-    func appDeactivated() {}
+    func activated() {}
+    func backgrounded() {}
+    func deactivated() {}
     func onOpenURL(_ url: URL) {} // URL Opening management. Same as AppDelegate's `application(_:open:options:)`
 }
