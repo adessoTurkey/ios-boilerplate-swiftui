@@ -27,8 +27,6 @@
 		2F56AE92256E4CD30007D0A2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE91256E4CD30007D0A2 /* Colors.xcassets */; };
 		2F56AE94256E65910007D0A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE93256E65910007D0A2 /* Images.xcassets */; };
 		2F56AE9C256E6EF70007D0A2 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE9B256E6EF70007D0A2 /* Icons.xcassets */; };
-		2FCDE0F62565722400203445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE0F52565722400203445 /* AppDelegate.swift */; };
-		2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE0F72565722400203445 /* SceneDelegate.swift */; };
 		2FCDE0FF2565722600203445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE0FE2565722600203445 /* Assets.xcassets */; };
 		2FCDE1022565722600203445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE1002565722600203445 /* LaunchScreen.storyboard */; };
 		2FCDE1572566AE2700203445 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */; };
@@ -41,10 +39,8 @@
 		7259FCC1299EAD3300BF8309 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA292579857E00096894 /* UIApplicationExtension.swift */; };
 		7259FCC2299EAD3300BF8309 /* NewPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */; };
 		7259FCC3299EAD3300BF8309 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4C62425769BE400358DAE /* Configuration.swift */; };
-		7259FCC4299EAD3300BF8309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE0F52565722400203445 /* AppDelegate.swift */; };
 		7259FCC5299EAD3300BF8309 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA242579852700096894 /* LoggingService.swift */; };
 		7259FCC6299EAD3300BF8309 /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA0F2579826700096894 /* LoggerManager.swift */; };
-		7259FCC7299EAD3300BF8309 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDE0F72565722400203445 /* SceneDelegate.swift */; };
 		7259FCC8299EAD3300BF8309 /* URLSessionAutoLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */; };
 		7259FCC9299EAD3300BF8309 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B44091299654B5004D1FC5 /* ImagePickerView.swift */; };
 		7259FCCA299EAD3300BF8309 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA1F2579833600096894 /* Logger.swift */; };
@@ -118,8 +114,6 @@
 		2F56AE93256E65910007D0A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F56AE9B256E6EF70007D0A2 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		2FCDE0F22565722400203445 /* BoilerPlateSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerPlateSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FCDE0F52565722400203445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2FCDE0F72565722400203445 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2FCDE0FE2565722600203445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FCDE1012565722600203445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FCDE1032565722600203445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -298,8 +292,6 @@
 			isa = PBXGroup;
 			children = (
 				26C4C5632576519000358DAE /* Services */,
-				2FCDE0F52565722400203445 /* AppDelegate.swift */,
-				2FCDE0F72565722400203445 /* SceneDelegate.swift */,
 				18CADB3428A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift */,
 			);
 			path = Application;
@@ -629,10 +621,8 @@
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
 				72B4409629966B1C004D1FC5 /* NewPhotoPickerView.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
-				2FCDE0F62565722400203445 /* AppDelegate.swift in Sources */,
 				26BCDA252579852700096894 /* LoggingService.swift in Sources */,
 				26BCDA102579826700096894 /* LoggerManager.swift in Sources */,
-				2FCDE0F82565722400203445 /* SceneDelegate.swift in Sources */,
 				72EB01A6299E39D700DF6C24 /* URLSessionAutoLogging.swift in Sources */,
 				72B44092299654B5004D1FC5 /* ImagePickerView.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
@@ -676,10 +666,8 @@
 				7259FCC1299EAD3300BF8309 /* UIApplicationExtension.swift in Sources */,
 				7259FCC2299EAD3300BF8309 /* NewPhotoPickerView.swift in Sources */,
 				7259FCC3299EAD3300BF8309 /* Configuration.swift in Sources */,
-				7259FCC4299EAD3300BF8309 /* AppDelegate.swift in Sources */,
 				7259FCC5299EAD3300BF8309 /* LoggingService.swift in Sources */,
 				7259FCC6299EAD3300BF8309 /* LoggerManager.swift in Sources */,
-				7259FCC7299EAD3300BF8309 /* SceneDelegate.swift in Sources */,
 				7259FCC8299EAD3300BF8309 /* URLSessionAutoLogging.swift in Sources */,
 				7259FCC9299EAD3300BF8309 /* ImagePickerView.swift in Sources */,
 				7259FCCA299EAD3300BF8309 /* Logger.swift in Sources */,

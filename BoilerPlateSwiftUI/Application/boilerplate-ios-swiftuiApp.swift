@@ -7,14 +7,54 @@
 //
 
 import SwiftUI
+#if PULSE
+import Pulse
+#endif
 
 @main
 struct BoilerPlateSwiftUIApp: App {
-    // swiftlint:disable:next weak_delegate
-    @UIApplicationDelegateAdaptor var delegate: BoilerPlateAppDelegate
+    @Environment(\.scenePhase) private var phase
+    // Check out https://developer.apple.com/documentation/swiftui/scenephase for more information
+    private var loggingService: LoggingService
+
+    init() {
+    #if PULSE
+        Experimental.URLSessionProxy.shared.isEnabled = true
+        URLSessionProxyDelegate.enableAutomaticRegistration()
+    #endif
+        loggingService = LoggingService()
+    }
+
     var body: some Scene {
         WindowGroup {
             MainView()
+                .onChange(of: phase) { newPhase in
+                    switch newPhase {
+                        case .active:
+                            // App became active
+                            appActivated()
+                        case .background:
+                            // App became inactive
+                            appInBackground()
+                        case .inactive:
+                            // App is running in the background
+                            appDeactivated()
+                        @unknown default:
+                            // Fallback for future cases
+                            break
+                    }
+                }
+                .onOpenURL { url in
+                    // Add your related codes for URL Opening management. Same as AppDelegate's `application(_:open:options:)`
+                    print(url)
+                }
         }
     }
+}
+
+// MARK: - App Life Cycle
+extension BoilerPlateSwiftUIApp {
+    func appActivated() { }
+    func appInBackground() { }
+    func appDeactivated() { }
 }
