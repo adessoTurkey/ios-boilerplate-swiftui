@@ -34,10 +34,10 @@ struct BoilerPlateSwiftUIApp: App {
                             // App became active
                             appActivated()
                         case .background:
-                            // App became inactive
+                            // App is running in the background
                             appInBackground()
                         case .inactive:
-                            // App is running in the background
+                            // App became inactive
                             appDeactivated()
                         @unknown default:
                             // Fallback for future cases
