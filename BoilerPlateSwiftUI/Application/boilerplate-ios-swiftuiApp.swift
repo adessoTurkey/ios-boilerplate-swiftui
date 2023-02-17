@@ -44,17 +44,15 @@ struct BoilerPlateSwiftUIApp: App {
                             break
                     }
                 }
-                .onOpenURL { url in
-                    // Add your related codes for URL Opening management. Same as AppDelegate's `application(_:open:options:)`
-                    print(url)
-                }
+                .onOpenURL(perform: urlOpened(_:))
         }
     }
 }
 
 // MARK: - App Life Cycle
 extension BoilerPlateSwiftUIApp {
-    func appActivated() { }
-    func appInBackground() { }
-    func appDeactivated() { }
+    func appActivated() {}
+    func appInBackground() {}
+    func appDeactivated() {}
+    func urlOpened(_ url: URL) {} // URL Opening management. Same as AppDelegate's `application(_:open:options:)`
 }
