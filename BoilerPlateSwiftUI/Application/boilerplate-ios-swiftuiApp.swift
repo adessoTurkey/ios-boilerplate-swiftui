@@ -28,23 +28,25 @@ struct BoilerPlateSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .onChange(of: phase) { newPhase in
-                    switch newPhase {
-                        case .active:
-                            // App became active
-                            appActivated()
-                        case .background:
-                            // App is running in the background
-                            appInBackground()
-                        case .inactive:
-                            // App became inactive
-                            appDeactivated()
-                        @unknown default:
-                            // Fallback for future cases
-                            break
-                    }
-                }
+                .onChange(of: phase, perform: manageChanges(for:))
                 .onOpenURL(perform: urlOpened(_:))
+        }
+    }
+
+    private func manageChanges(for phase: ScenePhase) {
+        switch phase {
+            case .active:
+                // App became active
+                appActivated()
+            case .background:
+                // App is running in the background
+                appInBackground()
+            case .inactive:
+                // App became inactive
+                appDeactivated()
+            @unknown default:
+                // Fallback for future cases
+                break
         }
     }
 }
