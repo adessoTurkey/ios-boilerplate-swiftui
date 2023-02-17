@@ -7,6 +7,9 @@
 //
 
 import UIKit
+#if PULSE
+import Pulse
+#endif
 
 class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
 
@@ -14,6 +17,10 @@ class BoilerPlateAppDelegate: NSObject, UIApplicationDelegate, ObservableObject 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        #if PULSE
+        Experimental.URLSessionProxy.shared.isEnabled = true
+        URLSessionProxyDelegate.enableAutomaticRegistration()
+        #endif
         return services.allSatisfy { service -> Bool in
             service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? true
         }
