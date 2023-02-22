@@ -1,6 +1,6 @@
 //
-//  boilerplate-ios-swiftuiApp.swift
-//  boilerplate-ios-swiftui
+//  BoilerPlateSwiftUIApp.swift
+//  BoilerPlateSwiftUIApp
 //
 //  Created by Cagri Gider on 14.08.2022.
 //  Copyright © 2022 Adesso Turkey. All rights reserved.
@@ -14,6 +14,7 @@ import Pulse
 @main
 struct BoilerPlateSwiftUIApp: App {
     @Environment(\.scenePhase) private var phase
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     // Check out https://developer.apple.com/documentation/swiftui/scenephase for more information
     private var loggingService: LoggingService
 

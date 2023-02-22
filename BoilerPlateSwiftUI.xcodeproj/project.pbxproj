@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18CADB3228A92CDC007FC2C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3128A92CDC007FC2C8 /* MainView.swift */; };
-		18CADB3528A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3428A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift */; };
+		18CADB3528A932FE007FC2C8 /* BoilerPlateSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3428A932FE007FC2C8 /* BoilerPlateSwiftUIApp.swift */; };
 		18CADB3828A93B4F007FC2C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3728A93B4F007FC2C8 /* HomeView.swift */; };
 		18CADB3A28A97CC8007FC2C8 /* BoilerPlateSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3928A97CC8007FC2C8 /* BoilerPlateSwiftUITests.swift */; };
 		18CADB3C28A97CDF007FC2C8 /* BoilerPlateSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3B28A97CDF007FC2C8 /* BoilerPlateSwiftUIUITests.swift */; };
@@ -44,7 +44,7 @@
 		7259FCC8299EAD3300BF8309 /* URLSessionAutoLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */; };
 		7259FCC9299EAD3300BF8309 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B44091299654B5004D1FC5 /* ImagePickerView.swift */; };
 		7259FCCA299EAD3300BF8309 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BCDA1F2579833600096894 /* Logger.swift */; };
-		7259FCCB299EAD3300BF8309 /* boilerplate-ios-swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3428A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift */; };
+		7259FCCB299EAD3300BF8309 /* BoilerPlateSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CADB3428A932FE007FC2C8 /* BoilerPlateSwiftUIApp.swift */; };
 		7259FCCC299EAD3300BF8309 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */; };
 		7259FCCD299EAD3300BF8309 /* BigButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */; };
 		7259FCCE299EAD3300BF8309 /* OnFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */; };
@@ -67,6 +67,8 @@
 		72B440942996688B004D1FC5 /* BigButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */; };
 		72B4409629966B1C004D1FC5 /* NewPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */; };
 		72B4409829967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */; };
+		72C4BE3E29A6376C0032CFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4BE3D29A6376C0032CFF2 /* AppDelegate.swift */; };
+		72C4BE3F29A637E20032CFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4BE3D29A6376C0032CFF2 /* AppDelegate.swift */; };
 		72EB01A6299E39D700DF6C24 /* URLSessionAutoLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */; };
 		72EB01B4299E57AB00DF6C24 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB01B3299E57AB00DF6C24 /* Pulse */; };
 		72EB01B6299E57AB00DF6C24 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 72EB01B5299E57AB00DF6C24 /* PulseUI */; };
@@ -94,7 +96,7 @@
 
 /* Begin PBXFileReference section */
 		18CADB3128A92CDC007FC2C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		18CADB3428A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "boilerplate-ios-swiftuiApp.swift"; sourceTree = "<group>"; };
+		18CADB3428A932FE007FC2C8 /* BoilerPlateSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerPlateSwiftUIApp.swift; sourceTree = "<group>"; };
 		18CADB3728A93B4F007FC2C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		18CADB3928A97CC8007FC2C8 /* BoilerPlateSwiftUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoilerPlateSwiftUITests.swift; sourceTree = "<group>"; };
 		18CADB3B28A97CDF007FC2C8 /* BoilerPlateSwiftUIUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoilerPlateSwiftUIUITests.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonTextModifier.swift; sourceTree = "<group>"; };
 		72B4409529966B1C004D1FC5 /* NewPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotoPickerView.swift; sourceTree = "<group>"; };
 		72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerSourceTypeExtension.swift; sourceTree = "<group>"; };
+		72C4BE3D29A6376C0032CFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72EB01A5299E39D700DF6C24 /* URLSessionAutoLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAutoLogging.swift; sourceTree = "<group>"; };
 		D1AC819628F69C4500E5B0AE /* OnFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearModifier.swift; sourceTree = "<group>"; };
 		F856462E28D12DC90015D3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -292,7 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				26C4C5632576519000358DAE /* Services */,
-				18CADB3428A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift */,
+				18CADB3428A932FE007FC2C8 /* BoilerPlateSwiftUIApp.swift */,
+				72C4BE3D29A6376C0032CFF2 /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -618,6 +622,7 @@
 				2F56AE8E256E487F0007D0A2 /* StringExtensions.swift in Sources */,
 				18CADB3228A92CDC007FC2C8 /* MainView.swift in Sources */,
 				2F56AE8A256E44BB0007D0A2 /* UICollectionViewCellExtensions.swift in Sources */,
+				72C4BE3E29A6376C0032CFF2 /* AppDelegate.swift in Sources */,
 				26BCDA2A2579857E00096894 /* UIApplicationExtension.swift in Sources */,
 				72B4409629966B1C004D1FC5 /* NewPhotoPickerView.swift in Sources */,
 				26C4C62525769BE400358DAE /* Configuration.swift in Sources */,
@@ -626,7 +631,7 @@
 				72EB01A6299E39D700DF6C24 /* URLSessionAutoLogging.swift in Sources */,
 				72B44092299654B5004D1FC5 /* ImagePickerView.swift in Sources */,
 				26BCDA202579833600096894 /* Logger.swift in Sources */,
-				18CADB3528A932FE007FC2C8 /* boilerplate-ios-swiftuiApp.swift in Sources */,
+				18CADB3528A932FE007FC2C8 /* BoilerPlateSwiftUIApp.swift in Sources */,
 				72B4409829967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */,
 				72B440942996688B004D1FC5 /* BigButtonTextModifier.swift in Sources */,
 				D1AC819728F69C4500E5B0AE /* OnFirstAppearModifier.swift in Sources */,
@@ -671,7 +676,7 @@
 				7259FCC8299EAD3300BF8309 /* URLSessionAutoLogging.swift in Sources */,
 				7259FCC9299EAD3300BF8309 /* ImagePickerView.swift in Sources */,
 				7259FCCA299EAD3300BF8309 /* Logger.swift in Sources */,
-				7259FCCB299EAD3300BF8309 /* boilerplate-ios-swiftuiApp.swift in Sources */,
+				7259FCCB299EAD3300BF8309 /* BoilerPlateSwiftUIApp.swift in Sources */,
 				7259FCCC299EAD3300BF8309 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */,
 				7259FCCD299EAD3300BF8309 /* BigButtonTextModifier.swift in Sources */,
 				7259FCCE299EAD3300BF8309 /* OnFirstAppearModifier.swift in Sources */,
@@ -679,6 +684,7 @@
 				7259FCD0299EAD3300BF8309 /* UITableViewCellExtensions.swift in Sources */,
 				7259FCD1299EAD3300BF8309 /* UIDeviceExtension.swift in Sources */,
 				7259FCD2299EAD3300BF8309 /* HomeView.swift in Sources */,
+				72C4BE3F29A637E20032CFF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
