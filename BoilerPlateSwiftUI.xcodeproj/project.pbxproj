@@ -61,6 +61,7 @@
 		7259FCDB299EAD3300BF8309 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 		7259FCDD299EAD3300BF8309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE0FE2565722600203445 /* Assets.xcassets */; };
 		7259FCDE299EAD3300BF8309 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE9B256E6EF70007D0A2 /* Icons.xcassets */; };
+		727273812A1CBAB60050D236 /* MapApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727273802A1CBAB60050D236 /* MapApplication.swift */; };
 		72A7BE1C2A1CA5E000D66097 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A7BE1B2A1CA5E000D66097 /* URLExtensions.swift */; };
 		72A7BE1F2A1CA9C300D66097 /* URLDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A7BE1E2A1CA9C300D66097 /* URLDefinitions.swift */; };
 		72B4409029965134004D1FC5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4408F29965134004D1FC5 /* ImagePicker.swift */; };
@@ -129,6 +130,7 @@
 		2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		720A19F729E6BCF600265401 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		7259FCE4299EAD3300BF8309 /* BoilerPlateSwiftUI-Pulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BoilerPlateSwiftUI-Pulse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		727273802A1CBAB60050D236 /* MapApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapApplication.swift; sourceTree = "<group>"; };
 		72A7BE1B2A1CA5E000D66097 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		72A7BE1E2A1CA9C300D66097 /* URLDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefinitions.swift; sourceTree = "<group>"; };
 		72B4408F29965134004D1FC5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				72A7BE1E2A1CA9C300D66097 /* URLDefinitions.swift */,
+				727273802A1CBAB60050D236 /* MapApplication.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				72A7BE1F2A1CA9C300D66097 /* URLDefinitions.swift in Sources */,
 				2F56AE8C256E44F00007D0A2 /* UIViewControllerExtensions.swift in Sources */,
 				2F56AE86256E44730007D0A2 /* UICollectionViewExtensions.swift in Sources */,
+				727273812A1CBAB60050D236 /* MapApplication.swift in Sources */,
 				72A7BE1C2A1CA5E000D66097 /* URLExtensions.swift in Sources */,
 				72B4409029965134004D1FC5 /* ImagePicker.swift in Sources */,
 				2F56AE8E256E487F0007D0A2 /* StringExtensions.swift in Sources */,

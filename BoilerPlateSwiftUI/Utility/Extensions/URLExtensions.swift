@@ -6,21 +6,20 @@
 //  Copyright © 2023 Adesso Turkey. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 import MapKit
 
 // MARK: - Map URL Extension
 /// This extension is designed to open any location with users favorite map application.
 ///
-extension URL {
+extension View {
 
     func openURLWithMap(latitude: CGFloat, longitude: CGFloat, application: MapApplication) {
-
         switch application {
             case .google:
-            guard let deeplink = URLDefinitions.googleDeeplinkURL else { return }
+                guard let deeplink = URLDefinitions.googleMapsDeeplinkURL else { return }
                 if UIApplication.shared.canOpenURL(deeplink) {
-                    let url = URL(string: String(format: "google_maps_url", latitude, longitude))
+                    let url = URL(string: String(format: URLDefinitions.googleMapsLocationString, latitude, longitude))
                     if let url {
                         UIApplication.shared.open(url)
                     }
@@ -37,7 +36,7 @@ extension URL {
             case .yandex:
                 guard let deeplink = URLDefinitions.yandexMapsDeeplinkURL else { return }
                 if UIApplication.shared.canOpenURL(deeplink) {
-                    let url = URL(string: String(format: "yandex_maps_url", latitude, longitude))
+                    let url = URL(string: String(format: URLDefinitions.yandexMapsLocationString, latitude, longitude))
                     if let url {
                         UIApplication.shared.open(url)
                     }
@@ -48,10 +47,4 @@ extension URL {
                 }
         }
     }
-}
-
-enum MapApplication: String {
-    case google = "Google Maps"
-    case apple = "Maps"
-    case yandex = "Yandex Maps"
 }

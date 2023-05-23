@@ -14,5 +14,3 @@
 "source_camera" = "Kamera";
 "source_saved_album" = "Kaydedilmiş Albüm";
 "source_select_title" = "Bir kaynak seç";
-"google_maps_url" = "comgooglemaps://?saddr=&daddr=%@,%@";
-"yandex_maps_url" = "yandexnavi://build_route_on_map?lat_to=&@&lon_to=&@";
