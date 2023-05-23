@@ -61,6 +61,8 @@
 		7259FCDB299EAD3300BF8309 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F856462F28D12DC90015D3DF /* Localizable.strings */; };
 		7259FCDD299EAD3300BF8309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCDE0FE2565722600203445 /* Assets.xcassets */; };
 		7259FCDE299EAD3300BF8309 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F56AE9B256E6EF70007D0A2 /* Icons.xcassets */; };
+		72A7BE1C2A1CA5E000D66097 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A7BE1B2A1CA5E000D66097 /* URLExtensions.swift */; };
+		72A7BE1F2A1CA9C300D66097 /* URLDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A7BE1E2A1CA9C300D66097 /* URLDefinitions.swift */; };
 		72B4409029965134004D1FC5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4408F29965134004D1FC5 /* ImagePicker.swift */; };
 		72B44092299654B5004D1FC5 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B44091299654B5004D1FC5 /* ImagePickerView.swift */; };
 		72B440942996688B004D1FC5 /* BigButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */; };
@@ -127,6 +129,8 @@
 		2FCDE1562566AE2700203445 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		720A19F729E6BCF600265401 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		7259FCE4299EAD3300BF8309 /* BoilerPlateSwiftUI-Pulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BoilerPlateSwiftUI-Pulse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A7BE1B2A1CA5E000D66097 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		72A7BE1E2A1CA9C300D66097 /* URLDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefinitions.swift; sourceTree = "<group>"; };
 		72B4408F29965134004D1FC5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		72B44091299654B5004D1FC5 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		72B440932996688B004D1FC5 /* BigButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonTextModifier.swift; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 		2FCDE1262566412700203445 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				72A7BE1D2A1CA9B700D66097 /* Constants */,
 				26C4C6FF2578BFE600358DAE /* Mocks */,
 				2FCDE0FE2565722600203445 /* Assets.xcassets */,
 				2F56AE91256E4CD30007D0A2 /* Colors.xcassets */,
@@ -351,8 +356,17 @@
 				26BCDA2E2579859500096894 /* UIDeviceExtension.swift */,
 				72B4409729967738004D1FC5 /* UIImagePickerControllerSourceTypeExtension.swift */,
 				720A19F729E6BCF600265401 /* ArrayExtensions.swift */,
+				72A7BE1B2A1CA5E000D66097 /* URLExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		72A7BE1D2A1CA9B700D66097 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				72A7BE1E2A1CA9C300D66097 /* URLDefinitions.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		72B4408E29965119004D1FC5 /* ViewRepresentables */ = {
@@ -614,8 +628,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A7BE1F2A1CA9C300D66097 /* URLDefinitions.swift in Sources */,
 				2F56AE8C256E44F00007D0A2 /* UIViewControllerExtensions.swift in Sources */,
 				2F56AE86256E44730007D0A2 /* UICollectionViewExtensions.swift in Sources */,
+				72A7BE1C2A1CA5E000D66097 /* URLExtensions.swift in Sources */,
 				72B4409029965134004D1FC5 /* ImagePicker.swift in Sources */,
 				2F56AE8E256E487F0007D0A2 /* StringExtensions.swift in Sources */,
 				18CADB3228A92CDC007FC2C8 /* MainView.swift in Sources */,
