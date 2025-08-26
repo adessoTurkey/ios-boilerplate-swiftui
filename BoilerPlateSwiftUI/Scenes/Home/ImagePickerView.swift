@@ -78,14 +78,16 @@ struct ImagePickerView: View {
     }
 }
 
-struct ImagePickerView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ImagePickerView()
-            ImagePickerView()
-                .environment(\.locale, .init(identifier: "tr"))
-            ImagePickerView()
-                .environment(\.locale, .init(identifier: "de"))
-        }
-    }
+#Preview {
+    ImagePickerView()
+}
+
+#Preview {
+    ImagePickerView()
+        .environment(\.locale, .init(identifier: "tr"))
+}
+
+#Preview {
+    ImagePickerView()
+        .environment(\.locale, .init(identifier: "de"))
 }
