@@ -54,6 +54,7 @@ struct HomeView: View {
     }
 
     private func runTestConnection() async {
+#if PULSE
         do {
             let demoSession = URLSessionProxy(configuration: .default)
             // swiftlint:disable:next force_unwrapping
@@ -63,6 +64,7 @@ struct HomeView: View {
         } catch {
             Logger().error("URL could not be fetched \(error.localizedDescription)")
         }
+#endif
     }
 
     @ViewBuilder
