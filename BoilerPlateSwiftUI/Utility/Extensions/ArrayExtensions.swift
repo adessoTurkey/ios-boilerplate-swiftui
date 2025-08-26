@@ -8,18 +8,25 @@
 
 import Foundation
 
-extension Array: RawRepresentable where Element: Codable {
+/// A wrapper for arrays that enables RawRepresentable conformance via JSON encoding/decoding.
+public struct RawCodableArray<Element: Codable>: RawRepresentable, Codable {
+    public var elements: [Element]
+
+    public init(_ elements: [Element]) {
+        self.elements = elements
+    }
+
     public init?(rawValue: String) {
         guard let data = rawValue.data(using: .utf8),
               let result = try? JSONDecoder().decode([Element].self, from: data)
         else {
             return nil
         }
-        self = result
+        self.elements = result
     }
 
     public var rawValue: String {
-        guard let data = try? JSONEncoder().encode(self),
+        guard let data = try? JSONEncoder().encode(elements),
               let result = String(data: data, encoding: .utf8)
         else {
             return "[]"

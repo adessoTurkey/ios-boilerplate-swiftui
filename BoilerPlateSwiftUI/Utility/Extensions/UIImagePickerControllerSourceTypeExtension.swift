@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIImagePickerController.SourceType: CaseIterable {
-    public static var allCases: [UIImagePickerController.SourceType] {
+extension UIImagePickerController.SourceType {
+    static var allCases: [UIImagePickerController.SourceType] {
         [.camera, .savedPhotosAlbum, .photoLibrary].filter { sourceType in
             UIImagePickerController.isSourceTypeAvailable(sourceType)
         }

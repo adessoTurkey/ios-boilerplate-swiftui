@@ -14,7 +14,7 @@ import UIKit
          // Handle remote notifications here
      }
 
-     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: any Error) {
          // Handle remote notification failures here
          print(error.localizedDescription)
      }
