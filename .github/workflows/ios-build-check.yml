@@ -14,7 +14,6 @@ jobs:
     steps:
       - name: "Install Required Items"
         run: |
-          brew install xcbeautify
           brew install swiftlint
           set -o pipefail
       - name: Select xcode
