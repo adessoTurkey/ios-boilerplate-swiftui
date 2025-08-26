@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
- #if PULSE
- import PulseUI
- #endif
+#if PULSE
+import PulseUI
+import Pulse
+#endif
 
 struct HomeView: View {
     @State private var showPulse = false
@@ -32,6 +33,9 @@ struct HomeView: View {
             Button {
                 showPulse.toggle()
                 // Write a test function to make a fetch request in order to track Network activity.
+                Task { @MainActor in
+                    await self.runTestConnection()
+                }
             } label: {
                 Text("Test Networking")
                     .font(.title)
@@ -46,6 +50,18 @@ struct HomeView: View {
             NavigationView {
                pulseView()
             }
+        }
+    }
+
+    private func runTestConnection() async {
+        do {
+            let demoSession = URLSessionProxy(configuration: .default)
+            // swiftlint:disable:next force_unwrapping
+            let url = URL(string: "https://www.adesso.com.tr")!
+            let result = try await demoSession.data(from: url)
+            Logger().info("We have data: \(result.0)")
+        } catch {
+            Logger().error("URL could not be fetched \(error.localizedDescription)")
         }
     }
 
