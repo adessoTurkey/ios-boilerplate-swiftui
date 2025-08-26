@@ -70,15 +70,15 @@ final class Logger {
 
         switch level {
           case .verbose:
-            DDLogVerbose(message.description)
+            DDLogVerbose(.init(stringLiteral: message.description))
           case .debug:
-            DDLogDebug(message.description)
+            DDLogDebug(.init(stringLiteral: message.description))
           case .info:
-            DDLogInfo(message.description)
+            DDLogInfo(.init(stringLiteral: message.description))
           case .warning:
-            DDLogWarn(message.description)
+            DDLogWarn(.init(stringLiteral: message.description))
           case .error:
-            DDLogError(message.description)
+            DDLogError(.init(stringLiteral: message.description))
         }
     }
 
