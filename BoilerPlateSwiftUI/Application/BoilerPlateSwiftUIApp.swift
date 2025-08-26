@@ -17,16 +17,12 @@ struct BoilerPlateSwiftUIApp: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     // Check out https://developer.apple.com/documentation/swiftui/scenephase for more information
     private var loggingService: LoggingService
-    private let session: any URLSessionProtocol
 
     init() {
     #if PULSE
         /* Check out https://kean-docs.github.io/pulse/documentation/pulse/networklogging-article#Option-1-Recommended
          */
-        self.session = URLSessionProxy(configuration: .default)
         URLSessionProxyDelegate.enableAutomaticRegistration()
-    #else
-        self.session = URLSession(configuration: .default)
     #endif
         loggingService = LoggingService()
     }
