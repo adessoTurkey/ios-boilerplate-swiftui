@@ -3,6 +3,7 @@ disabled_rules: # rule identifiers to exclude from running
   - nesting
   - function_parameter_count
   - type_name
+  - todo
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
   - Project/R.generated.swift
@@ -23,9 +24,6 @@ line_length:
   ignores_comments: true
   ignores_interpolated_strings: true
   ignores_urls: true
-
-disabled_rules:
-  - todo
 
 large_tuple: # warn user when using 3 values in tuple, give error if there are 4
    - 3
@@ -79,44 +77,12 @@ force_try:
 force_unwrapping:
   severity: error
 
-function_parameter_count:
-  warning: 5
-  error: 5
-
-identifier_name:
-  min_length:
-    warning: 3
-    error: 2
-  max_length:
-    warning: 40
-    error: 64
-  excluded:
-    - id
-
-nesting:
-  type_level:
-    warning: 2
-  function_level:
-    warning: 3
-
 switch_case_alignment:
   severity: error
   indented_cases: true
 
 switch_case_on_newline:
   severity: error
-
-type_name:
-  min_length:
-    warning: 3
-  max_length:
-    warning: 1000
-  excluded:
-    - "ID"
-    - "Id"
-    - "boilerplate_ios_swiftuiApp"
-    - "boilerplate_ios_swiftuiTests"
-    - "boilerplate_ios_swiftuiUITests"
 
 unneeded_break_in_switch:
   severity: error

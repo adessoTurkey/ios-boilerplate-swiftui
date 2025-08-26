@@ -1,4 +1,4 @@
-[![swift-version](https://img.shields.io/badge/swift-5.7-brightgreen.svg)](https://github.com/apple/swift)
+[![swift-version](https://img.shields.io/badge/swift-6.0.2-brightgreen.svg)](https://github.com/apple/swift)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/adessoTurkey/boilerplate-ios-swiftui/iOS%20Build%20Check%20Workflow/develop)
 
@@ -96,12 +96,11 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 | [SwiftLint](https://github.com/realm/SwiftLint) | A tool to enforce Swift style and conventions. |
 | [Pulse](https://github.com/kean/Pulse) | Pulse is a powerful logging system for Apple Platforms. Native. Built with SwiftUI. |
 | [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) | Powerful & flexible logging framework. |
+| SwiftLint](https://github.com/realm/SwiftLint) - A tool to enforce Swift style and conventions. |
 
 ## Useful Tools and Resources
 
-- [SwiftLint](https://github.com/realm/SwiftLint) - A tool to enforce Swift style and conventions.
 - [TestFlight](https://help.apple.com/itunes-connect/developer/#/devdc42b26b8) - TestFlight beta testing lets you distribute beta builds of your app to testers and collect feedback.
-- [Appcenter](https://appcenter.ms/) - Continuously build, test, release, and monitor apps for every platform.
 
 ## Join the crew!
 
