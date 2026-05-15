@@ -14,46 +14,66 @@ import Pulse
 
 struct HomeView: View {
     @State private var showPulse = false
+
     var body: some View {
         ZStack {
+
             Color.red
+                .ignoresSafeArea()
+
             VStack {
-                Text("Hello, World!")
+                Text(.helloWorld)
                     .font(.largeTitle)
                     .bold()
-                // You can use the code block below to test out the old & new photo picker.
-                //                ImagePickerView()
-                //                    .padding(.all)
-                //                    .background(Color.white)
-                //                    .cornerRadius(10)
-                //                    .shadow(radius: 8)
-                //                    .padding(.all)
-            }
-            #if PULSE
-            Button {
-                showPulse.toggle()
-                // Write a test function to make a fetch request in order to track Network activity.
-                Task { @MainActor in
-                    await self.runTestConnection()
-                }
-            } label: {
-                Text("Test Networking")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-            }.offset(.init(width: 0, height: 200))
-            #endif
 
+                imagePicker
+
+                Spacer()
+            }
+            .stickyBottomView {
+                pulseButton
+                    .padding(.bottom, 50)
+            }
         }
-        .ignoresSafeArea()
         .sheet(isPresented: $showPulse) {
-            NavigationView {
+            NavigationStack {
                pulseView()
             }
         }
     }
 
-    private func runTestConnection() async {
+    @ViewBuilder var imagePicker: some View {
+        // You can use the code block below to test out the old & new photo picker.
+        //                ImagePickerView()
+        //                    .padding()
+        //                    .background(Color.white)
+        //                    .cornerRadius(10)
+        //                    .shadow(radius: 8)
+        //                    .padding(.all)
+    }
+}
+
+// MARK: Pulse Related Views & Functions
+private extension HomeView {
+
+    @ViewBuilder var pulseButton: some View {
+#if PULSE
+        Button {
+            showPulse.toggle()
+            // Write a test function to make a fetch request in order to track Network activity.
+            Task { @MainActor in
+                await self.runTestConnection()
+            }
+        } label: {
+            Text(.testNetworking)
+                .font(.title)
+                .bold()
+                .foregroundColor(.white)
+        }
+#endif
+    }
+
+    func runTestConnection() async {
 #if PULSE
         do {
             let demoSession = URLSessionProxy(configuration: .default)
@@ -69,16 +89,14 @@ struct HomeView: View {
 
     @ViewBuilder
     func pulseView() -> some View {
-    #if PULSE
+#if PULSE
         ConsoleView()
-            .navigationBarItems(leading: Button("Close") { showPulse = false })
-    #else
-        EmptyView()
-    #endif
+#endif
     }
-
 }
 
+#if DEBUG
 #Preview {
     HomeView()
 }
+#endif

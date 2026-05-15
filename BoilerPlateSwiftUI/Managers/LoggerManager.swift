@@ -51,7 +51,7 @@ class LoggerManager {
         for logFilePath in logFilePaths {
             let fileURL = URL(fileURLWithPath: logFilePath)
             if let logFileData = try? Data(contentsOf: fileURL, options: Data.ReadingOptions.mappedIfSafe) {
-                logFileDataArray.insert(logFileData, at: 0)
+                logFileDataArray.insert(logFileData, at: .zero)
             }
         }
         return logFileDataArray

@@ -14,7 +14,7 @@ extension UIApplication {
         if let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
             return appVersion
         } else {
-            return ""
+            return .empty
         }
     }()
 
@@ -22,7 +22,7 @@ extension UIApplication {
         if let appBuild = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String {
             return appBuild
         } else {
-            return ""
+            return .empty
         }
     }()
 }

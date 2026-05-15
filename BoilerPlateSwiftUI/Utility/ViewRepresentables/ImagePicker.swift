@@ -37,7 +37,7 @@ extension ImagePicker {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             if let uiImage = info[.editedImage] as? UIImage {
                 parent.selectedImage = Image(uiImage: uiImage)
-                if (0.0...1.0).contains(parent.compressQuality) {
+                if (CGFloat.zero...1.0).contains(parent.compressQuality) {
                     if let data = uiImage.jpegData(compressionQuality: parent.compressQuality), // We can also save this data here.
                     let compressedImage = UIImage(data: data) {
                         parent.selectedImage = Image(uiImage: compressedImage)

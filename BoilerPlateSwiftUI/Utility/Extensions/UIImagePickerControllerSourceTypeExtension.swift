@@ -15,16 +15,16 @@ extension UIImagePickerController.SourceType {
         }
     }
 
-    func text() -> String {
-        switch self {
+    var localizedText: LocalizedStringResource {
+        return switch self {
             case .camera:
-                return "source_camera"
+                .sourceCamera
             case .savedPhotosAlbum:
-                return "source_saved_album"
+                .sourceSavedAlbum
             case .photoLibrary:
-                return "source_library"
+                .sourceLibrary
             default: // Since the available type will be now filtered, this will not trigger.
-                return ""
+                ""
         }
     }
 }

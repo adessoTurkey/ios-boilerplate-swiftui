@@ -13,45 +13,41 @@ struct ImagePickerView: View {
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     @State private var shouldShowImagePicker = false
     @State private var selectedImage: Image?
+
+    var imagePickerSources: [UIImagePickerController.SourceType] {
+        UIImagePickerController.SourceType.allCases
+    }
+
     var body: some View {
         VStack {
             VStack {
-                Text("source_select_title")
+                Text(.sourceSelectTitle)
                     .font(.title3)
                     .bold()
-                Picker("Source Type", selection: $sourceType) {
-                    ForEach(UIImagePickerController.SourceType.allCases, id: \.self) { sourceType in
-                        Text(sourceType
-                            .text()
-                            .localized)
-                        .tag(sourceType.rawValue)
+                Picker("source_type", selection: $sourceType) {
+                    ForEach(imagePickerSources, id: \.rawValue) { sourceType in
+                        Text(sourceType.localizedText)
+                            .tag(sourceType.rawValue)
                     }
                 }
+                .pickerStyle(.menu)
                 .tint(.red)
+
             }
-            .padding(.all)
+            .padding()
             .background(Color.white)
             .cornerRadius(10)
             .shadow(radius: 8)
             .padding(.bottom, 40)
 
-            if #available(iOS 16, *) {
-                if sourceType == .photoLibrary || sourceType == .savedPhotosAlbum {
-                    NewPhotoPickerView(selectedImage: $selectedImage)
-                } else {
-                    Button {
-                        shouldShowImagePicker.toggle()
-                    } label: {
-                        Text(sourceType == .camera ? "take_photo" : "select_photo")
-                            .modifier(BigButtonTextModifier(backgroundColor: .green))
-                    }
-                }
+            if sourceType == .photoLibrary || sourceType == .savedPhotosAlbum {
+                PhotoPickerView(selectedImage: $selectedImage)
             } else {
                 Button {
                     shouldShowImagePicker.toggle()
                 } label: {
-                    Text(sourceType == .camera ? "take_photo" : "select_photo")
-                        .modifier(BigButtonTextModifier(backgroundColor: .green))
+                    Text(sourceType == .camera ? .takePhoto : .selectPhoto)
+                        .bigButtonText(backgroundColor: .green)
                 }
             }
 
@@ -65,21 +61,37 @@ struct ImagePickerView: View {
                 Button {
                     self.selectedImage = nil
                 } label: {
-                    Text("delete_image")
-                        .modifier(BigButtonTextModifier(backgroundColor: .red))
+                    Text(.deleteImage)
+                        .bigButtonText(backgroundColor: .red)
                 }
             }
         }
-        .sheet(isPresented: $shouldShowImagePicker, onDismiss: {
-            // make an action after it's dismissed
-        }, content: {
-            ImagePicker(sourceType: sourceType, compressQuality: 0.8, selectedImage: $selectedImage)
-        })
+        .sheet(
+            isPresented: $shouldShowImagePicker,
+            onDismiss: onImagePickerDismiss,
+            content: imagePicker
+        )
+        .padding(.horizontal)
+    }
+
+    func imagePicker() -> some View {
+        ImagePicker(
+            sourceType: sourceType,
+            compressQuality: 0.8,
+            selectedImage: $selectedImage
+        )
+    }
+
+    func onImagePickerDismiss() {
+        // make an action after it's dismissed
     }
 }
 
+#if DEBUG
+
 #Preview {
     ImagePickerView()
+        .environment(\.locale, .init(identifier: "en"))
 }
 
 #Preview {
@@ -91,3 +103,5 @@ struct ImagePickerView: View {
     ImagePickerView()
         .environment(\.locale, .init(identifier: "de"))
 }
+
+#endif

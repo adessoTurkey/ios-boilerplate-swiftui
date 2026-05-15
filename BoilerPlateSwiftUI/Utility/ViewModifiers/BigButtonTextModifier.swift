@@ -22,3 +22,9 @@ struct BigButtonTextModifier: ViewModifier {
             .shadow(radius: 8)
         }
 }
+
+extension View {
+    nonisolated func bigButtonText(backgroundColor: Color) -> some View {
+        self.modifier(BigButtonTextModifier(backgroundColor: backgroundColor))
+    }
+}
